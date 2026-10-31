@@ -1,0 +1,22 @@
+{
+  "wechat": {
+    "label": "微信公众号",
+    "account": "princetonpct",
+    "url": "https://mp.weixin.qq.com/s/GKJPuJ5vAvgtOgpp2SFT0g"
+  },
+  "youtube": {
+    "label": "YouTube",
+    "account": "PUChineseTheatre",
+    "url": "https://www.youtube.com/user/PUChineseTheatre"
+  },
+  "bilibili": {
+    "label": "哔哩哔哩",
+    "account": "普林斯顿中文剧社",
+    "url": "https://space.bilibili.com/3690988237228952"
+  },
+  "instagram": {
+    "label": "Instagram",
+    "account": "@princeton.chinese.theater",
+    "url": "https://www.instagram.com/princeton.chinese.theater/"
+  }
+}

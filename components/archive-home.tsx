@@ -1,19 +1,28 @@
 'use client';
-import { useEffect, useState } from 'react';
-import Link from 'next/link';
+import { useLanguage } from '@/components/language-provider';
+import TitleCover from '@/components/title-cover';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { api, type ProductionRecord } from '@/lib/api';
-import { safeUrl } from '@/lib/productions';
+import { productionTerm, safeUrl } from '@/lib/productions';
+const detail=(id:string)=>`/production/?id=${encodeURIComponent(id)}`;
 
-export default function ArchiveHome() {
-  const [records,setRecords]=useState<ProductionRecord[] | null>(null);
-  const [error,setError]=useState('');
-  const [query,setQuery]=useState('');
-  const [year,setYear]=useState('');
+export default function ArchiveHome(){
+  const {t,language}=useLanguage();
+  const [records,setRecords]=useState<ProductionRecord[]|null>(null),[error,setError]=useState('');
+  const [query,setQuery]=useState(''),[year,setYear]=useState(''),[view,setView]=useState<'grid'|'list'>('grid');
+  const resultsRef=useRef<HTMLDivElement>(null);
+  useEffect(()=>{if(resultsRef.current)resultsRef.current.scrollTop=0;},[query,year,view]);
   const load=()=>{setError('');api<{records:ProductionRecord[]}>('/api/productions').then(data=>setRecords(data.records)).catch(error=>setError(error.message));};
   useEffect(()=>{load();},[]);
-  const years=[...new Set((records||[]).map(r=>r.production.year).filter((year):year is string=>!!year))].sort().reverse();
-  const filtered=(records||[]).filter(({production:p})=>(!year||p.year===year)&&`${p.title} ${p.titleEn||''} ${p.season||''}`.toLowerCase().includes(query.toLowerCase()));
-  return <div className="archive-home wrap"><div className="eyebrow">PRINCETON CHINESE THEATRE / ON THE RECORD</div><h1>好戏，值得被记住。</h1><p className="archive-intro">从开场的第一束光，到谢幕的最后一次鞠躬。<br />在这里，重访每一个属于我们的舞台。</p><div className="archive-tools"><label>寻找一场戏<input placeholder="搜索中文名、英文名或演出季" value={query} onChange={e=>setQuery(e.target.value)} /></label><label>演出年份<select value={year} onChange={e=>setYear(e.target.value)}><option value="">全部年份</option>{years.map(y=><option key={y}>{y}</option>)}</select></label></div>
-    {error ? <div className="form-help" role="alert"><p>{error}</p><button className="button" onClick={load}>重试</button></div> : records===null ? <p role="status">正在打开剧目档案……</p> : !records.length ? <div className="empty-state"><div className="eyebrow">THE NEXT CHAPTER</div><h2>新的档案，从这里开始。</h2><p>目前还没有已发布的剧目。管理员可以先保存资料，准备好后再发布。</p><Link className="button primary" href="/admin/">进入管理后台 →</Link><Link className="button" href="/productions/example-production/">查看页面模板</Link></div> : !filtered.length ? <p role="status">没有找到符合条件的剧目，试试其他关键词或年份。</p> : <div className="production-grid">{filtered.map(({production:p})=><a className="production-card" href={`/production/?id=${encodeURIComponent(p.id)}`} key={p.id}><div className="card-art">{safeUrl(p.poster)?<img src={safeUrl(p.poster)} alt={p.posterAlt||`${p.title}海报`} loading="lazy"/>:<span>{p.title}</span>}</div><div className="eyebrow">{p.season||p.year||'剧目档案'}</div><h2>{p.title}</h2>{p.titleEn&&<p>{p.titleEn}</p>}<span className="card-more">走进这场戏 ↗</span></a>)}</div>}
+  const years=[...new Set((records||[]).map(r=>r.production.year).filter((y):y is string=>!!y))].sort().reverse();
+  const filtered=useMemo(()=>[...(records||[])].sort((a,b)=>(b.production.year||'').localeCompare(a.production.year||'')).filter(({production:p})=>(!year||p.year===year)&&`${p.title} ${p.titleEn||''} ${t(productionTerm(p))}`.toLowerCase().includes(query.toLowerCase())),[records,year,query]);
+  return <div id="top" className="archive-page">
+    <section className="repertoire wrap" id="productions" aria-labelledby="repertoire-title"><div className="repertoire-heading"><h2 id="repertoire-title">{t("剧目档案")}</h2><div className="archive-controls"><label className="archive-search"><span aria-hidden="true">⌕</span><input aria-label={t("搜索剧目")} placeholder={t("寻找一场戏")} value={query} onChange={e=>setQuery(e.target.value)}/>{query&&<button onClick={()=>setQuery('')} aria-label={t("清除搜索")}>×</button>}</label><div className="view-controls" role="group" aria-label={t("展示方式")}><button aria-label={t("海报网格")} aria-pressed={view==='grid'} className={view==='grid'?'active':''} onClick={()=>setView('grid')}>▦</button><button aria-label={t("剧目列表")} aria-pressed={view==='list'} className={view==='list'?'active':''} onClick={()=>setView('list')}>☷</button></div></div></div>
+      <div className="archive-tools"><div className="year-filters" role="group" aria-label={t("按年份筛选")}><button className={!year?'active':''} aria-pressed={!year} onClick={()=>setYear('')}>{t("全部演出")} <sup>{records?.length??'—'}</sup></button>{years.map(y=><button key={y} className={year===y?'active':''} aria-pressed={year===y} onClick={()=>setYear(y)}>{y}</button>)}</div></div>
+      <div className="archive-results" ref={resultsRef} role="region" aria-labelledby="repertoire-title" tabIndex={0}>
+      {error?<div className="form-help" role="alert"><p>{error}</p><button className="button" onClick={load}>{t("重新加载")}</button></div>:records===null?<div className="archive-loading" role="status">{t("正在打开剧目档案……")}</div>:!records.length?<div className="empty-state"><h3>{t("更多故事，即将入藏。")}</h3><p>{t("历年剧目资料正在整理中。")}</p></div>:!filtered.length?<div className="empty-state" role="status"><h3>{t("这场戏，暂时还没找到。")}</h3><button className="text-link" onClick={()=>{setQuery('');setYear('');}}>{t("清除筛选，查看所有剧目 →")}</button></div>:<div className={`production-grid ${view==='list'?'list-view':''}`}>{filtered.map(({production:p},index)=><a className={`production-card card-${p.id.includes('rhino')?'rhino':p.id.includes('tea')?'tea':'poster'}`} href={detail(p.id)} key={p.id}><div className="card-art">{safeUrl(p.poster)?<img src={safeUrl(p.poster)} alt={language==='en'?`${p.titleEn||p.title} — production poster`:(p.posterAlt||`${p.title}演出海报`)} loading="lazy"/>:<TitleCover production={p} />}<span className="card-open" aria-hidden="true">↗</span></div><div className="card-info"><div className="card-season"><span>{t(productionTerm(p))}</span><span>{String(index+1).padStart(2,'0')}</span></div><h3>{language==='en'?(p.titleEn||p.title):p.title}</h3>{language==='en'&&p.titleEn&&<p>{p.title}</p>}</div></a>)}</div>}
+      <p className="archive-endnote">{t("档案持续整理中。每一次回望，都是一次重逢。")}</p>
+      </div>
+    </section>
   </div>;
 }

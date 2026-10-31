@@ -1,0 +1,4419 @@
+{
+  "productions": [
+    {
+      "id": "2026-spring-rhino",
+      "title": "恋爱的犀牛（2026版）",
+      "titleEn": "Rhinoceros in Love",
+      "season": "2026-04-24、25日19:00",
+      "year": "2026",
+      "status": "公众号正式开票公告、校方售票与节目册资料确认",
+      "performances": [
+        "2026-04-24 19:00",
+        "2026-04-25 19:00"
+      ],
+      "venue": "frist theater",
+      "synopsis": "犀牛饲养员马路爱上邻居明明，认定她是自己生命中不可替代的人。明明却执着于另一个男人，始终无法回应他的感情。马路一次次示爱，也一次次遭到拒绝；在朋友的劝说与现实的压力下，他仍不肯放手，渐渐将爱情推向偏执与失控。",
+      "sources": [
+        {
+          "url": "https://puc.tickets.princeton.edu/event/rhinoceros-in-love-by-princeton-chinese-theater-ugemrt",
+          "label": "普林斯顿大学演出记录"
+        },
+        {
+          "url": "https://embed-rech-01.dialog.cm/dailyprincetonian/docs/the_daily_princetonian_april_24_2026",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://docs.google.com/document/d/10SxBMZXR0ds1lfoH1RyixowSGDadR1fNjHWK7cBHoB8/edit?usp=drivesdk",
+          "label": "Playbill info"
+        },
+        {
+          "url": "https://docs.google.com/presentation/d/1wNiRI_fSj_GRNPe4fEofGLUIIHlxte_3Rd0bCzdNn7U/edit?usp=drivesdk",
+          "label": "First Meeting"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=2650462711&sn=c46f8633b56611dab1dab5feb7b208db",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=2650462652&sn=de4353409d9f82bc723eb1229cfaf13a",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=2650462673&sn=a76a1ca7e1e95df6d7ead9e5ec6ecc1d",
+          "label": "原始资料"
+        }
+      ],
+      "updatedAt": "2026-10-31",
+      "creative": [
+        {
+          "role": "原作编剧",
+          "name": "廖一梅 / Liao Yimei"
+        },
+        {
+          "role": "表演导演",
+          "name": "朱乙壬 / Daniel Zhu"
+        },
+        {
+          "role": "制作导演",
+          "name": "李宜鸿 / Nina Li"
+        },
+        {
+          "role": "制作人",
+          "name": "PCT 理事会 / PCT Board Members"
+        },
+        {
+          "role": "音乐总监",
+          "name": "曾子裕 / Isabelle Tseng"
+        }
+      ],
+      "crew": [
+        {
+          "role": "舞台监督",
+          "name": "曹旭洋 / Danny Cao"
+        },
+        {
+          "role": "灯光设计",
+          "name": "姜家源 / Brian Jiang、韩皓潭 / Haotan Han、肖遥 / Yoyo Xiao、曹凌微 / Vivian Cao、李相毅 / Audrey Li"
+        },
+        {
+          "role": "音效",
+          "name": "汤子轩 / Angel Tang"
+        },
+        {
+          "role": "服装",
+          "name": "郑昕妍 / Xin Yan Zheng、胡海蒂 / Heidi Hu"
+        },
+        {
+          "role": "妆造",
+          "name": "李润欣 / Kazel Li"
+        },
+        {
+          "role": "视觉设计",
+          "name": "吴一凡 / Yifan Wu、齐坤月 / Kunyue Qi"
+        },
+        {
+          "role": "布景与道具",
+          "name": "张吴承 / Wucheng Zhang"
+        },
+        {
+          "role": "摄影",
+          "name": "唐薛怡铭 / Emily Tang、王睿 / Rui Wang"
+        },
+        {
+          "role": "翻译与字幕",
+          "name": "Simon Law"
+        },
+        {
+          "role": "宣传",
+          "name": "汤子轩 / Angel Tang、钟嘉莹 / Carmen Zhong、张采奕 / Flora Zhang"
+        },
+        {
+          "role": "剧社负责人",
+          "name": "王珞曦 / Lucille Wang"
+        }
+      ],
+      "cast": [
+        {
+          "role": "马路",
+          "name": "伏澄宇 / Chengyu Fu"
+        },
+        {
+          "role": "明明",
+          "name": "曹玉茜 / Yuxi Cao"
+        },
+        {
+          "role": "黑子",
+          "name": "王楚歌 / Jeffrey Wang"
+        },
+        {
+          "role": "大仙",
+          "name": "丁竹丞 / Eric Ding"
+        },
+        {
+          "role": "牙刷",
+          "name": "王苏浩 / Tiger Wang"
+        },
+        {
+          "role": "红红",
+          "name": "刘蕴欣 / Gloria Liu"
+        },
+        {
+          "role": "莉莉",
+          "name": "钱韵冰 / Emily Qian"
+        },
+        {
+          "role": "恋爱教授",
+          "name": "李恩在 / Enzai Li"
+        },
+        {
+          "role": "经纪人",
+          "name": "姜家源 / Brian Jiang"
+        },
+        {
+          "role": "摄影师",
+          "name": "林喆 / Amy Lin"
+        }
+      ],
+      "poster": "/assets/archive/2026-rhino.png",
+      "posterAlt": "恋爱的犀牛（2026版）公众号原始演出海报",
+      "playbillUrl": "/assets/archive/2026-rhino-playbill-notes.pdf",
+      "playbillLabel": "查看节目册资料（整理稿）"
+    },
+    {
+      "id": "2026-sheming",
+      "title": "赊命",
+      "year": "2026",
+      "season": "2026年秋（招募公告）",
+      "status": "公众号招募及共享盘剧本、排练资料确认制作推进；公演待核",
+      "updatedAt": "2026-10-31",
+      "performances": [
+        "2026年秋（招募公告）"
+      ],
+      "synopsis": "赵昭雪被赶出故乡多年后，带着巨额财富回到日渐衰败的青石沟。她愿意帮助村庄摆脱困境，却提出一项以生命为代价的交易。起初义正词严的村民，在足以改变生活的金钱面前逐渐动摇；小卖部老板高守义也被迫面对被掩埋的过去。",
+      "creative": [
+        {
+          "role": "原作编剧",
+          "name": "弗里德里希·迪伦马特 / Friedrich Dürrenmatt"
+        },
+        {
+          "role": "原作",
+          "name": "贵妇还乡"
+        }
+      ],
+      "crew": [],
+      "cast": [],
+      "sources": [
+        {
+          "url": "https://mp.weixin.qq.com/s/GKJPuJ5vAvgtOgpp2SFT0g",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://drive.google.com/file/d/1GnOfyegnqcJUfqqxrBzYUSD1gCxH_i2k/view?usp=drivesdk",
+          "label": "《赊命》v3.pdf"
+        },
+        {
+          "url": "https://docs.google.com/document/d/1Btf-NP-Q-MBhijswmcCA-CeYmI7EMIlv7yyt7Rqioos/edit?usp=drivesdk",
+          "label": "《赊命》v3"
+        },
+        {
+          "url": "https://docs.google.com/spreadsheets/d/13zuumB3DecVaSOvLzC_KK1mKXvFGAtBWYm9EjeTB6jI/edit?usp=drivesdk",
+          "label": "Fall 26 Conflict Sheet After Fall Break"
+        },
+        {
+          "url": "https://docs.google.com/spreadsheets/d/1NNqi1yPcbhrOuwgDs4VXAvAX2T8wDsqSqT2EqjbI9a0/edit?usp=drivesdk",
+          "label": "Scene Break Down"
+        }
+      ]
+    },
+    {
+      "id": "2025-red-coast",
+      "title": "红岸往事",
+      "year": "2025",
+      "season": "2025-04-24 20:00；25日19:30；26日14:00、20:00",
+      "status": "公众号公演公告、实际剧本及演职员资料确认",
+      "updatedAt": "2026-10-31",
+      "titleEn": "Echoes from the Red Coast",
+      "venue": "frist theater",
+      "performances": [
+        "2025-04-24 20:00",
+        "2025-04-25 19:30",
+        "2025-04-26 14:00",
+        "2025-04-26 20:00"
+      ],
+      "synopsis": "二十世纪六十年代末，屡遭打击的青年天体物理学家叶文洁进入大兴安岭深处的红岸基地，参与寻找地外文明的绝密研究。她发现太阳能够放大电波信号，并在对人类深感失望之际向宇宙发出呼唤。这一选择牵动了她与身边人的命运，也将整个人类带向未知的未来。",
+      "creative": [
+        {
+          "role": "原作者",
+          "name": "刘慈欣 / Liu Cixin"
+        },
+        {
+          "role": "原作",
+          "name": "三体"
+        },
+        {
+          "role": "改编",
+          "name": "徐道弘 / Daohong Xu"
+        },
+        {
+          "role": "导演",
+          "name": "姜家源 / Brian Jiang"
+        }
+      ],
+      "crew": [],
+      "cast": [
+        {
+          "role": "青年叶文洁",
+          "name": "艾思屹"
+        },
+        {
+          "role": "老年叶文洁",
+          "name": "Olivia Xu"
+        },
+        {
+          "role": "杨冬",
+          "name": "雷染"
+        },
+        {
+          "role": "叶哲泰",
+          "name": "尹理乾 / Tom Yin"
+        },
+        {
+          "role": "邵琳",
+          "name": "于佳彤 / Jiatong Yu"
+        },
+        {
+          "role": "雷志成",
+          "name": "何书忱 / Shuchen Charlie He"
+        },
+        {
+          "role": "杨卫宁",
+          "name": "黄冠棋"
+        },
+        {
+          "role": "常伟思",
+          "name": "伏澄宇 / Chengyu Fu"
+        },
+        {
+          "role": "白沐霖",
+          "name": "邹佩珂"
+        },
+        {
+          "role": "大凤",
+          "name": "陈恩颖"
+        },
+        {
+          "role": "刘政委",
+          "name": "唐崧庭 / Song Ting Tang"
+        },
+        {
+          "role": "医生",
+          "name": "谢安然"
+        },
+        {
+          "role": "三体人",
+          "name": "大森智加"
+        },
+        {
+          "role": "ETO 成员",
+          "name": "Joshua Yi"
+        },
+        {
+          "role": "伊文斯",
+          "name": "闵迪安 / Dean Minello"
+        },
+        {
+          "role": "工程师",
+          "name": "吴芮"
+        },
+        {
+          "role": "工程师",
+          "name": "刘伯伟 / Bowei Liu"
+        },
+        {
+          "role": "工程师",
+          "name": "陈君和"
+        },
+        {
+          "role": "林场士兵／学生／村民",
+          "name": "彭建文"
+        }
+      ],
+      "poster": "/assets/archive/2025-red-coast.jpg",
+      "posterAlt": "红岸往事公众号原始演出海报",
+      "sources": [
+        {
+          "url": "https://docs.google.com/document/d/1T8ujyPyFn-PtcydlzaQWnwS-4YfK4TYC77SELRXc5pE/edit",
+          "label": "红岸往事 剧本"
+        },
+        {
+          "url": "https://docs.google.com/document/d/19yifC2hcqQJH49vY84_9N5sJ1GqHBgNM/edit?usp=drivesdk&ouid=100966569382750120397&rtpof=true&sd=true",
+          "label": "Act I Sounds.docx"
+        },
+        {
+          "url": "https://docs.google.com/spreadsheets/d/1Y7pFfslQm7BzST2cTsDS_zpKq8NmgOeNk2lx6yB7emU/edit?usp=drivesdk",
+          "label": "三体演职人员名单"
+        },
+        {
+          "url": "https://docs.google.com/presentation/d/1wNiRI_fSj_GRNPe4fEofGLUIIHlxte_3Rd0bCzdNn7U/edit?usp=drivesdk",
+          "label": "First Meeting"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=2650462506&sn=7d39a9097f664b03a0ea9b2d91cd07d8",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=2650462502&sn=83245152b4917b6f9eb3a5f29705161b",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=2650462465&sn=c9e902546fb03e61859cadce8728437d",
+          "label": "原始资料"
+        }
+      ]
+    },
+    {
+      "id": "2025-fall-moses",
+      "title": "平原上的摩西",
+      "titleEn": "A Burning Christmas",
+      "season": "2025-12-11、12日20:00；13日14:00、20:00",
+      "year": "2025",
+      "status": "完整PDF节目单及公众号正式开票公告确认",
+      "tagline": "它的名字叫做平原，是你的平原。",
+      "performances": [
+        "2025-12-11 20:00",
+        "2025-12-12 20:00",
+        "2025-12-13 14:00",
+        "2025-12-13 20:00"
+      ],
+      "venue": "whiman theater",
+      "poster": "/assets/moses-poster.jpg",
+      "posterAlt": "《平原上的摩西》正式演出海报",
+      "synopsis": "东北小城里，曾经叛逆的少年庄树成为刑警，着手调查一桩十三年前的旧案。线索却逐渐指向儿时玩伴李斐与她的父亲。随着两家人的记忆交错展开，下岗潮中的离散、一个平安夜的约定与一场大火重新浮现，庄树也发现自己从未置身案外。",
+      "creative": [
+        {
+          "role": "原作者",
+          "name": "双雪涛"
+        },
+        {
+          "role": "编剧",
+          "name": "伏澄宇 / Chengyu Fu"
+        },
+        {
+          "role": "导演",
+          "name": "伏澄宇 / Chengyu Fu"
+        },
+        {
+          "role": "制作人",
+          "name": "刘蕴欣 / Gloria Liu"
+        }
+      ],
+      "cast": [
+        {
+          "role": "庄树",
+          "name": "丁竹丞 / Eric Ding"
+        },
+        {
+          "role": "李斐",
+          "name": "李宜鸿 / Nina Li"
+        },
+        {
+          "role": "赵小东",
+          "name": "王珞曦 / Lucille Wang"
+        },
+        {
+          "role": "蒋不凡",
+          "name": "尹理乾 / Tom Yin"
+        },
+        {
+          "role": "傅东心",
+          "name": "任益霖 / Shirley Ren"
+        },
+        {
+          "role": "庄德增",
+          "name": "唐崧庭 / Song Ting Tang"
+        },
+        {
+          "role": "李守廉",
+          "name": "李恩在 / Enzai Li"
+        },
+        {
+          "role": "孙天博",
+          "name": "王苏浩 / Tiger Wang"
+        },
+        {
+          "role": "刘卓美",
+          "name": "吕孟汀 / Mengting Lyu"
+        },
+        {
+          "role": "赵庆革",
+          "name": "朱乙壬 / Daniel Zhu"
+        },
+        {
+          "role": "警员甲",
+          "name": "高安馨 / Karen Gao"
+        },
+        {
+          "role": "警员乙",
+          "name": "林喆 / Amy Lin"
+        },
+        {
+          "role": "看守所辅警",
+          "name": "姜家源 / Brian Jiang"
+        },
+        {
+          "role": "电视甲",
+          "name": "伏澄宇 / Chengyu Fu"
+        },
+        {
+          "role": "电视乙",
+          "name": "刘蕴欣 / Gloria Liu"
+        }
+      ],
+      "crew": [
+        {
+          "role": "舞台统筹",
+          "name": "姜家源 / Brian Jiang、刘蕴欣 / Gloria Liu"
+        },
+        {
+          "role": "舞台设计",
+          "name": "李宜鸿 / Nina Li、齐坤月 / Kunyue Qi、曹旭洋 / Danny Cao"
+        },
+        {
+          "role": "灯光设计",
+          "name": "伏澄宇 / Chengyu Fu"
+        },
+        {
+          "role": "灯光执行",
+          "name": "姜家源 / Brian Jiang"
+        },
+        {
+          "role": "声音设计",
+          "name": "张适然、伏澄宇 / Chengyu Fu"
+        },
+        {
+          "role": "声音执行",
+          "name": "钱韵冰 / Emily Qian"
+        },
+        {
+          "role": "服装设计",
+          "name": "钱韵冰 / Emily Qian、王笑雨"
+        },
+        {
+          "role": "舞蹈设计",
+          "name": "周心怡、王书姮"
+        },
+        {
+          "role": "摄影",
+          "name": "伊卡洛斯"
+        },
+        {
+          "role": "场务",
+          "name": "曹旭洋 / Danny Cao、周安成成、朱乙壬 / Daniel Zhu"
+        },
+        {
+          "role": "宣传",
+          "name": "汤子轩 / Angel Tang、刘蕴欣 / Gloria Liu"
+        },
+        {
+          "role": "黑衣舞团",
+          "name": "周心怡、王书姮、朱乙壬 / Daniel Zhu、曹旭洋 / Danny Cao"
+        }
+      ],
+      "playbillUrl": "/assets/moses-playbill.pdf",
+      "playbillLabel": "阅读完整节目册",
+      "sources": [
+        {
+          "url": "https://drive.google.com/file/d/1gpbz3WCnNOaS1WfCc4Rv9a3aWBGw8P3l/view",
+          "label": "PCT 正式节目册"
+        },
+        {
+          "url": "https://drive.google.com/file/d/1Gc_EDQ8fjI8ms_8laSJaGNJGBTXYUZhx/view",
+          "label": "PCT 正式演出海报"
+        },
+        {
+          "url": "https://drive.google.com/file/d/1gpbz3WCnNOaS1WfCc4Rv9a3aWBGw8P3l/view?usp=drivesdk",
+          "label": "节目单.pdf"
+        },
+        {
+          "url": "https://docs.google.com/document/d/1tgIQGzUTrgpTpSdG36it39C13DS5o1rGzsVaX-8gM4c/edit?usp=drivesdk",
+          "label": "Playbill info"
+        },
+        {
+          "url": "https://drive.google.com/drive/folders/1WNd80PbrDVOKJnjlRyy2sqgGNhYlOI2R",
+          "label": "全场录制"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=2650462554&sn=e232ed3a20836194b35704b0a7001822",
+          "label": "原始资料"
+        }
+      ],
+      "updatedAt": "2026-10-31"
+    },
+    {
+      "id": "2024-chinglish",
+      "title": "Chinglish",
+      "year": "2024",
+      "season": "2024-12-06 20:00；12-07 14:00、20:00",
+      "status": "公众号演出回顾及正式开票公告确认三场演出",
+      "updatedAt": "2026-10-31",
+      "venue": "whiman theater",
+      "performances": [
+        "2024-12-06 20:00；12-07 14:00、20:00"
+      ],
+      "language": "中英双语，配中英文字幕",
+      "synopsis": "美国商人丹尼尔来到中国，希望为家族的标牌公司争取一份合同。顾问彼得教他理解“关系”，翻译却不断造成误会，谈判也远比预想复杂。副部长奚燕向他伸出援手，两人的合作逐渐变成私情；丹尼尔以为自己终于理解了对方，却发现语言之外还有更难跨越的距离。",
+      "creative": [
+        {
+          "role": "原作编剧",
+          "name": "黄哲伦 / David Henry Hwang"
+        },
+        {
+          "role": "导演团队",
+          "name": "Yuri Yu、刘蕴欣 / Gloria Liu"
+        }
+      ],
+      "crew": [
+        {
+          "role": "舞台监督",
+          "name": "刘蕴欣 / Gloria Liu"
+        },
+        {
+          "role": "舞台设计",
+          "name": "李宜鸿 / Nina Li、伏澄宇 / Chengyu Fu"
+        },
+        {
+          "role": "灯光设计",
+          "name": "李宜鸿 / Nina Li"
+        },
+        {
+          "role": "灯光执行",
+          "name": "姜家源 / Brian Jiang"
+        },
+        {
+          "role": "声音设计",
+          "name": "姜家源 / Brian Jiang"
+        },
+        {
+          "role": "声音执行",
+          "name": "李安愉 / Christina Li、Susan Zhang"
+        },
+        {
+          "role": "服装设计",
+          "name": "李宜鸿 / Nina Li、伏澄宇 / Chengyu Fu、李安愉 / Christina Li"
+        },
+        {
+          "role": "摄影",
+          "name": "齐迹"
+        },
+        {
+          "role": "翻译与字幕",
+          "name": "Yuri Yu、马乐原 / Leyuan Ma"
+        },
+        {
+          "role": "投影设计",
+          "name": "刘蕴欣 / Gloria Liu"
+        },
+        {
+          "role": "投屏执行",
+          "name": "姜家源 / Brian Jiang"
+        },
+        {
+          "role": "字幕执行",
+          "name": "马乐原 / Leyuan Ma"
+        },
+        {
+          "role": "宣传",
+          "name": "PCT 理事会 / PCT Board Members"
+        },
+        {
+          "role": "海报设计",
+          "name": "刘蕴欣 / Gloria Liu"
+        },
+        {
+          "role": "Instagram 运营",
+          "name": "Michelle Miao、汤子轩 / Angel Tang"
+        }
+      ],
+      "cast": [
+        {
+          "role": "Daniel Cavanaugh",
+          "name": "Cristian J. Gonzalez Rodriguez"
+        },
+        {
+          "role": "Peter Timms",
+          "name": "闵迪安 / Dean Minello"
+        },
+        {
+          "role": "Cai Guoliang",
+          "name": "伏澄宇 / Chengyu Fu"
+        },
+        {
+          "role": "Xi Yan",
+          "name": "Chloe Wu"
+        },
+        {
+          "role": "Qian",
+          "name": "李宜鸿 / Nina Li"
+        },
+        {
+          "role": "Bing / Zhao",
+          "name": "王苏浩 / Tiger Wang"
+        },
+        {
+          "role": "Prosecutor Li",
+          "name": "李安愉 / Christina Li"
+        },
+        {
+          "role": "Judge Geming",
+          "name": "王品 / Philip Wang"
+        }
+      ],
+      "poster": "/assets/archive/2024-chinglish.jpg",
+      "posterAlt": "Chinglish公众号原始演出海报",
+      "sources": [
+        {
+          "url": "https://docs.google.com/spreadsheets/d/1KvM71EfuPdZnR7d_5plUoeIpScXo3QMY1dxDVay5Pss/edit?usp=drivesdk",
+          "label": "PCT Fall 2024 Complimentary Tickets"
+        },
+        {
+          "url": "https://docs.google.com/spreadsheets/d/12VF6WIf__YTu5zUbdVVw2y10ZyqPJlBvv9Yl7ZYoM0Q/edit?usp=drivesdk",
+          "label": "Cast and Crew pub info"
+        },
+        {
+          "url": "https://docs.google.com/document/d/1vGVrIy-xcg836Oe0_hKEJTUkc5ognQxp1zcu23Poevs/edit?usp=drivesdk",
+          "label": "PCT Meeting Minutes"
+        },
+        {
+          "url": "https://docs.google.com/presentation/d/1wNiRI_fSj_GRNPe4fEofGLUIIHlxte_3Rd0bCzdNn7U/edit?usp=drivesdk",
+          "label": "First Meeting"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=2650462444&sn=6384ea2fda8800a873e09223fd1be350",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=2650462420&sn=53d83c23ff00b677dc7199bfedf67274",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=2650462433&sn=f40ed9614927b5ef3b568e0d0aec950b",
+          "label": "原始资料"
+        }
+      ]
+    },
+    {
+      "id": "2024-chess",
+      "title": "棋王",
+      "year": "2024",
+      "season": "2024-04-25至27，每日20:00（角色海报）",
+      "status": "共享盘角色海报、剧本与演员工作表确认制作、场次及导演署名",
+      "updatedAt": "2026-10-31",
+      "venue": "frist theater",
+      "performances": [
+        "2024-04-25至27，每日20:00（角色海报）"
+      ],
+      "synopsis": "物资匮乏的年代，被派往农村的知青们在艰难生活中寻找精神寄托。王一生珍惜食物，也痴迷象棋。在维持生计的需要与下棋带来的满足之间，他与身边的人各自寻找让生活值得继续的东西。",
+      "creative": [
+        {
+          "role": "原作者",
+          "name": "阿城 / Ah Cheng"
+        },
+        {
+          "role": "导演",
+          "name": "Olivia Xu"
+        },
+        {
+          "role": "副导演 / 联合导演",
+          "name": "Susan Zhang"
+        }
+      ],
+      "crew": [],
+      "cast": [
+        {
+          "role": "王一生",
+          "name": "Zeyu"
+        },
+        {
+          "role": "妈妈",
+          "name": "Angelina"
+        },
+        {
+          "role": "Sage",
+          "name": "Joshua"
+        },
+        {
+          "role": "钟阿城",
+          "name": "Hank"
+        },
+        {
+          "role": "红卫兵",
+          "name": "Tiger"
+        },
+        {
+          "role": "倪斌",
+          "name": "Gavin"
+        },
+        {
+          "role": "Young 王一生",
+          "name": "Nguyen"
+        }
+      ],
+      "poster": "/assets/archive/2024-chess.png",
+      "posterAlt": "棋王原始演出海报",
+      "sources": [
+        {
+          "url": "https://www.wayup.com/profile/Susan-Zhang-79e3ee8547/",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://docs.google.com/spreadsheets/d/1M32acDgj0i6TpuMyaa8IusUjzGe1fipdqIXwN7q0FOI/edit?usp=drivesdk",
+          "label": "Casts & Crews"
+        },
+        {
+          "url": "https://docs.google.com/document/d/1vGVrIy-xcg836Oe0_hKEJTUkc5ognQxp1zcu23Poevs/edit?usp=drivesdk",
+          "label": "PCT Meeting Minutes"
+        },
+        {
+          "url": "https://docs.google.com/document/d/1UYwzfrG3B0cp6qHoJZRW3ZRM7AeLTE7DkZxqY4OlTYc/edit?usp=drivesdk",
+          "label": "1/22/24 Meeting Minutes"
+        },
+        {
+          "url": "https://docs.google.com/document/d/1Y3ak4I7CJTcE8yzneoLJ3KD_o3rHlK0Hqzq1bgON45Q/edit?usp=drivesdk",
+          "label": "Pub plan"
+        },
+        {
+          "url": "https://drive.google.com/file/d/14BP_RsseHaq0JuQREmGTQBGAbT5gFZyC/view?usp=drivesdk",
+          "label": "Caroline.pdf"
+        },
+        {
+          "url": "https://drive.google.com/file/d/19tlHf_ejMvr8uh-7xfQhp_jJOojQhaD4/view?usp=drivesdk",
+          "label": "Steven_Hank.pdf"
+        }
+      ]
+    },
+    {
+      "id": "2023-thunderstorm",
+      "title": "雷雨（2023版）",
+      "year": "2023",
+      "season": "2023-12-07、08日19:30；09日14:00、19:30",
+      "status": "公众号同期购票公告与制作回顾确认",
+      "updatedAt": "2026-10-31",
+      "venue": "whiman theater",
+      "performances": [
+        "2023-12-07 19:30",
+        "2023-12-08 19:30",
+        "2023-12-09 14:00",
+        "2023-12-09 19:30"
+      ],
+      "synopsis": "一个闷热的夏日，周公馆里积压多年的矛盾逐渐爆发。周萍与女佣四凤相恋，继母繁漪不愿放开与周萍的秘密关系，而弟弟周冲也爱着四凤。随着四凤的母亲鲁侍萍来到周家，她与周朴园之间尘封的往事被揭开，两家人的血缘与情感纠葛在雷雨之夜走向悲剧。",
+      "creative": [
+        {
+          "role": "导演团队",
+          "name": "何书忱 / Shuchen Charlie He、姜家源 / Brian Jiang"
+        }
+      ],
+      "crew": [
+        {
+          "role": "道具／灯光",
+          "name": "苗十月 / Michelle Miao"
+        },
+        {
+          "role": "道具／灯光",
+          "name": "孟琪琪 / Claire Meng"
+        },
+        {
+          "role": "音效／化妆／服装／海报设计",
+          "name": "刘蕴欣 / Gloria Liu"
+        },
+        {
+          "role": "音效",
+          "name": "闵迪安 / Dean Minello"
+        },
+        {
+          "role": "音效",
+          "name": "刘伯伟 / Bowei Liu"
+        },
+        {
+          "role": "灯光",
+          "name": "周心怡"
+        },
+        {
+          "role": "舞台监督／化妆／服装",
+          "name": "李若衡 / Cindy Li"
+        },
+        {
+          "role": "化妆／服装",
+          "name": "郑梓怡 / Tiffanie Cheng"
+        }
+      ],
+      "cast": [
+        {
+          "role": "周冲",
+          "name": "陈君何"
+        },
+        {
+          "role": "四凤",
+          "name": "任益霖 / Shirley Ren"
+        },
+        {
+          "role": "周萍",
+          "name": "王则语 / Steven Wang"
+        },
+        {
+          "role": "侍萍",
+          "name": "陈珊珊"
+        },
+        {
+          "role": "鲁贵",
+          "name": "姜家源 / Brian Jiang"
+        },
+        {
+          "role": "大海",
+          "name": "黄冠棋"
+        },
+        {
+          "role": "繁漪",
+          "name": "于佳彤 / Jiatong Yu"
+        },
+        {
+          "role": "周朴园",
+          "name": "何书忱 / Shuchen Charlie He"
+        }
+      ],
+      "poster": "/assets/archive/2023-thunderstorm.jpg",
+      "posterAlt": "雷雨（2023版）公众号原始演出海报",
+      "sources": [
+        {
+          "url": "https://docs.google.com/presentation/d/1wNiRI_fSj_GRNPe4fEofGLUIIHlxte_3Rd0bCzdNn7U/edit?usp=drivesdk",
+          "label": "First Meeting"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=2650462297&sn=b4a37805edf6ca6ad4d3338f373c2296",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=2650462313&sn=825ea9fafd27a9e4d2f2f0717ece775c",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=2650462319&sn=fbac17fdde0614d0169ded63686e7605",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=2650462325&sn=0bcd275f9c03a6dc8ddc3254c2e2d1ba",
+          "label": "原始资料"
+        }
+      ]
+    },
+    {
+      "id": "2023-dragons",
+      "title": "亢龙有悔",
+      "year": "2023",
+      "season": "2023-05-05 20:00；06日13:30、20:00；07日13:30",
+      "status": "公众号正式购票与角色海报公告确认",
+      "updatedAt": "2026-10-31",
+      "titleEn": "Dragons in Despair",
+      "venue": "whiman theater",
+      "performances": [
+        "2023-05-05 20:00",
+        "2023-05-06 13:30",
+        "2023-05-06 20:00",
+        "2023-05-07 13:30"
+      ],
+      "language": "英文为主、穿插中文对白，配中文字幕",
+      "synopsis": "二十世纪初的上海，斧头帮横行，四位功夫高手决定与其抗衡。郭靖、黄蓉、张三丰与杨康走进这个新的江湖，而帮内四位首领也各怀心思。外有强敌、内有争斗，尤其是三哥朱雀的谋划，让这场较量不再只是武力之间的胜负。",
+      "creative": [
+        {
+          "role": "导演",
+          "name": "王品 / Philip Wang"
+        },
+        {
+          "role": "副导演 / 联合导演",
+          "name": "Elliot Lee、Angela Tan"
+        }
+      ],
+      "crew": [
+        {
+          "role": "文案／排版",
+          "name": "马乐原 / Leyuan Ma"
+        },
+        {
+          "role": "海报设计",
+          "name": "Briony Zhao、David Huang、Pia Capili"
+        },
+        {
+          "role": "贴纸设计",
+          "name": "Meryl Liu"
+        }
+      ],
+      "cast": [
+        {
+          "role": "黄蓉",
+          "name": "Kayla Xu"
+        },
+        {
+          "role": "郭靖",
+          "name": "林浩溢 / Hank Lin"
+        },
+        {
+          "role": "张三丰",
+          "name": "Drew Comstock"
+        },
+        {
+          "role": "杨康",
+          "name": "姜家源 / Brian Jiang"
+        },
+        {
+          "role": "林晚",
+          "name": "Icey Ai"
+        },
+        {
+          "role": "算命先生",
+          "name": "王品 / Philip Wang"
+        },
+        {
+          "role": "打手",
+          "name": "Rachel Chen"
+        },
+        {
+          "role": "打手",
+          "name": "Elinald Desroches"
+        },
+        {
+          "role": "打手",
+          "name": "Allison Ha"
+        },
+        {
+          "role": "玄武",
+          "name": "Anne Wen"
+        },
+        {
+          "role": "乙",
+          "name": "王则语 / Steven Wang"
+        },
+        {
+          "role": "甲",
+          "name": "Sophie Dai"
+        },
+        {
+          "role": "青龙",
+          "name": "Elliot Lee"
+        },
+        {
+          "role": "朱雀",
+          "name": "Chloe Yang"
+        },
+        {
+          "role": "白虎",
+          "name": "Cathy Di"
+        }
+      ],
+      "poster": "/assets/archive/2023-dragons.png",
+      "posterAlt": "亢龙有悔公众号原始演出海报",
+      "sources": [
+        {
+          "url": "https://drive.google.com/file/d/10PDrepz0ItVEUubSLYqx31lng9pu0hHr/view?usp=drivesdk",
+          "label": "2023 Spring【亢龙有悔 (Dragons in Despair)】"
+        },
+        {
+          "url": "https://docs.google.com/document/d/1vwU9p6SKMgVRB7MRNYFelD5hlJIBtbaYUpZ7ElMLgdw/edit?usp=drivesdk",
+          "label": "PCT 2023-24 Fall Proposal"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=2650462254&sn=c044d5c6add8344741fb0b329471903a",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=2650462244&sn=f6ad4030c6df97528ccb7b86cf52c851",
+          "label": "原始资料"
+        }
+      ]
+    },
+    {
+      "id": "2022-piano-factory",
+      "title": "钢的琴",
+      "year": "2022",
+      "season": "2022-12-08、09日20:00；10日15:30、20:30",
+      "status": "公众号同期公演购票公告确认",
+      "updatedAt": "2026-10-31",
+      "titleEn": "Piano in the Factory",
+      "venue": "frist theater",
+      "performances": [
+        "2022-12-08 20:00",
+        "2022-12-09 20:00",
+        "2022-12-10 15:30",
+        "2022-12-10 20:30"
+      ],
+      "synopsis": "钢厂工人陈桂林下岗后，靠组建小乐队维持生活。妻子归来争夺女儿的抚养权，而女儿只想要一架钢琴。买不起、借不到，连偷琴的计划也告失败，陈桂林便召集昔日工友，回到废弃厂房，决定亲手为女儿造出一架钢琴。",
+      "creative": [
+        {
+          "role": "编剧",
+          "name": "Briony Zhao"
+        },
+        {
+          "role": "导演",
+          "name": "Briony Zhao"
+        }
+      ],
+      "crew": [],
+      "cast": [
+        {
+          "role": "陈桂林",
+          "name": "何书忱 / Shuchen Charlie He"
+        },
+        {
+          "role": "王抗美",
+          "name": "赵顶如 / Briony Zhao"
+        },
+        {
+          "role": "大刘",
+          "name": "姜家源 / Brian Jiang"
+        },
+        {
+          "role": "季哥",
+          "name": "管曜 / Christopher Guan"
+        },
+        {
+          "role": "快手",
+          "name": "薛淇芸 / Shirley Xue"
+        },
+        {
+          "role": "胖头",
+          "name": "王则语 / Steven Wang"
+        },
+        {
+          "role": "汪工",
+          "name": "王品 / Philip Wang"
+        },
+        {
+          "role": "淑娴",
+          "name": "郑梓怡 / Tiffanie Cheng"
+        },
+        {
+          "role": "小元",
+          "name": "李文轩 / Wenxuan Li"
+        },
+        {
+          "role": "小菊",
+          "name": "曾元芳 / Jennifer Zeng"
+        },
+        {
+          "role": "老师",
+          "name": "高江滢 / Jingjing Gao"
+        },
+        {
+          "role": "二姐",
+          "name": "陈珊珊 / Sandra Chen"
+        },
+        {
+          "role": "陈父",
+          "name": "贾茂辰 / Shigetatsu Nishigai"
+        },
+        {
+          "role": "安昌业",
+          "name": "Yuqi Nie"
+        }
+      ],
+      "poster": "/assets/archive/2022-piano-factory.jpg",
+      "posterAlt": "钢的琴公众号原始演出海报",
+      "sources": [
+        {
+          "url": "https://drive.google.com/file/d/12becoDltD_GjxaLykdN9Jx4fWd7Si6pZ/view?usp=drivesdk",
+          "label": "2022 Fall【钢的琴 (The Piano in a Factory)】"
+        },
+        {
+          "url": "https://docs.google.com/document/d/1vwU9p6SKMgVRB7MRNYFelD5hlJIBtbaYUpZ7ElMLgdw/edit?usp=drivesdk",
+          "label": "PCT 2023-24 Fall Proposal"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=2650462168&sn=0ed4b2755d0738213dc29efa8d658259",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=2650462156&sn=35f2ab6bb58ceb2e91f6dd10034239ac",
+          "label": "原始资料"
+        }
+      ]
+    },
+    {
+      "id": "2022-journey",
+      "title": "大话西游之重回东土",
+      "year": "2022",
+      "season": "2022-03-25 20:00；03-26 14:00、20:00；03-27 14:00（节目册封面）",
+      "status": "共享盘节目册及原创音乐剧招募文件确认PCT制作",
+      "updatedAt": "2026-10-31",
+      "titleEn": "Journey to the West 2—Going Home",
+      "venue": "Drapkin Theatre",
+      "performances": [
+        "2022-03-25 20:00；03-26 14:00、20:00；03-27 14:00（节目册封面）"
+      ],
+      "synopsis": "唐僧、悟空、八戒与沙僧历经重重艰险，终于取得真经。但取经成功并不是故事的终点，师徒四人还要面对此后的波折与选择。这一次，故事从他们完成取经之后继续展开。",
+      "creative": [
+        {
+          "role": "编剧",
+          "name": "韩心怡 / Cindy Han、王品 / Philip Wang"
+        },
+        {
+          "role": "导演团队",
+          "name": "韩心怡 / Cindy Han、吴越雯 / Yuewen Wu、管佳鑫 / Jiaxin Guan"
+        },
+        {
+          "role": "导演",
+          "name": "韩心怡 / Cindy Han"
+        },
+        {
+          "role": "副导演 / 联合导演",
+          "name": "吴越雯 / Yuewen Wu、管佳鑫 / Jiaxin Guan"
+        },
+        {
+          "role": "音乐创作",
+          "name": "韩心怡 / Cindy Han"
+        }
+      ],
+      "crew": [
+        {
+          "role": "舞台监督",
+          "name": "曾元芳 / Jennifer Zeng"
+        },
+        {
+          "role": "舞台设计",
+          "name": "马乐原 / Leyuan Ma、曾元芳 / Jennifer Zeng"
+        },
+        {
+          "role": "灯光设计",
+          "name": "王则语 / Steven Wang、高江滢 / Jingjing Gao"
+        },
+        {
+          "role": "声音设计",
+          "name": "Angela Tan"
+        },
+        {
+          "role": "舞蹈设计",
+          "name": "Ivy Wang"
+        },
+        {
+          "role": "节目册制作",
+          "name": "沈昱彤 / Yutong Shen、王蔚亭 / Grace Wang"
+        }
+      ],
+      "cast": [
+        {
+          "role": "悟空",
+          "name": "韩心怡 / Cindy Han"
+        },
+        {
+          "role": "唐僧",
+          "name": "Icey Ai"
+        },
+        {
+          "role": "沙僧",
+          "name": "Helia Cui"
+        },
+        {
+          "role": "八戒",
+          "name": "林浩溢 / Hank Lin"
+        },
+        {
+          "role": "莺莺",
+          "name": "Briony Zhao"
+        },
+        {
+          "role": "小和尚／树",
+          "name": "Anne Wen"
+        },
+        {
+          "role": "唐太宗",
+          "name": "冮又亓 / Youqi Gang"
+        },
+        {
+          "role": "群演",
+          "name": "王品 / Philip Wang、Angela Tan、Christine Chen、于佳彤 / Jiatong Yu"
+        }
+      ],
+      "poster": "/assets/archive/2022-journey.png",
+      "posterAlt": "大话西游之重回东土原始演出海报",
+      "playbillUrl": "/assets/archive/2022-journey.docx",
+      "playbillLabel": "下载节目册（Word原文件）",
+      "sources": [
+        {
+          "url": "https://www.cellunova.org/about-us/our-team",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://docs.google.com/document/d/1f68wWU-BoBi5z9pzvyS0QAKNHHwVyVWV/edit?usp=drivesdk&ouid=100966569382750120397&rtpof=true&sd=true",
+          "label": "大话西游playbill.docx"
+        },
+        {
+          "url": "https://docs.google.com/document/d/1lT6QUMILXNHeUneU0XVerOf1qB5tJGyM/edit?usp=drivesdk&ouid=100966569382750120397&rtpof=true&sd=true",
+          "label": "Copy of 大话西游playbill.docx"
+        },
+        {
+          "url": "https://docs.google.com/document/d/1i2DqwtRSMo4qdOB4c9RTltouUwuGX09P/edit?usp=drivesdk&ouid=100966569382750120397&rtpof=true&sd=true",
+          "label": "Copy of Copy of 大话西游playbill.docx"
+        },
+        {
+          "url": "https://docs.google.com/document/d/1f_4JdD1SUHLM5IidFo25XCr4JlXwXt_N/edit?usp=drivesdk&ouid=100966569382750120397&rtpof=true&sd=true",
+          "label": "Copy of 大话西游playbill.docx"
+        },
+        {
+          "url": "https://docs.google.com/document/d/1N3w-RYjmfWJd8gmI-pRyNquP-Wqnl3w-ear1p72YT_0/edit?usp=drivesdk",
+          "label": "西游记 介绍"
+        },
+        {
+          "url": "https://docs.google.com/document/d/1ZLkGFSSmkP4wtkmQZ8Rrnx9a_VwdTf_IbcpsTgD7q54/edit?usp=drivesdk",
+          "label": "2022Spring PCT running agenda"
+        }
+      ]
+    },
+    {
+      "id": "2021-anlian",
+      "title": "暗恋·桃花源",
+      "year": "2021",
+      "season": "2021-12-02至04，20:00–22:00（节目册封面）",
+      "status": "共享盘完整节目册、封面及演出录像文件确认",
+      "updatedAt": "2026-10-31",
+      "venue": "whiman theater",
+      "performances": [
+        "2021-12-02至04，20:00–22:00（节目册封面）"
+      ],
+      "synopsis": "两个剧组意外订下同一间排练场，不得不轮流排戏。《暗恋》讲述江滨柳与云之凡因战乱分离、多年后再度相逢的爱情；《桃花源》里，渔夫老陶逃离妻子与情人的纠葛，误入一片世外天地。两出悲喜迥异的戏在舞台上不断碰撞，失去的爱与无法回去的故乡也渐渐彼此映照。",
+      "creative": [
+        {
+          "role": "原作编剧",
+          "name": "赖声川 / Stan Lai"
+        },
+        {
+          "role": "导演",
+          "name": "高江滢 / Jingjing Gao"
+        },
+        {
+          "role": "助理导演",
+          "name": "杨清 / Clarice Yang"
+        }
+      ],
+      "crew": [
+        {
+          "role": "舞台监督",
+          "name": "Yingxi Lin"
+        },
+        {
+          "role": "舞台设计",
+          "name": "张卿安 / Qingan Zhang、曾元芳 / Jennifer Zeng、贺昕妍 / Xinyan He"
+        },
+        {
+          "role": "灯光设计",
+          "name": "张卿安 / Qingan Zhang、刘伯伟 / Bowei Liu、薛淇芸 / Shirley Xue"
+        },
+        {
+          "role": "声音设计",
+          "name": "崔若晖 / Ruohui Cui、邵冰轮 / Binglun Shao"
+        },
+        {
+          "role": "服装／道具负责人",
+          "name": "姚昕彤 / Gracie Yao"
+        },
+        {
+          "role": "服装／道具负责人",
+          "name": "黄垲茵 / Rosalind Huang"
+        },
+        {
+          "role": "道具",
+          "name": "贺昕妍 / Xinyan He"
+        },
+        {
+          "role": "摄影",
+          "name": "Zheyi Zhu"
+        }
+      ],
+      "cast": [
+        {
+          "role": "云之凡",
+          "name": "方成之 / Julie Fang"
+        },
+        {
+          "role": "江滨柳",
+          "name": "管佳鑫 / Jiaxin Guan"
+        },
+        {
+          "role": "江太太",
+          "name": "于佳彤 / Jiatong Yu"
+        },
+        {
+          "role": "小护士",
+          "name": "计新格 / Kelsey Ji"
+        },
+        {
+          "role": "袁老板",
+          "name": "管曜 / Christopher Guan"
+        },
+        {
+          "role": "剧场管理员",
+          "name": "石萧寒 / Donald Della Pietra"
+        },
+        {
+          "role": "绘景师",
+          "name": "曾元芳 / Jennifer Zeng"
+        },
+        {
+          "role": "顺子",
+          "name": "王则语 / Steven Wang"
+        },
+        {
+          "role": "老陶",
+          "name": "林浩溢 / Hank Lin"
+        },
+        {
+          "role": "春花",
+          "name": "吴越雯 / Yuewen Wu"
+        },
+        {
+          "role": "桃树",
+          "name": "冀波帆 / Bofan Ji"
+        },
+        {
+          "role": "暗恋导演",
+          "name": "刘昌硕 / Changshuo Liu"
+        },
+        {
+          "role": "神秘女人",
+          "name": "杨清 / Clarice Yang"
+        }
+      ],
+      "poster": "/assets/archive/2021-anlian.jpg",
+      "posterAlt": "暗恋·桃花源原始演出海报",
+      "playbillUrl": "/assets/archive/2021-anlian.docx",
+      "playbillLabel": "下载节目册（Word原文件）",
+      "sources": [
+        {
+          "url": "https://www.cellunova.org/about-us/our-team",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://here.org/wp-content/uploads/2022/08/Digital-Program_HID-2.pdf",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://docs.google.com/document/d/14HxBCZzDAD7xlmNNNzZ7zol1X3QY_HqH/edit?usp=drivesdk&ouid=100966569382750120397&rtpof=true&sd=true",
+          "label": "暗恋桃花源playbill 70.docx"
+        },
+        {
+          "url": "https://docs.google.com/document/d/1fn1qIqRFKJ3Z65dbyfig6yIY2CgRrbPJ/edit?usp=drivesdk&ouid=100966569382750120397&rtpof=true&sd=true",
+          "label": "Copy of 暗恋桃花源playbill 70 - December 2, 4:13 PM"
+        },
+        {
+          "url": "https://docs.google.com/document/d/1nXx5FvTRsaH2sv4MrPTPbm0LFxGpj8KQ/edit?usp=drivesdk&ouid=100966569382750120397&rtpof=true&sd=true",
+          "label": "Copy of 暗恋桃花源playbill 70.docx"
+        },
+        {
+          "url": "https://drive.google.com/file/d/1V_apVl7fH3B1bqtB7h3s5_jNgEwOsRw6/view?usp=drivesdk",
+          "label": "Secret Love in Peach Blossom Land.mpeg"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=2650461942&sn=fc2660ef9021bd602b960d09e3264e4f",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=2650461982&sn=8461d80352872774950b8b34e1fb40f0",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=2650461682&sn=b03cebcfbc9ef1693188ecc0cf3c326a",
+          "label": "原始资料"
+        }
+      ]
+    },
+    {
+      "id": "2020-lust-caution",
+      "title": "色戒（制作计划）",
+      "year": "2020",
+      "season": "2020年春（招募）",
+      "status": "公众号正式招募确认计划；是否公演待核",
+      "updatedAt": "2026-10-31",
+      "performances": [
+        "2020年春（招募）"
+      ],
+      "synopsis": "抗战时期，女学生王佳芝与同伴策划刺杀为侵略者效力的易先生。她以富商太太的身份接近目标，逐渐卷入一场必须以亲密关系维系的危险行动。随着伪装与真实感情的界线变得模糊，她必须在集体使命、个人欲望与生死之间作出选择。",
+      "creative": [],
+      "crew": [],
+      "cast": [],
+      "sources": [
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=2650461336&sn=8920c3a73bd478b00af2e901c7a91b17",
+          "label": "原始资料"
+        }
+      ]
+    },
+    {
+      "id": "2020-birdman-reading",
+      "title": "鸟人（线上剧本朗读会）",
+      "year": "2020",
+      "season": "2020年秋；10月23/24/25日为文案备选日期",
+      "status": "共享盘宣传文案及后续制作计划确认策划；实际举办待核",
+      "updatedAt": "2026-10-31",
+      "performances": [
+        "2020年秋；10月23/24/25日为文案备选日期"
+      ],
+      "synopsis": "一群痴迷养鸟的人聚在一起，把各自对往日生活的眷恋寄托在鸟笼之中。随着精神分析与戏剧治疗介入，他们的执念被当作需要解释和矫正的症状。围绕鸟与人的争论越来越荒诞，谁在治疗谁、谁才算正常，也渐渐失去了清晰的界线。",
+      "creative": [
+        {
+          "role": "原作编剧",
+          "name": "过士行"
+        },
+        {
+          "role": "导演",
+          "name": "刘昌硕 / Changshuo Liu"
+        }
+      ],
+      "crew": [],
+      "cast": [],
+      "sources": [
+        {
+          "url": "https://docs.google.com/document/d/1Mm_rZP78MIIha5yNaUvUXnCyrLQXs3vaxssoBtAytJE/edit?usp=drivesdk",
+          "label": "鸟人宣传文案"
+        },
+        {
+          "url": "https://docs.google.com/document/d/1YqP2saGlnoGJbumm8cyO5YGAE2DnLZn5V1JA8bEpMw4/edit?usp=drivesdk",
+          "label": "鸟人：后续制作计划"
+        }
+      ]
+    },
+    {
+      "id": "2019-joy-luck-club",
+      "title": "喜福会",
+      "year": "2019",
+      "season": "2019年秋；首轮会议计划12月5–7日，实际场次待核",
+      "status": "共享盘剧本、演员名单及筹备记录确认策划；公演仍待核",
+      "updatedAt": "2026-10-31",
+      "performances": [
+        "2019年秋；首轮会议计划12月5–7日，实际场次待核"
+      ],
+      "synopsis": "四位移居美国的中国母亲与各自的女儿，在亲情与文化差异中不断误解彼此。母亲们不愿轻易说出的旧事，影响着女儿对婚姻、家庭与自我的选择。当两代人开始讲述各自的经历，那些看似苛刻的期待与难以理解的沉默，也逐渐有了新的含义。",
+      "creative": [],
+      "crew": [],
+      "cast": [
+        {
+          "role": "Suyuan Woo",
+          "name": "Grace Zhao"
+        },
+        {
+          "role": "An-Mei Hsu",
+          "name": "高江滢 / Jingjing Gao"
+        },
+        {
+          "role": "Lindo Jong",
+          "name": "Joanna Zhang"
+        },
+        {
+          "role": "Ying-Ying St. Clair",
+          "name": "Yunxiu Zhou"
+        },
+        {
+          "role": "Jing-Mei Woo",
+          "name": "Patricia Chen"
+        },
+        {
+          "role": "Rose Hsu Jordan",
+          "name": "Sarah Gao"
+        },
+        {
+          "role": "Waverly Jong",
+          "name": "Hannah Wang"
+        },
+        {
+          "role": "Lena St. Clair",
+          "name": "Alice Xue"
+        },
+        {
+          "role": "Canning Woo",
+          "name": "管佳鑫 / Jiaxin Guan"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://docs.google.com/document/d/1HZCocxQ17LysSCc-iHCvil77Sl2zEO2kit3DX9Ww47M/edit?usp=drivesdk",
+          "label": "Cast List and Production Team"
+        },
+        {
+          "url": "https://docs.google.com/document/d/1h8_oeBMvkgdLEHL-vx9f-4Z6l5O4kSsE/edit?usp=drivesdk&ouid=100966569382750120397&rtpof=true&sd=true",
+          "label": "Joy Luck Club - 1st meeting [9_9_2019].docx"
+        },
+        {
+          "url": "https://drive.google.com/file/d/1YXaLAN2sjENPsrH5rKVru2WqqC_fgXP1/view?usp=drivesdk",
+          "label": "2019_fall_excerpt_1.mov"
+        },
+        {
+          "url": "https://drive.google.com/file/d/1tFvVmg8QiMs_3TBc2ZSICjmmNawtSG9_/view?usp=drivesdk",
+          "label": "2019_fall_excerpt_2.mov"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=2650461215&sn=e34995bb120c2e0d77ed88bf7afbccc9",
+          "label": "原始资料"
+        }
+      ]
+    },
+    {
+      "id": "2019-folding",
+      "title": "北京折叠？",
+      "year": "2019",
+      "season": "2019-12-05、06日晚；07日下午及晚场",
+      "status": "公众号同期正式订票与演员公告确认",
+      "updatedAt": "2026-10-31",
+      "venue": "Matthews Acting Studio, 185 Nassau Street",
+      "performances": [
+        "2019-12-05 晚场（时间待核）",
+        "2019-12-06 晚场（时间待核）",
+        "2019-12-07 下午场（时间待核）",
+        "2019-12-07 晚场（时间待核）"
+      ],
+      "synopsis": "未来的北京被分成三个相互隔离的空间，不同阶层的人过着截然不同的生活。第三空间的老刀为第二空间的青年送信，踏入自己从未接触的世界。随着跨越空间的旅程展开，亲情、爱情与城市秩序之间的裂缝逐渐显露，人们也开始面对自身情感与存在的疑问。",
+      "creative": [
+        {
+          "role": "编剧",
+          "name": "陈君鸿"
+        },
+        {
+          "role": "导演",
+          "name": "赵佳凝 / Jianing Zhao"
+        }
+      ],
+      "crew": [
+        {
+          "role": "布景设计师",
+          "name": "添添"
+        },
+        {
+          "role": "灯光设计师",
+          "name": "胡叶琛"
+        },
+        {
+          "role": "服装设计师",
+          "name": "和昊原 / Haoyuan He"
+        },
+        {
+          "role": "舞台监督",
+          "name": "沈昱彤 / Yutong Shen"
+        },
+        {
+          "role": "道具设计师",
+          "name": "刘伯伟 / Bowei Liu"
+        },
+        {
+          "role": "制作人",
+          "name": "赵奕"
+        }
+      ],
+      "cast": [
+        {
+          "role": "范蠡",
+          "name": "秦璋"
+        },
+        {
+          "role": "老刀",
+          "name": "何心怡"
+        },
+        {
+          "role": "疯女人",
+          "name": "赵佳凝 / Jianing Zhao"
+        },
+        {
+          "role": "老葛",
+          "name": "管佳鑫 / Jiaxin Guan"
+        },
+        {
+          "role": "吴闻",
+          "name": "田畅"
+        },
+        {
+          "role": "阿秦",
+          "name": "于海跃"
+        },
+        {
+          "role": "小李",
+          "name": "陈君鸿"
+        },
+        {
+          "role": "张显",
+          "name": "Simon Li"
+        },
+        {
+          "role": "依言",
+          "name": "杨清 / Clarice Yang"
+        },
+        {
+          "role": "小丁",
+          "name": "吴越雯 / Yuewen Wu"
+        }
+      ],
+      "poster": "/assets/archive/2019-folding.jpeg",
+      "posterAlt": "《北京折叠？》演出海报",
+      "sources": [
+        {
+          "url": "https://www.sohu.com/a/361835589_753472",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=2650461215&sn=e34995bb120c2e0d77ed88bf7afbccc9",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=2650461293&sn=840cb3cf4e1066fddb3219d7a597bbb3",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=2650461280&sn=54d3521b5de5789a562ae2fd9f958015",
+          "label": "原始资料"
+        }
+      ]
+    },
+    {
+      "id": "2018-fall-teahouse",
+      "title": "茶馆",
+      "titleEn": "Teahouse",
+      "season": "2018-11-16至18",
+      "year": "2018",
+      "status": "校方公告确认",
+      "performances": [
+        "2018-11-16 20:00",
+        "2018-11-17 14:00",
+        "2018-11-17 20:00",
+        "2018-11-18 20:00"
+      ],
+      "venue": "Donald G. Drapkin Studio, Lewis Arts complex",
+      "language": "英语与普通话双语（约60%英语、40%普通话）",
+      "synopsis": "北京裕泰茶馆的掌柜王利发努力维持生意，盼着靠勤快与周全让日子安稳下去。茶客们来来往往，带进清末、民国与抗战胜利后三个时期的消息和遭遇。常四爷、秦仲义等人的命运随着时代翻覆，一间茶馆也见证了普通人在动荡中求生的半个世纪。",
+      "creative": [
+        {
+          "role": "编剧",
+          "name": "老舍 / Lao She"
+        },
+        {
+          "role": "导演",
+          "name": "刘昌硕 / Changshuo Liu"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://arts.princeton.edu/news/2018/11/princeton-chinese-theatre-in-collaboration-with-the-lewis-center-for-the-arts-program-in-theater-present-teahouse-by-lao-she",
+          "label": "Lewis Center：2018年《茶馆》官方公告"
+        },
+        {
+          "url": "https://arts.princeton.edu/sites/g/files/toruqf7991/files/thr-teahouse.jpg",
+          "label": "Lewis Center：原始演出海报"
+        },
+        {
+          "url": "https://arts.princeton.edu/sites/g/files/toruqf7991/files/pr-teahouse-11-16-18.docx",
+          "label": "Lewis Center：官方新闻稿（Word）"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=2650461108&sn=abd5c6e94a50ee0d202749cd7c352d9b",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=2650461113&sn=7f30b89a5e94604ff0d7d0d923eadb2c",
+          "label": "原始资料"
+        }
+      ],
+      "updatedAt": "2026-10-31",
+      "directorNote": "制作构想整理（据校方2018年新闻稿，非导演逐字原文）：刘昌硕以半沉浸式方式呈现《茶馆》，第一幕让部分观众围坐茶桌。演出以纪念老舍的葬礼与音乐段落串联；中英文台词的分配呼应人物所处的社会环境与外来文化影响。",
+      "crew": [
+        {
+          "role": "舞台监督",
+          "name": "吴越雯 / Yuewen Wu"
+        },
+        {
+          "role": "布景设计师",
+          "name": "祝沈含 / Sophia Zhu"
+        },
+        {
+          "role": "灯光设计师",
+          "name": "胡叶琛 / Yechen Hu"
+        },
+        {
+          "role": "武术指导",
+          "name": "李昊宸 / Haochen Li"
+        },
+        {
+          "role": "音效设计师",
+          "name": "王钦石 / Qinshi Wang"
+        },
+        {
+          "role": "服装设计师",
+          "name": "安太然 / Tairan An"
+        },
+        {
+          "role": "道具设计师",
+          "name": "邵扬 / Yang Shao"
+        },
+        {
+          "role": "剧务顾问",
+          "name": "任含章 / Tommy Ren"
+        },
+        {
+          "role": "助理舞台音效师",
+          "name": "成书影 / Sarah Cheng"
+        },
+        {
+          "role": "助理舞台服装师",
+          "name": "丁如仪 / Ruyi Ding"
+        },
+        {
+          "role": "助理舞台道具师",
+          "name": "叶乃萌 / Mona Ye"
+        },
+        {
+          "role": "音乐顾问",
+          "name": "何宇洁 / Yujie He"
+        }
+      ],
+      "cast": [
+        {
+          "role": "演员",
+          "name": "Simon Li"
+        },
+        {
+          "role": "演员",
+          "name": "Menghan Hu"
+        },
+        {
+          "role": "演员",
+          "name": "潘停云 / Megan Pan"
+        },
+        {
+          "role": "演员",
+          "name": "Haoxing Pu"
+        },
+        {
+          "role": "演员",
+          "name": "鞠锡川 / Daniel Ju"
+        },
+        {
+          "role": "演员",
+          "name": "陈述非 / Felix Chen"
+        },
+        {
+          "role": "演员",
+          "name": "Johanne Kjaersgaard"
+        },
+        {
+          "role": "演员",
+          "name": "韩心怡 / Cindy Han"
+        },
+        {
+          "role": "演员",
+          "name": "沈博初 / Everett Shen"
+        },
+        {
+          "role": "演员",
+          "name": "谭泽钧 / Joshua Tan"
+        },
+        {
+          "role": "演员",
+          "name": "邵扬 / Yang Shao"
+        },
+        {
+          "role": "演员",
+          "name": "黄炎 / Bill Huang"
+        },
+        {
+          "role": "演员",
+          "name": "Rebecca Han"
+        },
+        {
+          "role": "演员",
+          "name": "Jonathan Som"
+        },
+        {
+          "role": "演员",
+          "name": "陈君鸿 / John Chen"
+        },
+        {
+          "role": "演员",
+          "name": "高江滢 / Jingjing Gao"
+        },
+        {
+          "role": "演员",
+          "name": "冮又亓 / Youqi Gang"
+        },
+        {
+          "role": "演员",
+          "name": "王乐天 / Letian Wang"
+        },
+        {
+          "role": "演员",
+          "name": "吴肖润 / Tungsten Wu"
+        },
+        {
+          "role": "演员",
+          "name": "Yunxiu Zhou"
+        },
+        {
+          "role": "演员",
+          "name": "尹姝卉 / Shuhui Yin"
+        },
+        {
+          "role": "演员",
+          "name": "赵奕 / Yi Zhao"
+        },
+        {
+          "role": "演员",
+          "name": "管佳鑫 / Jiaxin Guan"
+        }
+      ],
+      "poster": "/assets/archive/2018-teahouse.jpg",
+      "posterAlt": "2018年《茶馆》演出海报，普林斯顿中文剧社与Lewis Center for the Arts戏剧项目合作制作"
+    },
+    {
+      "id": "2018-bean",
+      "title": "油漆未干",
+      "year": "2018",
+      "season": "2018-05-03至05日20:00",
+      "status": "公众号中英双语导演介绍、正式海报及开票信息确认",
+      "updatedAt": "2026-10-31",
+      "titleEn": "The Late Christopher Bean",
+      "venue": "whiman theater",
+      "performances": [
+        "2018-05-03 20:00",
+        "2018-05-04 20:00",
+        "2018-05-05 20:00"
+      ],
+      "synopsis": "1922年，北平郊外的冯医生收到一封来自上海的陌生电报，随后又迎来一连串不速之客。原本平静的乡下人家就此陷入一场金钱与利益的闹剧。一天之内，九个性格迥异的人为各自的利益碰撞，也显露出各自不同的面目。",
+      "creative": [
+        {
+          "role": "原作编剧",
+          "name": "René Fauchois"
+        },
+        {
+          "role": "导演",
+          "name": "管佳鑫 / Jiaxin Guan"
+        },
+        {
+          "role": "英文改编",
+          "name": "Emlyn Williams"
+        },
+        {
+          "role": "翻译",
+          "name": "欧阳予倩 / Yuqian Ouyang"
+        }
+      ],
+      "crew": [
+        {
+          "role": "定妆照摄影",
+          "name": "刘昌硕 / Changshuo Liu"
+        },
+        {
+          "role": "海报设计",
+          "name": "施云子 / Yunzi Shi"
+        },
+        {
+          "role": "宣传片导演",
+          "name": "李彦哲"
+        },
+        {
+          "role": "宣传片制作",
+          "name": "赵奕"
+        },
+        {
+          "role": "宣传片主演",
+          "name": "刘昌硕 / Changshuo Liu"
+        }
+      ],
+      "cast": [
+        {
+          "role": "演员",
+          "name": "汪洁 / Jie Wang"
+        },
+        {
+          "role": "演员",
+          "name": "曹宇新 / Klaus Yuxin Cao"
+        },
+        {
+          "role": "演员",
+          "name": "李珵瑜 / Chengyu (Benton) Li"
+        },
+        {
+          "role": "演员",
+          "name": "彭立群 / Liqun (Zoe) Peng"
+        },
+        {
+          "role": "演员",
+          "name": "赵雨嫣 / Yuyan Zhao"
+        },
+        {
+          "role": "演员",
+          "name": "朱雨清 / Rainie Yuqing Zhu"
+        },
+        {
+          "role": "冯京墨医生",
+          "name": "王钦石 / Qinshi Wang"
+        },
+        {
+          "role": "冯太太",
+          "name": "裴锦秋 / Jinqiu Pei"
+        }
+      ],
+      "poster": "/assets/archive/2018-bean.png",
+      "posterAlt": "油漆未干公众号原始演出海报",
+      "sources": [
+        {
+          "url": "https://www.cellunova.org/about-us/our-team",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=2650461084&sn=b039a4d109ca9a42438efe599f82574a",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=2650461059&sn=937cda9460cef3e50480b21077a08f71",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=2650461071&sn=da31f5cdf84edda80a1a1ccea7388366",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=2650461079&sn=c9be9e8036ae1cbf9b89d1d9e0246d3b",
+          "label": "原始资料"
+        }
+      ]
+    },
+    {
+      "id": "2017-robbery",
+      "title": "你好，打劫",
+      "year": "2017",
+      "season": "2017-04-06、07日20:00；08日14:00、20:00",
+      "status": "公众号同期公演、导演及演员资料确认",
+      "updatedAt": "2026-10-31",
+      "titleEn": "Robbery in Progress",
+      "venue": "whiman theater",
+      "performances": [
+        "2017-04-06 20:00",
+        "2017-04-07 20:00",
+        "2017-04-08 14:00",
+        "2017-04-08 20:00"
+      ],
+      "synopsis": "两名劫匪闯进银行，将四名职员困在一间狭小的房间里。警笛在外响个不停，电话一次次打断对峙，金库中的三百万元却始终近在眼前。随着僵局延长，劫匪与人质的关系发生变化，每个人原本藏在平静生活下的压力、欲望与恐惧也逐渐暴露。",
+      "creative": [
+        {
+          "role": "导演",
+          "name": "王乐天 / Letian Wang"
+        }
+      ],
+      "crew": [],
+      "cast": [
+        {
+          "role": "Sunny",
+          "name": "李天意 / Tianyi Li"
+        },
+        {
+          "role": "Ben",
+          "name": "Sylvia Lu"
+        },
+        {
+          "role": "Lucy",
+          "name": "赵佳凝 / Jianing Zhao"
+        },
+        {
+          "role": "Cruise",
+          "name": "Jackie Dong"
+        },
+        {
+          "role": "Tom",
+          "name": "Coco Chou"
+        },
+        {
+          "role": "Hanks",
+          "name": "Will Simon"
+        },
+        {
+          "role": "领导",
+          "name": "苏凤云 / Sophia Su"
+        },
+        {
+          "role": "六号",
+          "name": "Klaus Yuxin Cao"
+        },
+        {
+          "role": "Tom父亲／Lucy丈夫／银行经理",
+          "name": "Lisha Ruan"
+        },
+        {
+          "role": "Rita／DJ",
+          "name": "Sofie Kim"
+        }
+      ],
+      "poster": "/assets/archive/2017-robbery.jpg",
+      "posterAlt": "你好，打劫公众号原始演出海报",
+      "sources": [
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=2650460866&sn=d28ddaa7c56b946c7ccd2aa2ccaffe04",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=2650460840&sn=2cae1081af001373097a892dc2278c1a",
+          "label": "原始资料"
+        }
+      ]
+    },
+    {
+      "id": "2017-none",
+      "title": "无人生还",
+      "year": "2017",
+      "season": "2017-11-30至12-02日20:00",
+      "status": "同期校报确认",
+      "updatedAt": "2026-10-31",
+      "venue": "whiman theater",
+      "performances": [
+        "2017-11-30 20:00",
+        "2017-12-01 20:00",
+        "2017-12-02 20:00"
+      ],
+      "synopsis": "六名陌生人来到一座孤岛上的宅邸，一段神秘录音打破了聚会的平静。随着客人接连遭到杀害，每个人不愿示人的秘密逐一暴露。无法离开小岛的幸存者彼此猜疑，必须在凶手再次行动前找出藏在他们之中的真凶。",
+      "creative": [
+        {
+          "role": "改编",
+          "name": "赵佳凝 / Jianing Zhao"
+        },
+        {
+          "role": "导演",
+          "name": "赵佳凝 / Jianing Zhao"
+        }
+      ],
+      "crew": [
+        {
+          "role": "海报设计",
+          "name": "施云子 / Yunzi Shi"
+        },
+        {
+          "role": "宣传片制作",
+          "name": "赵奕"
+        },
+        {
+          "role": "技术总监",
+          "name": "Jackie Dong"
+        }
+      ],
+      "cast": [
+        {
+          "role": "Emily Brent",
+          "name": "Sophia Zhu"
+        },
+        {
+          "role": "Philip Lombard",
+          "name": "Qingcan Wang"
+        },
+        {
+          "role": "Ethel Rogers",
+          "name": "赵佳凝 / Jianing Zhao"
+        },
+        {
+          "role": "Vera Claythorne",
+          "name": "Michelle Wang"
+        },
+        {
+          "role": "Justice Lawrence Wargrave",
+          "name": "Arthur Li"
+        },
+        {
+          "role": "Dr. Edward Armstrong",
+          "name": "管佳鑫 / Jiaxin Guan"
+        }
+      ],
+      "poster": "/assets/archive/2017-none.png",
+      "posterAlt": "无人生还公众号原始演出海报",
+      "sources": [
+        {
+          "url": "https://www.dailyprincetonian.com/article/2017/12/review-and-then-there-were-none",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=2650460928&sn=4884b9ea284947758e7ccf6d5103cdbb",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=2650460915&sn=4e32a19402724dcc34243fd5037a02a5",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=2650460872&sn=905f18ac2b0d2bad08b8730095367121",
+          "label": "原始资料"
+        }
+      ]
+    },
+    {
+      "id": "pre2018-playhouse",
+      "title": "家家酒",
+      "year": "2016",
+      "season": "2016-03-31、04-01日20:00；04-02日14:00、20:00",
+      "status": "公众号同期导演、剧名、购票及公演报道确认",
+      "updatedAt": "2026-10-31",
+      "titleEn": "Playing House",
+      "venue": "whiman theater",
+      "performances": [
+        "2016-03-31 20:00",
+        "2016-04-01 20:00",
+        "2016-04-02 14:00",
+        "2016-04-02 20:00"
+      ],
+      "synopsis": "九个儿时的玩伴在十五年后重逢，来到海边进行一日一夜的聚会。他们骑马、嬉水、厮闹，试着在“家家酒”中重温童年。但旧日的记忆与伤痛并未消失，看似尽兴的游戏逐渐变成复仇，欢乐的重聚也走向悲剧。",
+      "creative": [
+        {
+          "role": "原作编剧",
+          "name": "金士杰"
+        },
+        {
+          "role": "导演",
+          "name": "刘昌硕 / Changshuo Liu"
+        },
+        {
+          "role": "助理导演",
+          "name": "Xiaoyu Xu"
+        },
+        {
+          "role": "艺术导演",
+          "name": "胥晓宇"
+        }
+      ],
+      "crew": [
+        {
+          "role": "技术指导",
+          "name": "苏凤云 / Sophia Su"
+        },
+        {
+          "role": "宣传指导",
+          "name": "郑天铖"
+        },
+        {
+          "role": "试镜摄影",
+          "name": "曹宇新"
+        },
+        {
+          "role": "海报设计",
+          "name": "Shirley Fu"
+        },
+        {
+          "role": "排练摄影",
+          "name": "Shirley Fu"
+        },
+        {
+          "role": "宣传片制作",
+          "name": "Siyu Yang"
+        }
+      ],
+      "cast": [
+        {
+          "role": "金玥珍",
+          "name": "邱箫宇 / Cadee Qiu"
+        },
+        {
+          "role": "林维",
+          "name": "苏凤云 / Sophia Su"
+        },
+        {
+          "role": "张惠卿",
+          "name": "曹翰文 / Hanwen Cao"
+        },
+        {
+          "role": "张令娴",
+          "name": "曹越 / Yue Cao"
+        },
+        {
+          "role": "赵自强",
+          "name": "李天意 / Tianyi Li"
+        },
+        {
+          "role": "李仲明",
+          "name": "牛乾坤 / Leo Niu"
+        },
+        {
+          "role": "李仁龙",
+          "name": "陈旃铣 / Zhanxian Chen"
+        },
+        {
+          "role": "陈庆昇",
+          "name": "李杰良 / Jie Liang Li"
+        },
+        {
+          "role": "杨智年",
+          "name": "陈晓丹 / Dan Chen"
+        }
+      ],
+      "poster": "/assets/archive/pre2018-playhouse.png",
+      "posterAlt": "家家酒公众号原始演出海报",
+      "sources": [
+        {
+          "url": "https://arts.princeton.edu/news/2018/11/princeton-chinese-theatre-in-collaboration-with-the-lewis-center-for-the-arts-program-in-theater-present-teahouse-by-lao-she",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=402833159&sn=5b0d213d97f37308db4d61d2275c872f",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=402681056&sn=7519903a80d4bce37d6f57cae060097d",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=402802167&sn=18180de5518839ea7ea95473501d61de",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=402312332&sn=fcb9c58faf70d29f63f3d233e06031b2",
+          "label": "原始资料"
+        }
+      ]
+    },
+    {
+      "id": "2016-amber",
+      "title": "琥珀",
+      "year": "2016",
+      "season": "2016-12-14至16日20:00",
+      "status": "公众号正式演出公告与节目册预览确认制作及公布场次",
+      "updatedAt": "2026-10-31",
+      "venue": "Wilson Blackbox, Princeton University",
+      "performances": [
+        "2016-12-14 20:00",
+        "2016-12-15 20:00",
+        "2016-12-16 20:00"
+      ],
+      "synopsis": "玩世不恭的高辕与博物馆解说员小优相遇。高辕以为是自己诱惑了小优，却不知道她平静的外表下藏着炽烈的感情与一个秘密。两个人被一颗心联系起来：一个什么都不相信，一个执意在脆弱的生命里寻找奇迹，在隐瞒与相互伤害中深陷爱情。",
+      "creative": [
+        {
+          "role": "编剧",
+          "name": "廖一梅 / Liao Yimei"
+        },
+        {
+          "role": "编剧",
+          "name": "廖一梅 / Liao Yimei"
+        },
+        {
+          "role": "导演",
+          "name": "陈舒捷 / Shujie Chen"
+        }
+      ],
+      "crew": [
+        {
+          "role": "艺术指导",
+          "name": "胥晓宇"
+        },
+        {
+          "role": "技术总监",
+          "name": "苏凤云 / Sophia Su"
+        },
+        {
+          "role": "舞台总监",
+          "name": "Sarah Kim"
+        },
+        {
+          "role": "灯光",
+          "name": "刘昌硕 / Changshuo Liu、王乐天 / Letian Wang"
+        },
+        {
+          "role": "音效",
+          "name": "Diana Chen"
+        },
+        {
+          "role": "道具／服装",
+          "name": "施云子 / Yunzi Shi、Jackie Dong"
+        },
+        {
+          "role": "翻译",
+          "name": "王乐天 / Letian Wang、SiTian Zhang、Jackie Dong、苏凤云 / Sophia Su"
+        },
+        {
+          "role": "演员定妆照摄影",
+          "name": "邱箫宇 / Cadee Qiu"
+        },
+        {
+          "role": "预告片导演",
+          "name": "牛乾坤 / Leo (Qiankun) Niu"
+        }
+      ],
+      "cast": [
+        {
+          "role": "高辕",
+          "name": "孙赫"
+        },
+        {
+          "role": "博士",
+          "name": "曹宇新"
+        },
+        {
+          "role": "影舞者",
+          "name": "陈志远"
+        },
+        {
+          "role": "耗子",
+          "name": "贺冠华"
+        },
+        {
+          "role": "臭皮匠",
+          "name": "毛宇俊"
+        },
+        {
+          "role": "医生",
+          "name": "蔡凌志"
+        },
+        {
+          "role": "护士",
+          "name": "金美显"
+        },
+        {
+          "role": "小优",
+          "name": "吴汭"
+        },
+        {
+          "role": "姚月月／姚妖妖",
+          "name": "赵佳凝 / Jianing Zhao"
+        }
+      ],
+      "poster": "/assets/archive/2016-amber.jpg",
+      "posterAlt": "琥珀公众号原始演出海报",
+      "playbillUrl": "/assets/archive/2016-amber-playbill-preview.pdf",
+      "playbillLabel": "查看节目册预览（原图三页）",
+      "sources": [
+        {
+          "url": "https://acsspu.princeton.edu/2016/09/21/普林斯顿中文剧社新剧《琥珀》试镜开始！！/",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=2650460815&sn=d928ca9cb342aa3ac6862daf3159c637",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=2650460806&sn=95e0dcadb93d825aa7332216c29c9ed4",
+          "label": "原始资料"
+        }
+      ]
+    },
+    {
+      "id": "pre2017-love",
+      "title": "那次奋不顾身的爱情",
+      "year": "2015",
+      "season": "2015-12-10、11日20:00；12日14:00、20:00",
+      "status": "公众号同期购票公告及演出落幕回顾确认",
+      "updatedAt": "2026-10-31",
+      "venue": "frist theater",
+      "performances": [
+        "2015-12-10 20:00",
+        "2015-12-11 20:00",
+        "2015-12-12 14:00",
+        "2015-12-12 20:00"
+      ],
+      "synopsis": "一次穿越将现代生活与二战前夕的世界连接起来。一群青年在时代动荡中相识，在爱情、友谊与共同理想之间作出选择。私人情感与对国家、同伴的责任交织，让他们面对付出与牺牲的分量。",
+      "creative": [
+        {
+          "role": "原作编剧",
+          "name": "Yanzhuo Huang"
+        },
+        {
+          "role": "导演",
+          "name": "邱箫宇 / Cadee Qiu"
+        }
+      ],
+      "crew": [
+        {
+          "role": "海报设计",
+          "name": "Zi Xiang Pan"
+        },
+        {
+          "role": "排练摄影",
+          "name": "Shirley Fu"
+        },
+        {
+          "role": "宣传片制作",
+          "name": "Siyu Yang"
+        },
+        {
+          "role": "海报设计",
+          "name": "常惠雯"
+        },
+        {
+          "role": "发声指导",
+          "name": "燕楠 / Nan Yan"
+        },
+        {
+          "role": "化妆",
+          "name": "燕楠 / Nan Yan"
+        }
+      ],
+      "cast": [
+        {
+          "role": "静宜",
+          "name": "陈舒捷 / Shujie Chen"
+        },
+        {
+          "role": "主演",
+          "name": "王乐天 / Letian Wang"
+        }
+      ],
+      "poster": "/assets/archive/pre2017-love.jpg",
+      "posterAlt": "那次奋不顾身的爱情公众号原始演出海报",
+      "sources": [
+        {
+          "url": "https://yp.wanjiaweb.com/cn/zhuanlan/zhangxi/2017-08-16-000000",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=400605557&sn=0ac6746c3c962b92b2cf369a7da03468",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=401650269&sn=e9339afad7502d3cd4369bafe91a21de",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=400587458&sn=d4c3f00a7c1f344a42c1cc16f2aea75a",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=400519353&sn=0b5b8d0742abadd89398464ac7b22e79",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=208535881&sn=2558fc7f147ee6b8a86f48a933d1bb06",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=2650460756&sn=19e5f85581f6bbaa4362aafed35cb2aa",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=2650460830&sn=0fda7b7d839833e911795fc48c6a19d7",
+          "label": "原始资料"
+        }
+      ]
+    },
+    {
+      "id": "pre2017-libai",
+      "title": "我不是李白",
+      "year": "2015",
+      "season": "2015-04-09至11日20:00；11日另有14:00场",
+      "status": "公众号同期购票公告及演出落幕回顾确认",
+      "updatedAt": "2026-10-31",
+      "venue": "whiman theater",
+      "performances": [
+        "2015-04-09 20:00",
+        "2015-04-10 20:00",
+        "2015-04-11 14:00",
+        "2015-04-11 20:00"
+      ],
+      "synopsis": "精神病院里，自称“李白”的李响与白兰度、某某、领导等病友相处。原本美好的生活被权势摧毁后，他困在自己的伤痛中；护士陪他走过这段黑暗的日子。随着病友们的故事展开，李响与惠芳阿姨也各自面对过去，在原谅与饶恕中寻找解脱。",
+      "creative": [
+        {
+          "role": "原作编剧",
+          "name": "Bo Bai"
+        },
+        {
+          "role": "导演",
+          "name": "常惠雯"
+        },
+        {
+          "role": "艺术导演",
+          "name": "曹宇新、李杰良 / Jie Liang Li"
+        }
+      ],
+      "crew": [
+        {
+          "role": "海报设计",
+          "name": "潘子翔"
+        },
+        {
+          "role": "摄影",
+          "name": "Shirley Fu"
+        },
+        {
+          "role": "摄影",
+          "name": "Alex Garzón"
+        },
+        {
+          "role": "发声指导",
+          "name": "燕楠 / Nan Yan"
+        },
+        {
+          "role": "化妆",
+          "name": "燕楠 / Nan Yan"
+        }
+      ],
+      "cast": [
+        {
+          "role": "李响 / 李白",
+          "name": "Xuling Hu"
+        },
+        {
+          "role": "护士",
+          "name": "邱箫宇 / Cadee Qiu"
+        },
+        {
+          "role": "某某",
+          "name": "刘博娜 / Briana Liu"
+        },
+        {
+          "role": "白兰度",
+          "name": "Liang Dai"
+        },
+        {
+          "role": "惠芳阿姨",
+          "name": "苏凤云 / Sophia Su"
+        },
+        {
+          "role": "医生",
+          "name": "David Zhao"
+        },
+        {
+          "role": "领导",
+          "name": "Tiancheng Zheng"
+        }
+      ],
+      "poster": "/assets/archive/pre2017-libai.jpg",
+      "posterAlt": "我不是李白公众号原始演出海报",
+      "sources": [
+        {
+          "url": "https://yp.wanjiaweb.com/cn/zhuanlan/zhangxi/2017-08-16-000000",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=204473724&sn=a7f5e2e94f4127446c38c9534deaaaf2",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=204725566&sn=27a6b05f824f717985a8f84fa0f8e587",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=204415473&sn=353bf24562820b03ab8a898bf7601ad7",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=204439506&sn=01aa2d1af08255bbb59cf73c744afc3d",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=204225574&sn=b64c043dc1b3e7ffd268d4c9db4747f7",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=203457916&sn=5c4b56ecc4078251f1c32dbddad79b7e",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=203208642&sn=e8f7257bbeef8d52759d2a257ee5436c",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=203188956&sn=a8fc2da8732c39751b41ffb72ba0f1bf",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=203557739&sn=3c3cb84945d96707d548c3907fa36682",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=203678047&sn=559d5b51503a094f2037a430242bc749",
+          "label": "原始资料"
+        }
+      ]
+    },
+    {
+      "id": "2014-donkey",
+      "title": "驴得水",
+      "year": "2014",
+      "season": "2014-12-04至06日20:00；06日另有14:00场",
+      "status": "公众号同期购票公告与首演报道确认",
+      "updatedAt": "2026-10-31",
+      "titleEn": "Mr. Mule",
+      "venue": "frist theater",
+      "performances": [
+        "2014-12-04 20:00",
+        "2014-12-05 20:00",
+        "2014-12-06 14:00",
+        "2014-12-06 20:00"
+      ],
+      "synopsis": "一所偏远乡村学校为了多领一份经费，把负责拉水的驴虚报成老师“吕得水”。上级突然前来视察，教师们只得找来铜匠冒名顶替。本想用一个谎言保住学校，却不得不用更多谎言掩饰，原本相处融洽的人也在利益与权力面前逐渐反目。",
+      "creative": [
+        {
+          "role": "导演",
+          "name": "夏沁 / Qin Xia"
+        },
+        {
+          "role": "副导演 / 联合导演",
+          "name": "陈洋 / Yang Chen"
+        }
+      ],
+      "crew": [
+        {
+          "role": "海报设计",
+          "name": "Zixiang Pan"
+        },
+        {
+          "role": "摄影",
+          "name": "陈洋 / Yang Chen"
+        },
+        {
+          "role": "摄影",
+          "name": "Xuling Hu"
+        }
+      ],
+      "cast": [
+        {
+          "role": "校长",
+          "name": "胥晓宇"
+        },
+        {
+          "role": "张一曼",
+          "name": "胡璇"
+        },
+        {
+          "role": "铁匠",
+          "name": "曹宇新"
+        },
+        {
+          "role": "铁匠老婆",
+          "name": "符姝楣"
+        },
+        {
+          "role": "裴魁山",
+          "name": "李杰良 / Jie Liang Li"
+        },
+        {
+          "role": "周铁男",
+          "name": "郑天钺"
+        },
+        {
+          "role": "佳佳",
+          "name": "Julie Chen"
+        },
+        {
+          "role": "罗斯先生",
+          "name": "Alex Garzon"
+        },
+        {
+          "role": "特派员",
+          "name": "Gavin Zhang"
+        }
+      ],
+      "poster": "/assets/archive/2014-donkey.jpg",
+      "posterAlt": "驴得水公众号原始演出海报",
+      "sources": [
+        {
+          "url": "https://www.chinaqw.com/zhwh/2014/12-17/30314.shtml",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=201289360&sn=ac127a8d68ce007291f0dbaa4fc352c2",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=201473868&sn=1d841c2d9824cc2816dd5dd6d647713f",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=200740823&sn=d025eea58ca8e76dbf1b0db76a1d93d0",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=201085495&sn=493ec7dfa91bf2388999e2fb377af5cc",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDE2MDI4OQ%3D%3D&idx=1&mid=201196962&sn=abec53fbaaf6ce9e2bd5f088ec36066d",
+          "label": "原始资料"
+        }
+      ]
+    },
+    {
+      "id": "2012-13-twelve",
+      "title": "十二人",
+      "year": "2013",
+      "season": "2013-03-07至09",
+      "status": "旧官网目录及英文资料确认",
+      "updatedAt": "2026-10-31",
+      "titleEn": "12 Angry Men",
+      "venue": "frist theater",
+      "performances": [
+        "2013-03-07 20:00",
+        "2013-03-08 20:00",
+        "2013-03-09 14:00"
+      ],
+      "synopsis": "一宗刑事案件审理结束后，十二名陪审员进入陪审室，决定被告是否有罪。原本看似明确的证据，在一名陪审员提出疑问后出现裂缝。随着讨论升级，每个人的偏见、经历与情绪都进入争论，他们必须重新检视证词，也面对自己手中判决的分量。",
+      "creative": [
+        {
+          "role": "导演",
+          "name": "朱诚铭 / Chengming Zhu"
+        },
+        {
+          "role": "副导演 / 联合导演",
+          "name": "Xuling Hu"
+        }
+      ],
+      "crew": [
+        {
+          "role": "舞台总监",
+          "name": "薛牧青"
+        },
+        {
+          "role": "道具总监",
+          "name": "黃安瑩"
+        },
+        {
+          "role": "化妆",
+          "name": "燕楠 / Nan Yan、徐培文 / Peiwen Xu"
+        },
+        {
+          "role": "灯光",
+          "name": "曲兆南 / Zhaonan Qu、张罗斌"
+        },
+        {
+          "role": "音效",
+          "name": "屠畅 / Brian Tu、顾翀 / Chong Gu"
+        },
+        {
+          "role": "字幕",
+          "name": "顾翀 / Chong Gu"
+        },
+        {
+          "role": "预告片制片",
+          "name": "杨斯羽"
+        }
+      ],
+      "cast": [
+        {
+          "role": "1号陪审员",
+          "name": "陈嘉伟 / Jiawei Chen"
+        },
+        {
+          "role": "2号陪审员",
+          "name": "陆璐 / Lu Lu"
+        },
+        {
+          "role": "3号陪审员",
+          "name": "顾诗尧 / Shiyao Gu"
+        },
+        {
+          "role": "4号陪审员",
+          "name": "吴刘琨 / Liukun Wu"
+        },
+        {
+          "role": "5号陪审员",
+          "name": "陈洋 / Yang Chen"
+        },
+        {
+          "role": "6号陪审员",
+          "name": "苏奕心 / Victoria Su"
+        },
+        {
+          "role": "7号陪审员",
+          "name": "程成 / Cheng Chen"
+        },
+        {
+          "role": "8号陪审员",
+          "name": "朱浩 / Hao Zhu"
+        },
+        {
+          "role": "9号陪审员",
+          "name": "李华泽 / Alicia Li"
+        },
+        {
+          "role": "10号陪审员",
+          "name": "明中行 / Zhongxing Ming"
+        },
+        {
+          "role": "11号陪审员",
+          "name": "梁家扬 / Kevin Leung"
+        },
+        {
+          "role": "12号陪审员",
+          "name": "马星辰 / Stella Ma"
+        },
+        {
+          "role": "旁述",
+          "name": "彭英之 / Yingzhi Peng"
+        }
+      ],
+      "poster": "/assets/archive/2012-13-twelve.jpg",
+      "posterAlt": "十二人旧版官网演出海报",
+      "sources": [
+        {
+          "url": "https://www.princeton.edu/~ctheatre/ch/ch_past.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/en/Past/12AngryMen/en_12AngryMen.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/en/Past/12AngryMen/en_12AngryMen_cast.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/ch/Past/12AngryMen/ch_12AngryMen_cast.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/ch/Past/12AngryMen/ch_12AngryMen_director.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/images/Past/12AngryMen/12AngryMen.jpg",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/ch/Past/12AngryMen/ch_12AngryMen_production.html",
+          "label": "旧版官网资料"
+        }
+      ]
+    },
+    {
+      "id": "2012-train",
+      "title": "火车站",
+      "year": "2012",
+      "season": "2012-03-29至31",
+      "status": "旧官网确认",
+      "updatedAt": "2026-10-31",
+      "titleEn": "Train Station",
+      "venue": "whiman theater",
+      "performances": [
+        "2012-03-29 20:00",
+        "2012-03-30 20:00",
+        "2012-03-31 14:00",
+        "2012-03-31 20:00"
+      ],
+      "synopsis": "八个互不相识的人在偏远车站等候一列迟迟不来的火车。漫长的等待中，他们争论、倾诉，也不断猜测列车究竟会不会停靠。有人选择继续守候，有人开始怀疑等待本身；一场普通的候车，逐渐变成每个人必须回答的人生选择。",
+      "creative": [
+        {
+          "role": "改编",
+          "name": "龙小洋 / Xiaoyang Long、顾诗尧 / Shiyao Gu、胡曲曌 / Quzhao Hu、朱诚铭 / Chengming Zhu、陈重铭 / Zhong Ming Tan"
+        },
+        {
+          "role": "导演",
+          "name": "陈重铭 / Zhong Ming Tan"
+        }
+      ],
+      "crew": [
+        {
+          "role": "舞台总监",
+          "name": "苏奕心 / Victoria Su"
+        },
+        {
+          "role": "服装总监",
+          "name": "赵翯翎 / Heling Zhao"
+        },
+        {
+          "role": "道具总监",
+          "name": "高骊 / Vivian Gao、曲安特 / Ante Qu、周煜捷 / Yujie Zhou"
+        },
+        {
+          "role": "化妆",
+          "name": "燕楠 / Nan Yan"
+        },
+        {
+          "role": "摄影",
+          "name": "叶耀文 / Yao Wen Yeh"
+        },
+        {
+          "role": "音效",
+          "name": "屠畅 / Brian Tu、陈心怡 / Xinyi Chen、翁珏 / Jue Weng"
+        },
+        {
+          "role": "灯光",
+          "name": "胡曲曌 / Quzhao Hu、何文维 / Wenwei Ho"
+        },
+        {
+          "role": "字幕",
+          "name": "吴刘琨 / Liukun Wu"
+        },
+        {
+          "role": "录像",
+          "name": "张徐凡 / Xufan Zhang"
+        },
+        {
+          "role": "预告片制片",
+          "name": "唐翱翔 / Aoxiang Tang"
+        },
+        {
+          "role": "翻译组",
+          "name": "梁家扬 / Kevin Leung、陈心怡 / Xinyi Chen、傅文礼 / Charles Fortin、冯嘉雯 / Adrienne Fung、Eric Guo、April Hu、Po Wah Moon、Mary Schulman、Jessica Wilson、吴刘琨 / Liukun Wu"
+        }
+      ],
+      "cast": [
+        {
+          "role": "大爷/老翁",
+          "name": "冯笑尘 / Alan Xiaocheng Feng"
+        },
+        {
+          "role": "女读书的/女孩",
+          "name": "李莱茵 / Laiyin Li"
+        },
+        {
+          "role": "马主任",
+          "name": "黄斯达 / Sida Huang"
+        },
+        {
+          "role": "戴眼镜的",
+          "name": "顾诗尧 / Shiyao Gu"
+        },
+        {
+          "role": "愣小子",
+          "name": "刘博娜 / Briana Liu"
+        },
+        {
+          "role": "做母亲的",
+          "name": "李梦弥 / Victoria Lee"
+        },
+        {
+          "role": "“外国人”",
+          "name": "庫克正明 / Gavin Cook"
+        },
+        {
+          "role": "过客/沉默的人",
+          "name": "朱沨 / Feng Zhu"
+        },
+        {
+          "role": "露宿街头的人",
+          "name": "师子杰 / Jacob Scheer"
+        },
+        {
+          "role": "露宿街头的人",
+          "name": "傅文礼 / Charles Fortin"
+        },
+        {
+          "role": "时尚女",
+          "name": "彭喡 / Peng Wei"
+        },
+        {
+          "role": "卖伞的",
+          "name": "王晓旻 / Eric Wang"
+        }
+      ],
+      "poster": "/assets/archive/2012-train.jpg",
+      "posterAlt": "火车站旧版官网演出海报",
+      "sources": [
+        {
+          "url": "https://www.princeton.edu/~ctheatre/ch/Past/trainstation/ch_trainstation.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/ch/Past/trainstation/ch_trainstation_cast.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/ch/ch_past.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/en/Past/trainstation/en_trainstation_cast.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/images/Past/trainstation/trainsmall.jpg",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/ch/Past/trainstation/ch_trainstation_production.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/en/Past/trainstation/en_trainstation_production.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/en/Past/trainstation/en_trainstation_translation.html",
+          "label": "旧版官网资料"
+        }
+      ]
+    },
+    {
+      "id": "2012-rhinos",
+      "title": "恋爱的犀牛",
+      "year": "2012",
+      "season": "2012-11-08至10",
+      "status": "旧官网目录及演员页确认",
+      "updatedAt": "2026-10-31",
+      "titleEn": "Rhinoceros in Love",
+      "venue": "whiman theater",
+      "performances": [
+        "2012-11-08 20:00",
+        "2012-11-09 20:00",
+        "2012-11-10 14:00",
+        "2012-11-10 20:00"
+      ],
+      "synopsis": "犀牛饲养员马路爱上邻居明明，认定她是自己生命中不可替代的人。明明却执着于另一个男人，始终无法回应他的感情。马路一次次示爱，也一次次遭到拒绝；在朋友的劝说与现实的压力下，他仍不肯放手，渐渐将爱情推向偏执与失控。",
+      "creative": [
+        {
+          "role": "导演团队",
+          "name": "陈剑飞 / Jianfei Chen、吴刘琨 / Liukun Wu"
+        }
+      ],
+      "crew": [
+        {
+          "role": "舞台总监",
+          "name": "孔怡青 / Tracie Kong、孙昕卓 / Sara Sun"
+        },
+        {
+          "role": "服装总监",
+          "name": "金琪娟 / Michelle Kiyeon Kim"
+        },
+        {
+          "role": "道具总监",
+          "name": "黃安瑩"
+        },
+        {
+          "role": "化妆",
+          "name": "燕楠 / Nan Yan"
+        },
+        {
+          "role": "灯光",
+          "name": "曲安特 / Ante Qu、陈思尧"
+        },
+        {
+          "role": "音效",
+          "name": "馮婉瑩、阮凱琪"
+        },
+        {
+          "role": "字幕",
+          "name": "Dyland Xue"
+        },
+        {
+          "role": "宣传",
+          "name": "陈思尧、陆璐 / Lu Lu、马星辰 / Stella Ma、姜楠"
+        },
+        {
+          "role": "录像",
+          "name": "杨斯羽"
+        },
+        {
+          "role": "预告片制片",
+          "name": "杨斯羽"
+        }
+      ],
+      "cast": [
+        {
+          "role": "马路",
+          "name": "陈洋 / Yang Chen"
+        },
+        {
+          "role": "明明",
+          "name": "陈嘉伟 / Jiawei Chen"
+        },
+        {
+          "role": "大仙",
+          "name": "王天龙 / Tianlong Wang"
+        },
+        {
+          "role": "牙刷",
+          "name": "古迪 / Cody Abbey"
+        },
+        {
+          "role": "黑子",
+          "name": "朱浩 / Hao Zhu"
+        },
+        {
+          "role": "红红",
+          "name": "翁珏 / Jue Weng"
+        },
+        {
+          "role": "莉莉",
+          "name": "翁其钊 / Qizhao Weng"
+        },
+        {
+          "role": "经纪人／彩票主持／学生",
+          "name": "顾翀 / Chong Gu"
+        },
+        {
+          "role": "恋爱老师／摄影师",
+          "name": "胡旭岭 / Xulin Hu"
+        }
+      ],
+      "poster": "/assets/archive/2012-rhinos.jpg",
+      "posterAlt": "恋爱的犀牛旧版官网演出海报",
+      "sources": [
+        {
+          "url": "https://www.princeton.edu/~ctheatre/ch/Past/Rhinos/ch_Rhinos.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/ch/Past/Rhinos/ch_Rhinos_cast.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/ch/Past/Rhinos/ch_Rhinos_director.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/ch/Past/Rhinos/ch_Rhinos_production.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/ch/ch_past.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/en/Past/Rhinos/en_Rhinos_cast.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/images/Past/rhinoinlove/rhino.jpg",
+          "label": "旧版官网资料"
+        }
+      ]
+    },
+    {
+      "id": "2011-fallencity",
+      "title": "倾城之恋",
+      "year": "2011",
+      "season": "2011-03-24至26",
+      "status": "旧官网及同期报道确认",
+      "updatedAt": "2026-10-31",
+      "titleEn": "Love in a Fallen City",
+      "venue": "frist theater",
+      "performances": [
+        "2011-03-24 20:00",
+        "2011-03-25 20:00",
+        "2011-03-26 14:00",
+        "2011-03-26 20:00"
+      ],
+      "synopsis": "离婚后的白流苏回到上海娘家，在亲人的冷眼中寻找新的出路。她与富商范柳原相识，两人从上海到香港，在调情与试探中各有盘算：她想要一份安稳的婚姻，他却不愿轻易许诺。直到战火逼近，他们才不得不放下算计，重新面对彼此与未来。",
+      "creative": [
+        {
+          "role": "改编",
+          "name": "沈诞琦"
+        },
+        {
+          "role": "导演团队",
+          "name": "王逸丰 / Yifeng Wang、徐培文 / Peiwen Xu"
+        }
+      ],
+      "crew": [
+        {
+          "role": "舞台总监",
+          "name": "賀子豪 / Leon Ho、陈重铭 / Zhong Ming Tan"
+        },
+        {
+          "role": "服装总监",
+          "name": "Deul Lim"
+        },
+        {
+          "role": "道具总监",
+          "name": "Xin Yang Yak"
+        },
+        {
+          "role": "化妆",
+          "name": "燕楠 / Nan Yan、胡曲曌 / Quzhao Hu"
+        },
+        {
+          "role": "音效",
+          "name": "陈隽訸 / Juanhe Tan、安博扬 / Boyang An"
+        },
+        {
+          "role": "灯光",
+          "name": "何建华 / Jianhua He、朱沨 / Feng Zhu、张徐凡 / Xufan Zhang"
+        },
+        {
+          "role": "翻译组",
+          "name": "苏婉媛 / Beatrice Soh、Adrian Low、冯嘉雯 / Adrienne Fung、安博扬 / Boyang An、朱沨 / Feng Zhu、王凯琳 / Helen Wong、陈隽訸 / Juanhe Tan、陈勘凯 / Kankai Chen、胡曲曌 / Quzhao Hu、马骁成 / Rosaline Ma"
+        }
+      ],
+      "cast": [
+        {
+          "role": "白流苏",
+          "name": "马质含 / Zhihan Ma"
+        },
+        {
+          "role": "范柳原",
+          "name": "王天龙 / Tianlong Wang"
+        },
+        {
+          "role": "白三爷",
+          "name": "金相浩 / Andrew Kim"
+        },
+        {
+          "role": "白三奶奶",
+          "name": "王碧杨 / Biyang Wang"
+        },
+        {
+          "role": "白四爷",
+          "name": "梁家扬 / Kevin Leung"
+        },
+        {
+          "role": "白四奶奶",
+          "name": "张睿 / Rui Zhang"
+        },
+        {
+          "role": "白母",
+          "name": "孔怡青 / Tracie Kong"
+        },
+        {
+          "role": "白七小姐",
+          "name": "徐梦伊 / Mengyi Xu"
+        },
+        {
+          "role": "金枝",
+          "name": "苏婉媛 / Beatrice Soh"
+        },
+        {
+          "role": "金蝉",
+          "name": "赵翯翎 / Heling Zhao"
+        },
+        {
+          "role": "徐太太",
+          "name": "王卿箴 / Sophie Wang"
+        },
+        {
+          "role": "徐先生",
+          "name": "马明凯 / Michael Medeiros"
+        },
+        {
+          "role": "萨黑夷妮公主",
+          "name": "韩池银 / Sharon Han"
+        },
+        {
+          "role": "老朱",
+          "name": "朱元亨 / Henry Chu"
+        },
+        {
+          "role": "阿栗",
+          "name": "曾美 / Sekai Zengeza"
+        },
+        {
+          "role": "英国绅士／军人",
+          "name": "纪爱文 / Arlyss Gease"
+        },
+        {
+          "role": "饭店助手／军人",
+          "name": "马雷 / Michael Bailey"
+        },
+        {
+          "role": "的士司机／军人",
+          "name": "金恩植 / Eric Kim"
+        },
+        {
+          "role": "胡先生",
+          "name": "胡瑞安 / Ryan Huynh"
+        },
+        {
+          "role": "旁白",
+          "name": "彭英之 / Yingzhi Peng"
+        }
+      ],
+      "poster": "/assets/archive/2011-fallencity.jpg",
+      "posterAlt": "倾城之恋旧版官网演出海报",
+      "sources": [
+        {
+          "url": "https://www.princeton.edu/~ctheatre/ch/Past/FallenCity/ch_fallencity.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/ch/Past/FallenCity/ch_fallencity_cast.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.chinanews.com/lxsh/2011/03-28/2934451.shtml",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/ch/ch_past.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/en/Past/FallenCity/en_fallencity_cast.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/ch/Past/FallenCity/Images/FallenCity.jpg",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/en/Past/FallenCity/en_fallencity_production.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/en/Past/FallenCity/en_fallencity_translation.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/ch/Past/FallenCity/ch_fallencity_director.html",
+          "label": "旧版官网资料"
+        }
+      ]
+    },
+    {
+      "id": "2011-27",
+      "title": "27",
+      "year": "2011",
+      "season": "2011-11-17至19",
+      "status": "旧官网及同期报道确认",
+      "updatedAt": "2026-10-31",
+      "titleEn": "27",
+      "venue": "frist theater",
+      "performances": [
+        "2011-11-17 20:00",
+        "2011-11-18 20:00",
+        "2011-11-19 14:00",
+        "2011-11-19 20:00"
+      ],
+      "synopsis": "年轻工程师蒋飞来到一座北方县城，希望开启新的生活，现实却让他的理想屡屡受挫。当日子逐渐失去方向，一通电话与一场意外相遇打破了原有的轨迹，让他重新面对自己的愿望，以及人与人之间建立联系的可能。",
+      "creative": [
+        {
+          "role": "编剧",
+          "name": "孙梅岑 / Meicen Sun"
+        },
+        {
+          "role": "导演",
+          "name": "孙梅岑 / Meicen Sun"
+        },
+        {
+          "role": "助理导演",
+          "name": "陈重铭 / Zhong Ming Tan"
+        }
+      ],
+      "crew": [
+        {
+          "role": "舞台总监",
+          "name": "朱诚铭 / Chengming Zhu"
+        },
+        {
+          "role": "后台助理",
+          "name": "Po Wah Moon、Sophia Leonard"
+        },
+        {
+          "role": "舞台设计",
+          "name": "孙昕卓 / Sara Sun、Xiuyuan Cheng"
+        },
+        {
+          "role": "道具总监",
+          "name": "张徐凡 / Xufan Zhang、翁珏 / Jue Weng"
+        },
+        {
+          "role": "服装总监",
+          "name": "赵翯翎 / Heling Zhao、金琪娟 / Michelle Kiyeon Kim、Tracy Cheng"
+        },
+        {
+          "role": "音效设计",
+          "name": "Emi Nakamura"
+        },
+        {
+          "role": "音效",
+          "name": "苏婉媛 / Beatrice Soh、王凯琳 / Helen Wong"
+        },
+        {
+          "role": "灯光",
+          "name": "曲兆南 / Zhaonan Qu、冯嘉雯 / Adrienne Fung"
+        },
+        {
+          "role": "宣传助理",
+          "name": "傅文礼 / Charles Fortin、张佳安 / Jane Cheung"
+        },
+        {
+          "role": "平面设计",
+          "name": "韦安骑 / Angela Wei"
+        },
+        {
+          "role": "化妆",
+          "name": "燕楠 / Nan Yan、胡曲曌 / Quzhao Hu"
+        },
+        {
+          "role": "翻译组",
+          "name": "苏婉媛 / Beatrice Soh、庫克正明 / Gavin Cook、Yi qing Kong、Qianxiao Li、Adrian Low、孙昕卓 / Sara Sun、Jessica Wilson、张睿 / Rui Zhang、郑浩天 / Cosmo Zheng、朱沨 / Feng Zhu、翁其钊 / Qizhao Weng"
+        }
+      ],
+      "cast": [
+        {
+          "role": "蒋飞",
+          "name": "陈隽訸 / Juanhe Tan"
+        },
+        {
+          "role": "张希",
+          "name": "冯立雪 / Lixue (Lily) Feng"
+        },
+        {
+          "role": "朱觅",
+          "name": "孙梅岑 / Meicen Sun"
+        },
+        {
+          "role": "刘可",
+          "name": "安博扬 / Boyang An"
+        },
+        {
+          "role": "王主任",
+          "name": "顾诗尧 / Shiyao Gu"
+        },
+        {
+          "role": "老郭",
+          "name": "陈勘凯 / Kankai Chen"
+        },
+        {
+          "role": "领班",
+          "name": "孔怡青 / Tracie Kong"
+        },
+        {
+          "role": "助手",
+          "name": "邢云 / Sophia Yun Xing"
+        },
+        {
+          "role": "客户",
+          "name": "古迪 / Cody Abbey"
+        },
+        {
+          "role": "朋友A（李杰）",
+          "name": "梁彦宗 / Chris Leung"
+        },
+        {
+          "role": "朋友B（郑敏）",
+          "name": "刘博娜 / Briana Liu"
+        },
+        {
+          "role": "朋友C（赵欣）",
+          "name": "梁家扬 / Kevin Leung"
+        },
+        {
+          "role": "朋友D（周妍）",
+          "name": "刘昱 / Ellen Liu"
+        },
+        {
+          "role": "朋友D（周妍）",
+          "name": "孙昕卓 / Sara Sun"
+        },
+        {
+          "role": "朋友E（杨凯）",
+          "name": "徐安民 / Benjamin Tsui"
+        },
+        {
+          "role": "主持人",
+          "name": "翁珏 / Jue Weng"
+        },
+        {
+          "role": "歌手1",
+          "name": "何文维 / Wenwei Ho"
+        },
+        {
+          "role": "歌手2",
+          "name": "黄斯达 / Sida Huang"
+        },
+        {
+          "role": "服务员",
+          "name": "郑浩天 / Cosmo Zheng"
+        },
+        {
+          "role": "黄小培（声音）",
+          "name": "何建华 / Jianhua He"
+        }
+      ],
+      "poster": "/assets/archive/2011-27.jpg",
+      "posterAlt": "27旧版官网演出海报",
+      "sources": [
+        {
+          "url": "https://www.princeton.edu/~ctheatre/ch/Past/27/ch_27.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/ch/Past/27/ch_27_cast.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/ch/Past/27/ch_27_production.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.dailyprincetonian.com/article/2011/11/campus-picks-nov-17-2011",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/ch/ch_past.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/en/Past/27/en_27_cast.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/images/Past/27/poster.jpg",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/en/Past/27/en_27_production.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/en/Past/27/en_27_translation.html",
+          "label": "旧版官网资料"
+        }
+      ]
+    },
+    {
+      "id": "2010-leiyu-tour",
+      "title": "雷雨（纽约巡演）",
+      "year": "2010",
+      "season": "2010-04-25 20:00",
+      "status": "旧官网及活动公告确认",
+      "updatedAt": "2026-10-31",
+      "titleEn": "Thunderstorm — New York Tour",
+      "venue": "The Kaye Playhouse at Hunter College",
+      "performances": [
+        "2010-04-25 20:00"
+      ],
+      "synopsis": "一个闷热的夏日，周公馆里积压多年的矛盾逐渐爆发。周萍与女佣四凤相恋，继母繁漪不愿放开与周萍的秘密关系，而弟弟周冲也爱着四凤。随着四凤的母亲鲁侍萍来到周家，她与周朴园之间尘封的往事被揭开，两家人的血缘与情感纠葛在雷雨之夜走向悲剧。",
+      "creative": [
+        {
+          "role": "导演团队",
+          "name": "龙小洋 / Xiaoyang Long、刘宇鹏 / Yupeng Liu"
+        }
+      ],
+      "crew": [
+        {
+          "role": "舞台总监",
+          "name": "牟晓蕾 / Maggie Mou"
+        },
+        {
+          "role": "制作监制",
+          "name": "周莹 / Pearl Zhou"
+        },
+        {
+          "role": "灯光",
+          "name": "韦安骑 / Angela Wei、张静媛 / Linda Zhang、翁其钊 / Qizhao Weng"
+        },
+        {
+          "role": "音效",
+          "name": "张尚骏 / Mary Zhang、徐梓曦 / Zixi Xu"
+        },
+        {
+          "role": "服装",
+          "name": "郭小珍 / Olivia Quach"
+        },
+        {
+          "role": "道具",
+          "name": "牟晓蕾 / Maggie Mou"
+        },
+        {
+          "role": "布景",
+          "name": "田爱伦 / Alexandra Trevisan"
+        },
+        {
+          "role": "化妆／表演顾问",
+          "name": "燕楠 / Nan Yan"
+        },
+        {
+          "role": "平面设计",
+          "name": "韦安骑 / Angela Wei、杨冠亚 / Georgia Yang"
+        },
+        {
+          "role": "巡演总策划",
+          "name": "孙天姝 / Tianshu Sun"
+        },
+        {
+          "role": "巡演宣传总监",
+          "name": "李莱茵 / Laiyin Li"
+        },
+        {
+          "role": "巡演宣传组",
+          "name": "马骁成 / Rosaline Ma、曹明骅 / Phillips Cao、安博扬 / Boyang An、张尚骏 / Mary Zhang、陈隽訸 / Juanhe Tan、彭柯安 / Alexander Pretko、賀子豪 / Leon Ho、郭舒悅 / Stacy Guo"
+        },
+        {
+          "role": "巡演制作总监",
+          "name": "牟晓蕾 / Maggie Mou"
+        },
+        {
+          "role": "巡演制作组",
+          "name": "刘宇鹏 / Yupeng Liu、胡曲曌 / Quzhao Hu、郭小珍 / Olivia Quach、王景声 / Gary Wang、殷骏雅 / Rick Yin、杨冠亚 / Georgia Yang、韦安骑 / Angela Wei、周莹 / Pearl Zhou"
+        },
+        {
+          "role": "巡演筹资总监",
+          "name": "龙小洋 / Xiaoyang Long"
+        },
+        {
+          "role": "巡演筹资组",
+          "name": "黄斯达 / Sida Huang、郭达明 / Damjan Korac、王梦洁 / Mengjie Wang、李杨 / May Li"
+        },
+        {
+          "role": "巡演内务总监",
+          "name": "王逸丰 / Yifeng Wang"
+        },
+        {
+          "role": "巡演内务组",
+          "name": "翁其钊 / Qizhao Weng、徐培文 / Peiwen Xu、彭于纶 / Gregory Peng、田爱伦 / Alexandra Trevisan、徐志宏 / Zhihong Xu、刘安娜 / Anna Liu"
+        }
+      ],
+      "cast": [
+        {
+          "role": "周朴园",
+          "name": "陈兆年 / Michael Chen"
+        },
+        {
+          "role": "周繁漪",
+          "name": "李柳潼 / Liutong Li"
+        },
+        {
+          "role": "周萍",
+          "name": "罗海丰 / Haifeng Luo"
+        },
+        {
+          "role": "周冲",
+          "name": "彭天镱 / Tianyi Peng"
+        },
+        {
+          "role": "鲁贵",
+          "name": "李硕 / Shuo Li"
+        },
+        {
+          "role": "鲁侍萍",
+          "name": "孙天姝 / Tianshu Sun"
+        },
+        {
+          "role": "鲁四凤",
+          "name": "李莱茵 / Laiyin Li"
+        },
+        {
+          "role": "鲁大海",
+          "name": "王逸丰 / Yifeng Wang"
+        },
+        {
+          "role": "仆人",
+          "name": "冉德宁 / Daniel Roberts"
+        },
+        {
+          "role": "修女甲",
+          "name": "文源哲 / Christine Wen"
+        },
+        {
+          "role": "修女乙",
+          "name": "马质含 / Zhihan Ma"
+        },
+        {
+          "role": "姐姐",
+          "name": "李杨 / May Li"
+        },
+        {
+          "role": "弟弟",
+          "name": "安博扬 / Boyang An"
+        }
+      ],
+      "poster": "/assets/archive/2010-leiyu-tour.jpg",
+      "posterAlt": "雷雨（纽约巡演）旧版官网演出海报",
+      "sources": [
+        {
+          "url": "https://artspiral.blogspot.com/2010/04/thunderstorm.html",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/ch/ch_past.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/images/Past/Leiyu/thunderstorm_web-2.jpg",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/ch/Past/Leiyu/ch_leiyutour_team.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/en/Past/Leiyu/en_leiyutour_team.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/ch/Past/Leiyu/ch_leiyutour_committee.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/en/Past/Leiyu/en_leiyutour_committee.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/en/Past/Leiyu/en_leiyutour_cast.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/ch/Past/Leiyu/ch_leiyutour_director.html",
+          "label": "旧版官网资料"
+        }
+      ]
+    },
+    {
+      "id": "2010-11-waiting",
+      "title": "等待",
+      "year": "2010",
+      "season": "2010-11-11至13",
+      "status": "旧官网确认",
+      "updatedAt": "2026-10-31",
+      "titleEn": "Waiting",
+      "venue": "whiman theater",
+      "performances": [
+        "2010-11-11 20:00",
+        "2010-11-12 20:00",
+        "2010-11-13 14:00",
+        "2010-11-13 20:00"
+      ],
+      "synopsis": "公园里，老人、少女、兄弟与情侣各自等待着一个人、一段往事的答案，或一次改变生活的机会。随着他们相遇、交谈，看似无关的人生逐渐交织；有人困在回忆中，有人隐瞒着秘密，也有人仍相信等待会带来希望。",
+      "creative": [
+        {
+          "role": "编剧",
+          "name": "陈隽訸 / Juanhe Tan"
+        },
+        {
+          "role": "导演团队",
+          "name": "陈隽訸 / Juanhe Tan、马骁成 / Rosaline Ma"
+        }
+      ],
+      "crew": [
+        {
+          "role": "舞台总监",
+          "name": "翁其钊 / Qizhao Weng"
+        },
+        {
+          "role": "制作总监",
+          "name": "金海彬"
+        },
+        {
+          "role": "道具／服装总监",
+          "name": "李旻旻"
+        },
+        {
+          "role": "音响",
+          "name": "靳宁、张徐凡 / Xufan Zhang"
+        },
+        {
+          "role": "灯光",
+          "name": "朱渢、朱曼云"
+        },
+        {
+          "role": "字幕技术",
+          "name": "张尚骏 / Mary Zhang"
+        },
+        {
+          "role": "化妆",
+          "name": "燕楠 / Nan Yan"
+        },
+        {
+          "role": "化妆助理",
+          "name": "胡曲曌 / Quzhao Hu"
+        }
+      ],
+      "cast": [],
+      "poster": "/assets/archive/2010-11-waiting.jpg",
+      "posterAlt": "等待旧版官网演出海报",
+      "sources": [
+        {
+          "url": "https://www.princeton.edu/~ctheatre/ch/Past/Waiting/ch_waiting.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/ch/ch_past.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/ch/Past/Waiting/ch_waiting_director.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/en/Past/Waiting/en_waiting_director.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/ch/Past/Waiting/waiting.jpg",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/ch/Past/Waiting/ch_waiting_team.html",
+          "label": "旧版官网资料"
+        }
+      ]
+    },
+    {
+      "id": "2009-10-zou",
+      "title": "邹忌讽齐王纳谏",
+      "year": "2010",
+      "season": "2009–2010学年",
+      "status": "旧官网确认",
+      "updatedAt": "2026-10-31",
+      "titleEn": "Zou and the King",
+      "venue": "frist theater",
+      "performances": [
+        "2009–2010学年"
+      ],
+      "synopsis": "齐国大夫邹忌原以为自己生活美满，武林新秀徐公的出现却让他重新审视自己。富商韩武带着难题求助，两人在言语交锋中各有盘算；朝堂上，年轻的齐威王又重用小人、疏远忠言。邹忌必须在私人困惑与朝政危机之间，寻找让君王听见劝谏的办法。",
+      "creative": [
+        {
+          "role": "导演团队",
+          "name": "龙小洋 / Xiaoyang Long、刘宇鹏 / Yupeng Liu、牟晓蕾 / Maggie Mou"
+        }
+      ],
+      "crew": [
+        {
+          "role": "舞台监督",
+          "name": "徐培文 / Peiwen Xu"
+        },
+        {
+          "role": "制作监督",
+          "name": "Hyun Sunny Suh"
+        },
+        {
+          "role": "道具监督",
+          "name": "田爱伦 / Alexandra Trevisan"
+        },
+        {
+          "role": "灯光",
+          "name": "翁其钊 / Qizhao Weng、张静媛 / Linda Zhang"
+        },
+        {
+          "role": "音效",
+          "name": "张尚骏 / Mary Zhang、徐梓曦 / Zixi Xu"
+        },
+        {
+          "role": "形象设计",
+          "name": "郭小珍 / Olivia Quach"
+        },
+        {
+          "role": "化妆助理",
+          "name": "李杨 / May Li"
+        }
+      ],
+      "cast": [
+        {
+          "role": "邹忌",
+          "name": "安博扬 / Boyang An"
+        },
+        {
+          "role": "齐王",
+          "name": "黄斯达 / Sida Huang"
+        },
+        {
+          "role": "徐玑",
+          "name": "王梦洁 / Mengjie Wang"
+        },
+        {
+          "role": "韩武",
+          "name": "陈隽訸 / Juanhe Tan"
+        },
+        {
+          "role": "邹妻",
+          "name": "邓珮琳 / Tiffany Tang"
+        },
+        {
+          "role": "婵娟（妾）",
+          "name": "马金秀 / Jenny Ma"
+        },
+        {
+          "role": "小人甲",
+          "name": "胡曲曌 / Quzhao Hu"
+        },
+        {
+          "role": "小人乙",
+          "name": "庄明隆 / Ming Loong Chng"
+        },
+        {
+          "role": "仆人",
+          "name": "王景声 / Gary Wang"
+        },
+        {
+          "role": "士兵",
+          "name": "殷骏雅 / Rick Yin"
+        },
+        {
+          "role": "比武选手1",
+          "name": "彭英之 / Yingzhi Peng、陈兆年 / Michael Chen"
+        },
+        {
+          "role": "比武选手2",
+          "name": "王逸丰 / Yifeng Wang"
+        },
+        {
+          "role": "比武选手3",
+          "name": "罗海丰 / Haifeng Luo"
+        },
+        {
+          "role": "司马迁声音",
+          "name": "彭英之 / Yingzhi Peng"
+        },
+        {
+          "role": "舞女",
+          "name": "Triple 8"
+        }
+      ],
+      "poster": "/assets/archive/2009-10-zou.jpg",
+      "posterAlt": "邹忌讽齐王纳谏旧版官网演出海报",
+      "sources": [
+        {
+          "url": "https://www.princeton.edu/~ctheatre/ch/Past/Z%2BK/ch_z%2Bk.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/ch/Past/Z%2BK/ch_z%2Bk_cast.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/ch/ch_past.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/en/Past/Z%2BK/en_z%2Bk_cast.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/images/Past/Zou%26King/poster.jpg",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/ch/Past/Z%2BK/ch_z%2Bk_team.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/ch/Past/Z%2BK/ch_z%2Bk_director.html",
+          "label": "旧版官网资料"
+        }
+      ]
+    },
+    {
+      "id": "2009-lighter",
+      "title": "打火机",
+      "year": "2009",
+      "season": "2009年秋",
+      "status": "旧官网及同期报道确认",
+      "updatedAt": "2026-10-31",
+      "titleEn": "Lighter",
+      "venue": "whiman theater",
+      "performances": [
+        "2009年秋"
+      ],
+      "synopsis": "孤儿吴敬安被陈家收养，却在养兄弟突发哮喘时迟疑伸出援手。多年后，他成为医生，一通勒索电话使往事重新浮现。为了守住如今的生活，他不得不再次面对当年的选择，以及欲望与良知之间的冲突。",
+      "creative": [
+        {
+          "role": "编剧",
+          "name": "孙梅岑 / Meicen Sun"
+        },
+        {
+          "role": "导演",
+          "name": "孙梅岑 / Meicen Sun"
+        }
+      ],
+      "crew": [],
+      "cast": [
+        {
+          "role": "吴敬安",
+          "name": "彭英之 / Yingzhi Peng"
+        },
+        {
+          "role": "海诺",
+          "name": "李莱茵 / Laiyin Li"
+        },
+        {
+          "role": "周美琪",
+          "name": "李杨 / May Li"
+        },
+        {
+          "role": "陈宝纶",
+          "name": "罗海丰 / Haifeng Luo"
+        },
+        {
+          "role": "陈先生",
+          "name": "陈兆年 / Michael Chen"
+        },
+        {
+          "role": "陈太太",
+          "name": "齐霁 / Janie Qi"
+        },
+        {
+          "role": "林警官",
+          "name": "王兆焜 / Harold Wang"
+        },
+        {
+          "role": "助手",
+          "name": "徐培文 / Peiwen Xu"
+        },
+        {
+          "role": "黄医生",
+          "name": "陈勘凯 / Kankai Chen"
+        },
+        {
+          "role": "治愈病人",
+          "name": "安立骏 / Tulio Alvarez"
+        },
+        {
+          "role": "护士长",
+          "name": "麻屹然 / Lillian Ma"
+        },
+        {
+          "role": "护士甲",
+          "name": "刘安娜 / Anna Liu"
+        },
+        {
+          "role": "护士乙",
+          "name": "马骁成 / Rosaline Ma"
+        },
+        {
+          "role": "死者／丈夫",
+          "name": "曹明骅 / Phillips Cao"
+        },
+        {
+          "role": "男同学甲",
+          "name": "黄斯达 / Sida Huang"
+        },
+        {
+          "role": "男同学乙／病人甲",
+          "name": "陆志勤 / Jorge Lugo"
+        },
+        {
+          "role": "护士丙",
+          "name": "王碧杨 / Biyang Wang"
+        },
+        {
+          "role": "医生",
+          "name": "郭达明 / Damjan Korac"
+        },
+        {
+          "role": "病人乙",
+          "name": "彭柯安 / Alexander Pretko"
+        },
+        {
+          "role": "病人丙／女同学甲",
+          "name": "郭小珍 / Olivia Quach"
+        },
+        {
+          "role": "病人丁／女同学乙",
+          "name": "田爱伦 / Alexandra Trevisan"
+        },
+        {
+          "role": "病人戊／男同学丙／仆人",
+          "name": "林镇汉 / Chern Han Lim"
+        },
+        {
+          "role": "病人己／护士丁",
+          "name": "何依倩 / Ivy He"
+        },
+        {
+          "role": "护士戊／妻子",
+          "name": "金恩亨 / Natelie Kim"
+        },
+        {
+          "role": "来电者（画外音）",
+          "name": "李硕 / Shuo Li"
+        }
+      ],
+      "poster": "/assets/archive/2009-lighter.jpg",
+      "posterAlt": "打火机旧版官网演出海报",
+      "sources": [
+        {
+          "url": "https://www.princeton.edu/~ctheatre/ch/Past/Lighter/ch_lighter.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/ch/Past/Lighter/ch_lighter_director.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/ch/Past/Lighter/ch_lighter_cast.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/ch/ch_past.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/en/Past/Lighter/en_lighter_cast.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/images/Past/Lighter/small_new1.jpg",
+          "label": "旧版官网资料"
+        }
+      ]
+    },
+    {
+      "id": "2009-leiyu",
+      "title": "雷雨",
+      "year": "2009",
+      "season": "2009-02-26至28",
+      "status": "旧官网及同期报道确认",
+      "updatedAt": "2026-10-31",
+      "titleEn": "Thunderstorm",
+      "venue": "frist theater",
+      "performances": [
+        "2009-02-26 20:00",
+        "2009-02-27 20:00",
+        "2009-02-28 14:00",
+        "2009-02-28 19:00"
+      ],
+      "synopsis": "一个闷热的夏日，周公馆里积压多年的矛盾逐渐爆发。周萍与女佣四凤相恋，继母繁漪不愿放开与周萍的秘密关系，而弟弟周冲也爱着四凤。随着四凤的母亲鲁侍萍来到周家，她与周朴园之间尘封的往事被揭开，两家人的血缘与情感纠葛在雷雨之夜走向悲剧。",
+      "creative": [
+        {
+          "role": "导演团队",
+          "name": "龙小洋 / Xiaoyang Long、刘宇鹏 / Yupeng Liu"
+        }
+      ],
+      "crew": [],
+      "cast": [
+        {
+          "role": "周朴园",
+          "name": "陈兆年 / Michael Chen"
+        },
+        {
+          "role": "周繁漪",
+          "name": "李柳潼 / Liutong Li"
+        },
+        {
+          "role": "周萍",
+          "name": "罗海丰 / Haifeng Luo"
+        },
+        {
+          "role": "周冲",
+          "name": "彭天镱 / Tianyi Peng"
+        },
+        {
+          "role": "鲁贵",
+          "name": "李硕 / Shuo Li"
+        },
+        {
+          "role": "鲁侍萍",
+          "name": "孙天姝 / Tianshu Sun"
+        },
+        {
+          "role": "鲁四凤",
+          "name": "李莱茵 / Laiyin Li"
+        },
+        {
+          "role": "鲁大海",
+          "name": "王逸丰 / Yifeng Wang"
+        },
+        {
+          "role": "仆人",
+          "name": "冉德宁 / Daniel Roberts"
+        },
+        {
+          "role": "修女甲",
+          "name": "文源哲 / Christine Wen"
+        },
+        {
+          "role": "修女乙",
+          "name": "马质含 / Zhihan Ma"
+        },
+        {
+          "role": "姐姐",
+          "name": "卜婷 / Hedy Ting Bok"
+        },
+        {
+          "role": "弟弟",
+          "name": "陈时亮 / Thomas Chen"
+        }
+      ],
+      "poster": "/assets/archive/2009-leiyu.jpg",
+      "posterAlt": "雷雨旧版官网演出海报",
+      "sources": [
+        {
+          "url": "https://www.princeton.edu/~ctheatre/ch/Past/Leiyu/ch_leiyu.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/ch/Past/Leiyu/ch_leiyu_cast.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.dailyprincetonian.com/article/2009/02/campus-picks-feb-26-2009",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/ch/ch_past.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/en/Past/Leiyu/en_leiyu_cast.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/ch/images/poster_leiyu.jpg",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/ch/Past/Leiyu/ch_leiyu_director.html",
+          "label": "旧版官网资料"
+        }
+      ]
+    },
+    {
+      "id": "2008-09-anlian",
+      "title": "暗恋桃花源",
+      "year": "2008",
+      "season": "2008-11-20至22",
+      "status": "旧官网确认",
+      "updatedAt": "2026-10-31",
+      "titleEn": "Secret Love in Peach Blossom Land",
+      "venue": "frist theater",
+      "performances": [
+        "2008-11-20 20:00",
+        "2008-11-21 20:00",
+        "2008-11-22 14:00",
+        "2008-11-22 20:00"
+      ],
+      "synopsis": "两个剧组意外订下同一间排练场，不得不轮流排戏。《暗恋》讲述江滨柳与云之凡因战乱分离、多年后再度相逢的爱情；《桃花源》里，渔夫老陶逃离妻子与情人的纠葛，误入一片世外天地。两出悲喜迥异的戏在舞台上不断碰撞，失去的爱与无法回去的故乡也渐渐彼此映照。",
+      "creative": [
+        {
+          "role": "导演团队",
+          "name": "彭英之 / Yingzhi Peng、卢陈"
+        }
+      ],
+      "crew": [
+        {
+          "role": "舞台监督",
+          "name": "姜明睿 / Mingrui Jiang"
+        },
+        {
+          "role": "助理舞台监督",
+          "name": "陈剑飞 / Jianfei Chen"
+        },
+        {
+          "role": "制作总监",
+          "name": "彭英之 / Yingzhi Peng"
+        },
+        {
+          "role": "灯光",
+          "name": "史至明 / Zhiming Shi、王藤耀 / Tengyao Wang"
+        },
+        {
+          "role": "音效",
+          "name": "王逸丰 / Yifeng Wang、王兆焜 / Harold Wang"
+        },
+        {
+          "role": "服装",
+          "name": "邓珮琳 / Tiffany Tang"
+        },
+        {
+          "role": "道具",
+          "name": "王逸丰 / Yifeng Wang"
+        }
+      ],
+      "cast": [],
+      "poster": "/assets/archive/2008-09-anlian.jpg",
+      "posterAlt": "暗恋桃花源旧版官网演出海报",
+      "sources": [
+        {
+          "url": "https://www.princeton.edu/~ctheatre/ch/Past/Anlian/ch_anlian.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/ch/Past/Anlian/ch_anlian_director.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/ch/ch_past.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/ch/images/poster_anlian.jpg",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/ch/Past/Anlian/ch_anlian_team.html",
+          "label": "旧版官网资料"
+        },
+        {
+          "url": "https://www.princeton.edu/~ctheatre/en/Past/Anlian/en_anlian_team.html",
+          "label": "旧版官网资料"
+        }
+      ]
+    },
+    {
+      "id": "pre2017-ruan",
+      "title": "阮玲玉",
+      "year": "",
+      "season": "2017年8月之前；具体年份待核",
+      "status": "第三方历史清单线索",
+      "updatedAt": "2026-10-31",
+      "performances": [
+        "2017年8月之前；具体年份待核"
+      ],
+      "synopsis": "三十年代的上海，出身贫寒的阮玲玉走进电影世界，成为备受瞩目的女演员。银幕上的成功没有让她摆脱生活中的困境：情感关系、亲近之人的索求与报刊流言不断侵入她的生活。她试图守住自己的尊严，却被推入越来越难以挣脱的舆论漩涡。",
+      "creative": [],
+      "crew": [],
+      "cast": [],
+      "sources": [
+        {
+          "url": "https://yp.wanjiaweb.com/cn/zhuanlan/zhangxi/2017-08-16-000000",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://www.info.gov.hk/gia/general/200204/03/0403136.htm",
+          "label": "原始资料"
+        }
+      ]
+    },
+    {
+      "id": "pre2017-me",
+      "title": "我和我和他和他",
+      "year": "",
+      "season": "2017年8月之前；具体年份待核",
+      "status": "第三方历史清单线索",
+      "updatedAt": "2026-10-31",
+      "performances": [
+        "2017年8月之前；具体年份待核"
+      ],
+      "synopsis": "一位台湾女主管与一位大陆男主管在香港会面，商谈两家公司的合并。谈判刚开始，两人的“另一个自己”便出现在身旁，说出本尊不愿承认的欲望与念头。公事与私情逐渐纠缠，他们也开始怀疑，彼此是否曾经相识，甚至有过一段被遗忘的爱情。",
+      "creative": [],
+      "crew": [],
+      "cast": [],
+      "sources": [
+        {
+          "url": "https://yp.wanjiaweb.com/cn/zhuanlan/zhangxi/2017-08-16-000000",
+          "label": "原始资料"
+        },
+        {
+          "url": "https://www.newton.com.tw/wiki/我和我和他和他",
+          "label": "原始资料"
+        }
+      ]
+    }
+  ],
+  "publicationStatusById": {
+    "2008-09-anlian": "published",
+    "2009-leiyu": "published",
+    "2009-lighter": "published",
+    "2009-10-zou": "published",
+    "2010-leiyu-tour": "published",
+    "2010-11-waiting": "published",
+    "2011-fallencity": "published",
+    "2011-27": "published",
+    "2012-train": "published",
+    "2012-rhinos": "published",
+    "2012-13-twelve": "published",
+    "pre2017-me": "draft",
+    "pre2017-ruan": "draft",
+    "pre2017-libai": "published",
+    "pre2017-love": "published",
+    "2014-donkey": "published",
+    "2016-amber": "published",
+    "2017-none": "published",
+    "pre2018-playhouse": "published",
+    "2018-bean": "published",
+    "2018-fall-teahouse": "published",
+    "2019-folding": "published",
+    "2021-anlian": "published",
+    "2022-journey": "published",
+    "2024-chess": "published",
+    "2026-spring-rhino": "published",
+    "2026-sheming": "draft",
+    "2019-joy-luck-club": "draft",
+    "2020-birdman-reading": "draft",
+    "2022-piano-factory": "published",
+    "2023-dragons": "published",
+    "2023-thunderstorm": "published",
+    "2024-chinglish": "published",
+    "2025-red-coast": "published",
+    "2025-fall-moses": "published",
+    "2017-robbery": "published",
+    "2020-lust-caution": "draft"
+  },
+  "researchIdBySiteId": {
+    "2008-09-anlian": "2008-09-anlian",
+    "2009-leiyu": "2009-leiyu",
+    "2009-lighter": "2009-lighter",
+    "2009-10-zou": "2009-10-zou",
+    "2010-leiyu-tour": "2010-leiyu-tour",
+    "2010-11-waiting": "2010-11-waiting",
+    "2011-fallencity": "2011-fallencity",
+    "2011-27": "2011-27",
+    "2012-train": "2012-train",
+    "2012-rhinos": "2012-rhinos",
+    "2012-13-twelve": "2012-13-twelve",
+    "pre2017-me": "pre2017-me",
+    "pre2017-ruan": "pre2017-ruan",
+    "pre2017-libai": "pre2017-libai",
+    "pre2017-love": "pre2017-love",
+    "2014-donkey": "2014-donkey",
+    "2016-amber": "2016-amber",
+    "2017-none": "2017-none",
+    "pre2018-playhouse": "pre2018-playhouse",
+    "2018-bean": "2018-bean",
+    "2018-fall-teahouse": "2018-teahouse",
+    "2019-folding": "2019-folding",
+    "2021-anlian": "2021-anlian",
+    "2022-journey": "2022-journey",
+    "2024-chess": "2024-chess",
+    "2026-spring-rhino": "2026-rhino",
+    "2026-sheming": "2026-sheming",
+    "2019-joy-luck-club": "2019-joy-luck-club",
+    "2020-birdman-reading": "2020-birdman-reading",
+    "2022-piano-factory": "2022-piano-factory",
+    "2023-dragons": "2023-dragons",
+    "2023-thunderstorm": "2023-thunderstorm",
+    "2024-chinglish": "2024-chinglish",
+    "2025-red-coast": "2025-red-coast",
+    "2025-fall-moses": "2025-moses",
+    "2017-robbery": "2017-robbery",
+    "2020-lust-caution": "2020-lust-caution"
+  }
+}

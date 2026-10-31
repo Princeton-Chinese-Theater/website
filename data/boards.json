@@ -1,0 +1,579 @@
+{
+  "updatedAt": "2026-10-31",
+  "boards": [
+    {
+      "id": "2026-2027",
+      "term": "2026–2027",
+      "note": "",
+      "source": {
+        "label": "剧社提供的 2026–2027 Board 名单",
+        "url": null
+      },
+      "members": [
+        {
+          "role": "President",
+          "roleZh": "社长",
+          "name": "Chengyu Fu ’28",
+          "nameZh": "伏澄宇 ’28"
+        },
+        {
+          "role": "Vice President",
+          "roleZh": "副社长",
+          "name": "Lucille Wang ’29",
+          "nameZh": "王珞曦 ’29"
+        },
+        {
+          "role": "Vice President",
+          "roleZh": "副社长",
+          "name": "Danny (Xuyang) Cao *30",
+          "nameZh": "曹旭洋 *30"
+        },
+        {
+          "role": "Treasurer",
+          "roleZh": "财务总监",
+          "name": "Eric Ding ’29",
+          "nameZh": "丁竹丞 ’29"
+        },
+        {
+          "role": "Artistic director",
+          "roleZh": "艺术总监",
+          "name": "Nina Li *27",
+          "nameZh": "李宜鸿 *27"
+        },
+        {
+          "role": "Alumni Outreach Chair",
+          "roleZh": "校友联络负责人",
+          "name": "Daohong Xu *28",
+          "nameZh": "徐道弘 *28"
+        },
+        {
+          "role": "Publicity (reels) chair",
+          "roleZh": "宣传负责人（Reels）",
+          "name": "Angel Tang ’27",
+          "nameZh": "汤子轩 ’27"
+        }
+      ]
+    },
+    {
+      "id": "2025-2026",
+      "term": "2025–2026",
+      "members": [
+        {
+          "role": "President",
+          "roleZh": "社长",
+          "name": "Gloria Liu ’27",
+          "nameZh": "刘蕴欣 ’27"
+        },
+        {
+          "role": "Vice president",
+          "roleZh": "副社长",
+          "name": "Jiayuan Jiang ’26",
+          "nameZh": "姜家源 ’26"
+        },
+        {
+          "role": "Treasurer",
+          "roleZh": "财务总监",
+          "name": "Chengyu Fu ’28",
+          "nameZh": "伏澄宇 ’28"
+        },
+        {
+          "role": "Artistic director",
+          "roleZh": "艺术总监",
+          "name": "Nina Li *27",
+          "nameZh": "李宜鸿 *27"
+        },
+        {
+          "role": "Alumni Outreach Chair",
+          "roleZh": "校友联络负责人",
+          "name": "Daohong Xu *28",
+          "nameZh": "徐道弘 *28"
+        },
+        {
+          "role": "Publicity (reels) chair",
+          "roleZh": "宣传负责人（Reels）",
+          "name": "Angel Tang ’27",
+          "nameZh": "汤子轩 ’27"
+        },
+        {
+          "role": "Campus Outreach",
+          "roleZh": "校内联络",
+          "name": "Dean Minello"
+        }
+      ],
+      "note": "",
+      "source": {
+        "label": "剧社提供的 2025–2026 Board 名单",
+        "url": null
+      }
+    },
+    {
+      "id": "2024-2025",
+      "term": "2024–2025",
+      "members": [
+        {
+          "role": "President",
+          "name": "Philip Wang"
+        },
+        {
+          "role": "Vice President",
+          "name": "Charlie He"
+        },
+        {
+          "role": "Treasurer",
+          "name": "Michelle Miao"
+        },
+        {
+          "role": "Artistic Director",
+          "name": "Susan Zhang"
+        },
+        {
+          "role": "Technical Director",
+          "name": "Tiffany Zhong"
+        },
+        {
+          "role": "Social Chair",
+          "name": "Brian Jiang"
+        },
+        {
+          "role": "Grad Community Liaison",
+          "name": "Bowei Liu"
+        },
+        {
+          "role": "Alumni Outreach Chair",
+          "name": "Daohong Xu"
+        },
+        {
+          "role": "Publicity Chair",
+          "name": "Michelle Miao"
+        },
+        {
+          "role": "Publicity Chair",
+          "name": "Claire Meng"
+        },
+        {
+          "role": "Publicity Chair",
+          "name": "Elinald Desroches"
+        },
+        {
+          "role": "Social Media Manager",
+          "name": "Zixuan Tang"
+        }
+      ],
+      "note": "",
+      "source": {
+        "label": "PCT 共享盘 Board 名单",
+        "url": "https://docs.google.com/spreadsheets/d/1NkiMI1WkIedI288R99eWOtmReFGdd5DLzF-97I7ZO1I/edit"
+      }
+    },
+    {
+      "id": "2023-2024",
+      "term": "2023–2024",
+      "members": [
+        {
+          "role": "",
+          "name": "Anne Jing Ping Wen"
+        },
+        {
+          "role": "",
+          "name": "Briony Zhao"
+        },
+        {
+          "role": "",
+          "name": "David Huang"
+        },
+        {
+          "role": "",
+          "name": "Leyuan Ma"
+        },
+        {
+          "role": "",
+          "name": "Philip Wang"
+        },
+        {
+          "role": "",
+          "name": "Shuchen He"
+        },
+        {
+          "role": "",
+          "name": "Wenxuan Li"
+        },
+        {
+          "role": "",
+          "name": "Yaqian Tang"
+        },
+        {
+          "role": "",
+          "name": "Steven Wang"
+        },
+        {
+          "role": "",
+          "name": "Brian Jiang"
+        },
+        {
+          "role": "",
+          "name": "Shirley Xue"
+        },
+        {
+          "role": "",
+          "name": "Haiyue Ma"
+        }
+      ],
+      "note": "原始名单未列职务。",
+      "source": {
+        "label": "PCT 共享盘 Board 名单",
+        "url": "https://docs.google.com/spreadsheets/d/1GTPtEu0sTIEANJniD2AeQQI_850f6w4tA6HknjIWI88/edit"
+      }
+    },
+    {
+      "id": "2013-2014",
+      "term": "2013–2014",
+      "note": "",
+      "members": [
+        {
+          "role": "Co-President",
+          "name": "Shiyao Gu ’14"
+        },
+        {
+          "role": "Co-President",
+          "name": "Zhong Ming Tan ’14"
+        },
+        {
+          "role": "Vice President",
+          "name": "Eva Jue Weng ’15"
+        },
+        {
+          "role": "Artistic Director",
+          "name": "Cody Abbey ’14"
+        },
+        {
+          "role": "Artistic Director",
+          "name": "Kecy Liukun Wu ’15"
+        },
+        {
+          "role": "Treasurer",
+          "name": "Chong Gu ’16"
+        },
+        {
+          "role": "Public Relations Director",
+          "name": "Jenny Jiang ’16"
+        },
+        {
+          "role": "Publicity Director",
+          "name": "Cathy Siyao Chen ’16"
+        },
+        {
+          "role": "Publicity Director",
+          "name": "Lu Lu ’16"
+        },
+        {
+          "role": "Publicity Director",
+          "name": "Stella Xingchen Ma ’16"
+        },
+        {
+          "role": "Technical Director",
+          "name": "Richard Hu ’16"
+        },
+        {
+          "role": "Webmaster",
+          "name": "Ante Qu ’15"
+        },
+        {
+          "role": "Video Designer",
+          "name": "Siyu Yang ’16"
+        },
+        {
+          "role": "Secretary",
+          "name": "Sara Sun ’16"
+        },
+        {
+          "role": "Translation Coordinator",
+          "name": "Dyland Xue ’16"
+        }
+      ],
+      "source": {
+        "label": "PCT 旧官网",
+        "url": "https://www.princeton.edu/~ctheatre/en/About/en_1314board.html"
+      }
+    },
+    {
+      "id": "2012-2013",
+      "term": "2012–2013",
+      "note": "",
+      "members": [
+        {
+          "role": "社长",
+          "name": "顾诗尧 ’14"
+        },
+        {
+          "role": "社长",
+          "name": "朱诚铭 ’13"
+        },
+        {
+          "role": "艺术总监",
+          "name": "安博扬 ’13"
+        },
+        {
+          "role": "艺术总监",
+          "name": "陈重铭 ’14"
+        },
+        {
+          "role": "财务总监",
+          "name": "翁珏 ’15"
+        },
+        {
+          "role": "公关总监",
+          "name": "冯立雪 ’15"
+        },
+        {
+          "role": "公关总监",
+          "name": "徐培文 ’13"
+        },
+        {
+          "role": "宣传指导",
+          "name": "王凯琳 ’14"
+        },
+        {
+          "role": "宣传指导",
+          "name": "吴刘琨 ’15"
+        },
+        {
+          "role": "宣传指导",
+          "name": "赵翯翎 ’14"
+        },
+        {
+          "role": "技术指导／网管",
+          "name": "屠畅 ’15"
+        },
+        {
+          "role": "秘书",
+          "name": "苏婉媛 ’14"
+        },
+        {
+          "role": "翻译总监",
+          "name": "梁家扬 ’14"
+        }
+      ],
+      "source": {
+        "label": "PCT 旧官网",
+        "url": "https://www.princeton.edu/~ctheatre/ch/About/ch_1213board.html"
+      }
+    },
+    {
+      "id": "2011-2012",
+      "term": "2011–2012",
+      "note": "",
+      "members": [
+        {
+          "role": "Co-President",
+          "name": "Yupeng Liu ’12"
+        },
+        {
+          "role": "Co-President",
+          "name": "Xiaoyang Long ’12"
+        },
+        {
+          "role": "Secretary",
+          "name": "Quzhao Hu ’12"
+        },
+        {
+          "role": "Treasurer",
+          "name": "Boyang An ’13"
+        },
+        {
+          "role": "Co-Artistic Director",
+          "name": "Meicen Sun ’12"
+        },
+        {
+          "role": "Co-Artistic Director",
+          "name": "Juanhe Tan ’13"
+        },
+        {
+          "role": "Co-Outreach Director (Lead)",
+          "name": "Tianshu Sun ’12"
+        },
+        {
+          "role": "Co-Outreach Director (Assistant)",
+          "name": "Peiwen Xu ’13"
+        },
+        {
+          "role": "Co-Publicity Director (Lead)",
+          "name": "Qizhao Weng ’13"
+        },
+        {
+          "role": "Co-Publicity Director",
+          "name": "Hoi Lam Helen Wong ’14"
+        },
+        {
+          "role": "Co-Publicity Director",
+          "name": "Shiyao Gu ’14"
+        },
+        {
+          "role": "Video Production Chair",
+          "name": "Chengming Zhu ’13"
+        },
+        {
+          "role": "Technical Director",
+          "name": "Xufan Zhang ’14"
+        },
+        {
+          "role": "Graphics Designer",
+          "name": "Angela Wei ’12"
+        },
+        {
+          "role": "Social Chair",
+          "name": "Rosaline Ma ’13"
+        },
+        {
+          "role": "Translation Coordinator",
+          "name": "Beatrice Soh ’14"
+        },
+        {
+          "role": "Webmaster",
+          "name": "Zixi Xu ’13"
+        }
+      ],
+      "source": {
+        "label": "PCT 旧官网",
+        "url": "https://www.princeton.edu/~ctheatre/en/About/en_1112board.html"
+      }
+    },
+    {
+      "id": "2009-2010",
+      "term": "2009–2010",
+      "note": "",
+      "members": [
+        {
+          "role": "社长",
+          "name": "彭英之 ’10"
+        },
+        {
+          "role": "财务总监",
+          "name": "张睿 ’10"
+        },
+        {
+          "role": "艺术总监",
+          "name": "龙小洋 ’12"
+        },
+        {
+          "role": "艺术总监",
+          "name": "刘宇鹏 ’12"
+        },
+        {
+          "role": "校内宣传委员",
+          "name": "王逸丰 ’11"
+        },
+        {
+          "role": "校内宣传委员",
+          "name": "牟晓蕾 ’12"
+        },
+        {
+          "role": "校外宣传委员",
+          "name": "马质含 ’11"
+        },
+        {
+          "role": "校外宣传委员",
+          "name": "孙天姝 ’12"
+        },
+        {
+          "role": "技术总监",
+          "name": "史至明 ’11"
+        },
+        {
+          "role": "活动总监",
+          "name": "李硕 ’10"
+        },
+        {
+          "role": "活动总监",
+          "name": "李柳潼 ’11"
+        },
+        {
+          "role": "秘书",
+          "name": "傅瑶 ’12"
+        },
+        {
+          "role": "网管",
+          "name": "徐志宏 ’12"
+        },
+        {
+          "role": "平面设计师",
+          "name": "郑辰雨 ’12"
+        },
+        {
+          "role": "挂职",
+          "name": "王崇兰 ’10"
+        },
+        {
+          "role": "挂职",
+          "name": "邓珮琳 ’10"
+        },
+        {
+          "role": "挂职",
+          "name": "易安 ’11"
+        }
+      ],
+      "source": {
+        "label": "PCT 旧官网",
+        "url": "https://www.princeton.edu/~ctheatre/ch/About/ch_0910board.html"
+      }
+    },
+    {
+      "id": "2008-2009",
+      "term": "2008–2009",
+      "note": "",
+      "members": [
+        {
+          "role": "社长",
+          "name": "彭英之 ’10"
+        },
+        {
+          "role": "财务总监",
+          "name": "张睿 ’10"
+        },
+        {
+          "role": "艺术总监",
+          "name": "易安 ’10"
+        },
+        {
+          "role": "艺术总监",
+          "name": "马质含 ’11"
+        },
+        {
+          "role": "宣传委员",
+          "name": "卢陈 ’09"
+        },
+        {
+          "role": "宣传委员",
+          "name": "邓珮琳 ’10"
+        },
+        {
+          "role": "技术总监",
+          "name": "史至明 ’11"
+        },
+        {
+          "role": "活动总监",
+          "name": "王崇兰 ’10"
+        },
+        {
+          "role": "社区联系人",
+          "name": "王逸丰 ’11"
+        },
+        {
+          "role": "中文系联系人",
+          "name": "姜明睿 ’09"
+        },
+        {
+          "role": "活动指导",
+          "name": "李硕 ’10"
+        },
+        {
+          "role": "秘书",
+          "name": "沈诞琦 ’11"
+        }
+      ],
+      "source": {
+        "label": "PCT 旧官网",
+        "url": "https://www.princeton.edu/~ctheatre/ch/About/ch_0809board.html"
+      }
+    }
+  ]
+}

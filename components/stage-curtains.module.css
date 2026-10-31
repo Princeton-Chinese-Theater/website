@@ -1,0 +1,22 @@
+.stage {
+  position: absolute;
+  inset: 0 0 auto;
+  height: var(--stage-height);
+  z-index: -1;
+  border-style: solid;
+  border-color: transparent;
+  border-width: var(--stage-valance) clamp(14px, calc((100vw - var(--page-max, 1000px)) / 2 - 40px), 170px) 0;
+  border-image-source: url('/assets/stage-curtains-mulberry.png');
+  border-image-slice: 12% 21% 0;
+  border-image-repeat: stretch;
+  /* Shift the original mulberry fabric toward the logo's red, with softer intensity. */
+  filter: hue-rotate(25deg) saturate(1.7) brightness(1.12);
+  pointer-events: none;
+  user-select: none;
+}
+
+@media (max-width: 760px) {
+  .stage {
+    border-inline-width: 10px;
+  }
+}

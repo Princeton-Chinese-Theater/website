@@ -1,0 +1,96 @@
+.cover {
+  container-type: inline-size;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  padding: 9%;
+  overflow: hidden;
+  background: #ede8dc;
+  color: var(--primary);
+  border: 1px solid var(--line);
+}
+
+.cover::before {
+  position: absolute;
+  inset: 4%;
+  border: 1px solid #792e4024;
+  content: '';
+  pointer-events: none;
+}
+
+.imprint {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+  font: 500 clamp(6px, 2.8cqw, 11px) / 1.6 var(--sans);
+  letter-spacing: .12em;
+}
+
+.mark {
+  padding-top: .1em;
+  color: var(--red);
+  font: italic clamp(12px, 6cqw, 24px) / 1 Georgia, serif;
+  letter-spacing: -.06em;
+}
+
+.names {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6cqw;
+  padding-block: 7%;
+  text-align: center;
+}
+
+.rule { width: 12%; height: 2px; flex-shrink: 0; background: var(--gold); }
+
+.title {
+  display: block;
+  max-width: 100%;
+  font-family: var(--serif);
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: .08em;
+  overflow-wrap: anywhere;
+  text-wrap: balance;
+}
+
+.short { font-size: clamp(24px, 24cqw, 96px); }
+.medium { font-size: clamp(21px, 18cqw, 72px); }
+.long { font-size: clamp(17px, 12cqw, 48px); }
+.english { font-family: Georgia, serif; letter-spacing: -.035em; line-height: 1.15; overflow-wrap: break-word; }
+.english.medium { font-size: clamp(18px, 15cqw, 60px); }
+.subtitle { max-width: 100%; color: #76626a; font: italic clamp(9px, 4.2cqw, 17px) / 1.45 Georgia, var(--serif); text-wrap: balance; }
+
+.footer {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 8px;
+  flex-shrink: 0;
+  padding-top: 7%;
+  border-top: 1px solid #792e4040;
+  font: 500 clamp(6px, 2.7cqw, 10px) / 1.5 var(--sans);
+  letter-spacing: .1em;
+}
+
+.footer > :last-child { color: var(--red); font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+@container (max-width: 120px) {
+  .imprint > :first-child, .subtitle, .footer > :first-child { display: none; }
+  .imprint { justify-content: center; }
+  .names { gap: 5px; padding-block: 4px; }
+  .title { letter-spacing: 0; line-height: 1.25; }
+  .short { font-size: 23cqw; }
+  .medium { font-size: 19cqw; }
+  .long, .english.medium { font-size: 15cqw; }
+  .footer { justify-content: center; padding-top: 4px; }
+}
