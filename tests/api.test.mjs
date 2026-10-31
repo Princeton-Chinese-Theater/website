@@ -52,27 +52,15 @@ test('media is authenticated, validated and survives storage reopening',async()=
   }finally{env.close();rmSync(folder,{recursive:true,force:true});}
 });
 
-test('maintenance import requires a temporary secret, preserves edits and draft visibility',async()=>{
-  const folder=mkdtempSync(join(tmpdir(),'pct-import-'));const env=createLocalStorage(folder);
-  const token='a'.repeat(64);
-  const production={id:'2025-import',title:'导入档案'};
-  const request=(body,key=token,headers={})=>handleApi(new Request('https://site.test/api/archive-import',{method:'POST',headers:{'Content-Type':'application/json','x-archive-import-token':key,...headers},body:JSON.stringify(body)}),env);
-  const body={production,publicationStatus:'draft'};
+test('retired maintenance import cannot write even with a former runtime secret',async()=>{
+  const folder=mkdtempSync(join(tmpdir(),'pct-retired-import-'));const env=createLocalStorage(folder);
+  env.ARCHIVE_IMPORT_TOKEN='a'.repeat(64);
   try {
-    assert.equal((await request(body)).status,404);
-    env.ARCHIVE_IMPORT_TOKEN=token;
-    assert.equal((await request(body,'wrong')).status,403);
-    assert.equal((await request(body,token,{Origin:'https://other.test'})).status,403);
-    assert.equal((await request({...body,production:{id:'invalid',title:''}})).status,400);
-    const first=await (await request(body)).json();
-    assert.equal(first.inserted,true);assert.equal(first.record.publicationStatus,'draft');
-    assert.equal((await handleApi(new Request('https://site.test/api/productions/'+production.id),env)).status,404);
-    await env.DB.prepare('UPDATE productions SET title = ?, data = ?, version = 2 WHERE id = ?').bind('线上修改',JSON.stringify({...production,title:'线上修改'}),production.id).run();
-    const repeat=await (await request({...body,publicationStatus:'published'})).json();
-    assert.equal(repeat.inserted,false);assert.equal(repeat.record.production.title,'线上修改');
-    assert.equal(repeat.record.version,2);assert.equal(repeat.record.publicationStatus,'draft');
-    assert.equal((await (await handleApi(new Request('https://site.test/api/session'),env)).json()).configured,false);
-    delete env.ARCHIVE_IMPORT_TOKEN;
-    assert.equal((await request(body)).status,404);
+    const response=await handleApi(new Request('https://site.test/api/archive-import',{
+      method:'POST',headers:{'Content-Type':'application/json','x-archive-import-token':env.ARCHIVE_IMPORT_TOKEN},
+      body:JSON.stringify({production:{id:'2025-retired',title:'不可导入'},publicationStatus:'published'}),
+    }),env);
+    assert.equal(response.status,404);
+    assert.equal((await env.DB.prepare('SELECT * FROM productions').all()).results.length,0);
   }finally{env.close();rmSync(folder,{recursive:true,force:true});}
 });

@@ -59,22 +59,6 @@ export async function handleApi(request, env) {
       if (!user.canEdit) fail(403, '后台已有其他管理员');
       return json({ canEdit: true });
     }
-    // Maintenance import is disabled unless a temporary server-side secret is set.
-    // It never enrolls an administrator or overwrites an existing record.
-    if (url.pathname === '/api/archive-import' && request.method === 'POST') {
-      if (typeof env.ARCHIVE_IMPORT_TOKEN !== 'string' || env.ARCHIVE_IMPORT_TOKEN.length < 32) fail(404, '导入入口未启用');
-      const supplied = request.headers.get('x-archive-import-token') || '';
-      const digest = async value => new Uint8Array(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(value)));
-      const expectedHash = await digest(env.ARCHIVE_IMPORT_TOKEN), suppliedHash = await digest(supplied);
-      let mismatch = 0;
-      for (let i = 0; i < expectedHash.length; i++) mismatch |= expectedHash[i] ^ suppliedHash[i];
-      if (mismatch) fail(403, '没有导入权限');
-      const body = await readBody(request); validateRecord(body);
-      const p = body.production, now = new Date().toISOString();
-      const result = await env.DB.prepare('INSERT OR IGNORE INTO productions (id, title, data, publication_status, version, created_at, updated_at) VALUES (?, ?, ?, ?, 1, ?, ?)')
-        .bind(p.id, p.title, JSON.stringify(p), body.publicationStatus, now, now).run();
-      return json({ inserted: !!result.meta.changes, record: decodeRow(await env.DB.prepare('SELECT * FROM productions WHERE id = ?').bind(p.id).first()) });
-    }
     if (url.pathname === '/api/productions' && request.method === 'GET') {
       const all = url.searchParams.get('scope') === 'all';
       if (all) await requireAdmin(request, env);

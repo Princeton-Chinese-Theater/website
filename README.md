@@ -81,9 +81,11 @@ npm run build
 
 ## 历史档案导入线上
 
-日常更新使用管理后台。首次批量迁移使用 `python3 scripts/import-online-archive.py`，从本机数据库读取 `data/curated-archive.json` 中对应的剧目，保留本机最新编辑与发布／草稿状态；按编号只插入缺少的记录，已有线上内容一律保留。
+日常更新使用管理后台。2026-10-31 的首次迁移使用 `scripts/import-online-archive.py`，从本机数据库读取37条对应档案，保留最新编辑与发布／草稿状态；按编号只插入缺少的记录，未覆盖线上数据。
 
-维护时通过 Sites 将随机的 `ARCHIVE_IMPORT_TOKEN` 设置为临时运行时 secret 并部署。脚本以隐藏输入接收 `url`、`serviceToken`、`importToken` JSON，不把凭证写入文件。导入前核对线上海报和节目册，源数据快照、逐条结果和总结保存到忽略提交的 `.local-data/online-import-backups/`。缺少文件的可选剧照会被排除并记录，海报或节目册缺失则停止。导入后删除运行时 secret 并重新部署，确认 `/api/archive-import` 返回 404。此入口不能登记管理员，也不能修改已有记录；默认未配置 secret 时关闭。
+导入前检查了36个线上海报／节目册附件，导入后验证了31条已发布剧目与6条草稿的可见性。缺少文件的摩西剧照 `/assets/moses-stage.jpg` 已在本次导出中排除，原始本机记录未修改。源数据快照、排除项、逐条结果和总结保存到忽略提交的 `.local-data/online-import-backups/20261031T224817Z/`。
+
+临时 `ARCHIVE_IMPORT_TOKEN` 已从 Sites 运行时配置删除，`/api/archive-import` 路由也已从生产代码移除。导入脚本作为本次迁移的记录保留，不能直接再次执行；后续批量迁移需要单独准备受保护的维护入口。首次管理员登录与登记仍通过 `/admin/` 完成。
 
 ## 本地历史档案资料
 

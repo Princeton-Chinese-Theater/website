@@ -1,5 +1,7 @@
 """Explicit online import. Credentials are read from hidden stdin, never files.
 
+Archived runner for the 2026-10-31 migration; its temporary endpoint is now removed.
+Do not run again without explicitly restoring a protected maintenance endpoint.
 Run from the project root after deploying with temporary ARCHIVE_IMPORT_TOKEN.
 Input JSON: url, serviceToken (Sites access), importToken (maintenance access).
 Remove the runtime import secret and redeploy after a successful import.
