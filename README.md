@@ -18,7 +18,7 @@
 
 后台可保存草稿、发布、编辑，或把已发布内容保存为草稿以撤下展示。草稿只对管理员可见。更新使用版本号检查，旧窗口不能直接覆盖较新修改。文本以 React 纯文本输出，外链限定 HTTP(S)；上传文件按实际文件头检查，只支持 JPG、PNG、WebP、GIF 与 PDF，每个最多 10 MB。
 
-上传文件后需要保存剧目才会引用该文件。JSON 导出用于备份，不再是发布流程。共享盘资料已手动接入本机数据库：32条可在 `/archive/` 查看，6条待核记录保留为后台草稿；线上数据库没有导入本批资料。
+上传文件后需要保存剧目才会引用该文件。JSON 导出用于备份，不再是发布流程。2026-10-31 已将本机37条历史档案导入线上数据库：31条已发布，6条待核记录保留为后台草稿。后续本机编辑仍不会自动同步线上。
 
 ## 本地开发
 
@@ -83,7 +83,7 @@ npm run build
 
 日常更新使用管理后台。首次批量迁移使用 `python3 scripts/import-online-archive.py`，从本机数据库读取 `data/curated-archive.json` 中对应的剧目，保留本机最新编辑与发布／草稿状态；按编号只插入缺少的记录，已有线上内容一律保留。
 
-维护时通过 Sites 将随机的 `ARCHIVE_IMPORT_TOKEN` 设置为临时运行时 secret 并部署。脚本以隐藏输入接收 `url`、`serviceToken`、`importToken` JSON，不把凭证写入文件。导入前核对线上海报和节目册，源数据快照、逐条结果和总结保存到忽略提交的 `.local-data/online-import-backups/`。导入后删除运行时 secret 并重新部署，确认 `/api/archive-import` 返回 404。此入口不能登记管理员，也不能修改已有记录；默认未配置 secret 时关闭。
+维护时通过 Sites 将随机的 `ARCHIVE_IMPORT_TOKEN` 设置为临时运行时 secret 并部署。脚本以隐藏输入接收 `url`、`serviceToken`、`importToken` JSON，不把凭证写入文件。导入前核对线上海报和节目册，源数据快照、逐条结果和总结保存到忽略提交的 `.local-data/online-import-backups/`。缺少文件的可选剧照会被排除并记录，海报或节目册缺失则停止。导入后删除运行时 secret 并重新部署，确认 `/api/archive-import` 返回 404。此入口不能登记管理员，也不能修改已有记录；默认未配置 secret 时关闭。
 
 ## 本地历史档案资料
 

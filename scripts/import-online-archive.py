@@ -55,6 +55,16 @@ def main():
     if status != 200:
         raise RuntimeError(f"Cannot read destination: HTTP {status}")
     (backup / "before-published.json").write_bytes(raw)
+    excluded_photos = []
+    for record in records:
+        production = record["production"]
+        for photo in production.get("photos", [])[:]:
+            path = photo["url"]
+            if path.startswith("/assets/") and not (Path("public") / path.lstrip("/")).is_file():
+                excluded_photos.append({"id": production["id"], "photo": photo})
+                production["photos"].remove(photo)
+                print(f"Excluded missing optional photo: {production['id']} {path}", flush=True)
+    (backup / "excluded-photos.json").write_text(json.dumps(excluded_photos, ensure_ascii=False, indent=2))
     assets = set()
     for record in records:
         p = record["production"]
@@ -99,7 +109,7 @@ def main():
                "preserved": sum(not r["inserted"] for r in results),
                "published": sum(r["record"]["publicationStatus"] == "published" for r in results),
                "draft": sum(r["record"]["publicationStatus"] == "draft" for r in results),
-               "verifiedAssets": len(assets), "backup": str(backup)}
+               "verifiedAssets": len(assets), "excludedPhotos": len(excluded_photos), "backup": str(backup)}
     (backup / "summary.json").write_text(json.dumps(summary, indent=2))
     print(json.dumps(summary), flush=True)
 
