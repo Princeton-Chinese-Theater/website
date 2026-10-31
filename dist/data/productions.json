@@ -1,0 +1,34 @@
+{
+  "productions": [
+    {
+      "id": "example-production",
+      "isExample": true,
+      "title": "一场好戏",
+      "titleEn": "A Story on Stage",
+      "season": "新剧档案 · 模板示例",
+      "year": "20XX",
+      "tagline": "灯光亮起，故事发生。\n把属于这场演出的记忆，留在这里。",
+      "status": "示例页面",
+      "performances": ["20XX 年 X 月 X 日 · 19:00", "20XX 年 X 月 X 日 · 14:00 / 19:00"],
+      "venue": "演出剧场名称",
+      "address": "剧场地址 / 校园位置",
+      "language": "普通话 · 英文字幕",
+      "duration": "约 XX 分钟 · 含一次中场休息",
+      "ticketUrl": "",
+      "poster": "",
+      "posterAlt": "",
+      "synopsis": "这里填写这部剧的剧情简介。可以从故事发生的地点、一段相遇，或一个关键的选择写起，让观众了解作品的气质，同时为走进剧场保留一点悬念。\n\n如为改编作品，请在这里注明原作者与改编来源。这段文字只用于展示页面排版，不对应剧社的真实演出。",
+      "directorNote": "这里放导演的话、创作缘起，或写给观众的一封短信。为什么选择这部作品？在排练中，你们发现了什么？希望观众带走什么？\n\n不必每部剧都写得一样。没有这一项时，留空即可，页面会自动隐藏。",
+      "creative": [{"role": "原作 / 编剧", "name": "姓名待填写"}, {"role": "导演", "name": "姓名待填写"}, {"role": "制作人", "name": "姓名待填写"}],
+      "cast": [{"role": "角色一", "name": "演员姓名"}, {"role": "角色二", "name": "演员姓名"}, {"role": "角色三", "name": "演员姓名"}, {"role": "角色四", "name": "演员姓名"}],
+      "crew": [{"role": "舞台监督", "name": "姓名待填写"}, {"role": "舞美设计", "name": "姓名待填写"}, {"role": "灯光设计", "name": "姓名待填写"}, {"role": "音效设计", "name": "姓名待填写"}, {"role": "服装 / 化妆", "name": "姓名待填写"}, {"role": "字幕 / 翻译", "name": "姓名待填写"}],
+      "playbillUrl": "",
+      "playbillLabel": "节目册 PDF",
+      "photos": [],
+      "videos": [],
+      "thanks": "这里填写合作单位、支持者与特别鸣谢。没有内容时可留空。",
+      "sources": [],
+      "updatedAt": ""
+    }
+  ]
+}

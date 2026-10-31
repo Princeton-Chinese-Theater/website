@@ -1,0 +1,8 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>添加新剧 · 普林斯顿中文剧社</title><meta name="description" content="填写剧目资料，预览并导出可重复使用的剧目档案。"><link rel="stylesheet" href="assets/style.css"><script src="assets/editor.js" defer></script></head>
+<body><header class="header"><a class="brand" href="index.html"><span class="seal" aria-hidden="true">剧</span><span>普林斯顿中文剧社<small>PRINCETON CHINESE THEATRE</small></span></a><nav aria-label="主导航"><a class="nav-action" href="index.html">返回模板 ↗</a></nav></header>
+<main class="editor"><div class="eyebrow">A NEW STORY / 新的故事</div><h1>把新剧，写进档案。</h1><p class="editor-intro">填写资料即可套用剧目页面。除剧目编号和中文名称外，其余内容均可留空；海报缺失时会生成文字占位，未填写的章节自动隐藏。</p><p class="editor-intro">预览草稿仅保存在当前浏览器，不会自动发布。请下载 JSON 留存，浏览器数据清除后草稿会丢失。</p>
+<form id="production-form"><div id="fields"></div><div class="editor-actions"><button class="button primary" type="submit">预览新剧 ↗</button><button class="button" type="button" id="download">下载剧目 JSON ↓</button><button class="button" type="button" id="restore">恢复本机草稿</button><span id="form-status" role="status" aria-live="polite"></span></div></form>
+<div class="form-help"><strong>如何加入网站</strong><ol><li>填写后预览，确认文字与演职员信息。</li><li>下载 JSON，将其中的剧目对象加入 <code>dist/data/productions.json</code> 的 <code>productions</code> 数组。</li><li>把海报、剧照和节目册放入 <code>dist/assets/</code>，填写对应路径后重新部署。</li></ol><p>新剧页面地址：<code>index.html?play=你的剧目编号</code>。可以把导出的文件交给网站维护者，或直接交给我继续添加。</p></div>
+</main><footer><span>普林斯顿中文剧社<small>PRINCETON CHINESE THEATRE</small></span><span>每一部新剧，都值得被记住。</span></footer></body></html>
