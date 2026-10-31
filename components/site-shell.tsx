@@ -9,5 +9,5 @@ export default function SiteShell({children}:{children:ReactNode}){const {t}=use
       <nav aria-label={t("主导航")}><Link href="/">{t("剧社介绍")}</Link><Link href="/archive/">{t("剧目档案")}</Link><Link href="/board/">{t("历届 Board")}</Link><a className="nav-action" href="/#join">{t("加入我们")} <span aria-hidden="true">↗</span></a></nav><LanguageSwitch/>
     </header></div>
     <main className="theatre-frame"><StageCurtains />{children}</main>
-    <footer className="site-footer"><div className="footer-bottom"><div className="footer-credits"><span className="footer-copyright">© {new Date().getFullYear()} Princeton Chinese Theatre</span><span className="footer-website">Website by Lucille Wang</span></div><Link className="footer-admin" href="/admin/">{t("剧社后台 ↗")}</Link></div></footer>
+    <footer className="site-footer"><div className="footer-bottom"><div className="footer-credits"><span className="footer-copyright">© {new Date().getFullYear()} Princeton Chinese Theatre</span><span className="footer-website">Website by Lucille Wang</span></div></div></footer>
 </>; }
