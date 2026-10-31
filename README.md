@@ -1,62 +1,61 @@
-# 普林斯顿中文剧社 · Next.js 剧目档案
+# 普林斯顿中文剧社 · 动态剧目档案
 
-使用 Next.js App Router、React 和 TypeScript。剧目页面共用 React 组件，填写页支持本机草稿、预览和 JSON 导出。当前只有明确标记的虚构示例，上级 research/ 的未核资料没有作为正式内容发布。
+前端使用 Next.js App Router、React 和 TypeScript；后端为同站点 Worker API。线上剧目存入 Cloudflare D1，海报、剧照与节目册存入 R2。Next.js 构建的是前端页面资源，真实资料在运行时通过 API 读取，不需要修改 JSON 或重新部署来更新内容。
+
+## 使用网站
+
+- `/`：已发布剧目，支持关键词和年份筛选。
+- `/admin/`：管理后台，查看全部草稿和已发布剧目。
+- `/new-play/`：新增剧目。
+- `/new-play/?id=剧目编号`：编辑已有剧目。
+- `/production/?id=剧目编号`：运行时读取的剧目详情，新增后立即可访问。
+- `/preview/`：本机修改预览，不自动保存或发布。
+- `/productions/example-production/`：保留的虚构模板示例，不是数据库里的正式剧目。
+
+首次访问 `/admin/` 时，使用网站所有者账号登录，点击“启用管理后台”。当前网站保持所有者私有访问；启用后管理员身份固定存入数据库，其他身份不能抢占。完成这一步后再扩大网站分享范围。不要在尚未登记管理员时把网站改为公开。
+
+后台可保存草稿、发布、编辑，或把已发布内容保存为草稿以撤下展示。草稿只对管理员可见。更新使用版本号检查，旧窗口不能直接覆盖较新修改。文本以 React 纯文本输出，外链限定 HTTP(S)；上传文件按实际文件头检查，只支持 JPG、PNG、WebP、GIF 与 PDF，每个最多 10 MB。
+
+上传文件后需要保存剧目才会引用该文件。JSON 导出用于备份，不再是发布流程。当前数据库为空，不会自动发布上级 research/ 中的未核实资料。
 
 ## 本地开发
 
-需要 Node.js 20.9 或以上版本。
+需要 Node.js 22.13 或以上版本，推荐 Node.js 24 或更新版本。
 
 ```sh
 npm ci
 npm run dev
 ```
 
-打开终端显示的本机地址，通常为 http://localhost:3000。
+本地服务在 `127.0.0.1:3000`（Next.js）和 `127.0.0.1:8899`（API）运行。数据库和上传文件保存在忽略提交的 `.local-data/` 中，重启仍然保留。启动时自动应用尚未执行的迁移。
 
-## 检查与构建
+本地开发使用仅绑定 loopback 的开发身份，不要求 ChatGPT 登录。这个身份只在 `scripts/dev.mjs` 中设置，绝不会进入生产 Worker。线上身份来自 Sites 的认证入口，写入操作每次都在后端检查。
+
+## 检查和部署
 
 ```sh
+npm test
 npm run typecheck
 npm run build
 ```
 
-目前配置 output: 'export'，构建时将各剧目的 HTML、React 资源及静态文件导出到 out/。可部署到 Vercel 或其他静态托管平台。源代码是完整 Next.js 项目，现有功能无需服务端；以后增加数据库或服务端编辑时可调整部署模式。
+构建先生成 Next.js 前端到 `out/`，再将资源和 API 打包为 `dist/server/index.js`，使用 `.openai/hosting.json` 中已有的站点 ID 发布。
 
-Vercel 配置：Root Directory 选择 theatre-template，Framework Preset 选择 Next.js，Build Command 为 npm run build，Output Directory 为 out。现有 Sites 身份保存在 .openai/hosting.json，没有创建另一站点。
+托管绑定为 `DB`（D1）和 `BUCKET`（R2）。数据库变更先改 `db/schema.ts`，运行 `npm run db:generate`，审阅并提交 `drizzle/` 迁移；Sites 发布时应用线上迁移。迁移只修改结构，不写入示例数据。生产数据库与本机数据库相互独立。
 
-## 添加新剧
+不要把 `out/` 单独部署为完整动态站点：它不包含 API 与持久化存储。如果以后迁移到 Vercel，需同时替换 Worker API、D1/R2 接入及认证，不能只上传前端。
 
-1. 打开 /new-play/，填写资料。编号和中文剧名必填，其余可留空。
-2. 点击“预览新剧”。返回填写页后点击“恢复本机草稿”继续编辑。
-3. 下载 JSON，将整个对象加入 public/data/productions.json 的 productions 数组，不要再套一层 productions。
-4. 编号必须唯一，只用小写字母、数字、短横线，例如 2027-spring-title，不能为保留编号 draft。
-5. 海报、剧照和节目册放入 public/assets/。资料路径填写 assets/poster.jpg 或 /assets/poster.jpg，不包含 public/。
-6. 重新构建部署后，自动生成 /productions/2027-spring-title/。
+## 主要源码
 
-也可以复制 public/data/production-template.json 直接填写。真实剧目设 isExample: false，并移除示例对象。首页展示第一部剧，多部剧时出现切换入口。巡演或复排使用不同编号，各自保留对应演职员与节目册。
+- `components/archive-home.tsx`：动态档案列表与筛选。
+- `components/admin-dashboard.tsx`：后台与管理员初始化。
+- `components/production-form.tsx`：剧目编辑、上传、在线保存、发布与备份。
+- `components/production-page.tsx`：共用剧目页面。
+- `lib/productions.ts`：资料类型与验证。
+- `worker/api.js`：资料、身份、版本检查与上传 API。
+- `db/schema.ts`、`drizzle/`：数据库 schema 和迁移。
+- `scripts/build-worker.mjs`：将 Next.js 资源与 API 打包成 ESM Worker。
+- `scripts/dev.mjs`、`scripts/local-storage.mjs`：本机 API 与 SQLite/文件存储适配。
+- `tests/api.test.mjs`：权限、持久化、草稿/发布、版本冲突和文件读取测试。
 
-## 页面和组件
-
-- app/layout.tsx：共用导航、页脚、元信息。
-- app/page.tsx：首页。
-- app/productions/[slug]/page.tsx：构建时自动生成的剧目路由。
-- app/new-play/page.tsx：填写页。
-- app/preview/page.tsx：本机草稿预览，不收录到搜索索引。
-- components/production-page.tsx：所有剧目共用的 React 页面。
-- components/production-form.tsx：React 表单、恢复和导出。
-- lib/productions.ts：TypeScript 类型、数据验证、安全链接处理。
-- lib/catalog.ts：读取并校验正式剧目，重复编号会阻止构建。
-- lib/form-fields.ts：可复用字段定义。
-- app/globals.css：响应式全局样式。
-- public/data/productions.json：正式剧目数据。
-- public/data/production-template.json：空白模板。
-
-## 字段约定
-
-- performances：每场演出一条字符串。
-- creative、cast、crew：role（职务或角色）与 name（姓名）组成的对象数组。
-- photos：url、caption 和可选 alt 组成的对象数组。
-- videos、sources：url 与 label 组成的对象数组。
-- poster、playbillUrl、ticketUrl：图片、节目册、购票路径或 HTTP(S) 网址。
-
-未填写的可选章节自动隐藏。没有海报时显示文字占位；没有节目册时显示待上传说明。文字由 React 渲染，不执行 HTML。草稿仅保存在当前浏览器，不上传、不自动发布；请下载 JSON 备份。
+角色与演员仍按“角色 | 姓名”逐行填写；节目册、海报和剧照可以直接上传，系统自动填入链接。

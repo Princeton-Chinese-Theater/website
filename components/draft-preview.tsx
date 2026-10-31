@@ -17,5 +17,5 @@ export default function DraftPreview() {
   }, []);
   if (error) return <div className="error"><h1>草稿暂时无法打开</h1><p>{error}</p><Link href="/new-play/">填写或恢复新剧资料 →</Link></div>;
   if (!play) return <p className="loading" role="status">正在打开本机草稿……</p>;
-  return <><div className="notice">本机草稿预览 · 尚未发布。<Link href="/new-play/">返回填写页，恢复草稿继续编辑 →</Link></div><ProductionPage play={play} /></>;
+  return <><div className="notice">本机修改预览 · 此预览不会自动保存到后台。<button className="button" onClick={()=>window.history.back()}>返回编辑</button></div><ProductionPage play={play} /></>;
 }

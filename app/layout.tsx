@@ -11,7 +11,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return <html lang="zh-CN"><body>
     <header className="header">
       <Link className="brand" href="/"><span className="seal" aria-hidden="true">剧</span><span>普林斯顿中文剧社<small>PRINCETON CHINESE THEATRE</small></span></Link>
-      <nav aria-label="主导航"><Link href="/">剧目档案</Link><Link className="nav-action" href="/new-play/">添加新剧 <span aria-hidden="true">↗</span></Link></nav>
+      <nav aria-label="主导航"><Link href="/">剧目档案</Link><Link className="nav-action" href="/admin/">管理后台 <span aria-hidden="true">↗</span></Link></nav>
     </header>
     <main>{children}</main>
     <footer><span>普林斯顿中文剧社<small>PRINCETON CHINESE THEATRE</small></span><span>让每一次登台，都有迹可循。</span></footer>
