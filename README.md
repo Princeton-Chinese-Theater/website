@@ -79,6 +79,12 @@ npm run build
 
 角色与演员仍按“角色 | 姓名”逐行填写；节目册、海报和剧照可以直接上传，系统自动填入链接。
 
+## 历史档案导入线上
+
+日常更新使用管理后台。首次批量迁移使用 `python3 scripts/import-online-archive.py`，从本机数据库读取 `data/curated-archive.json` 中对应的剧目，保留本机最新编辑与发布／草稿状态；按编号只插入缺少的记录，已有线上内容一律保留。
+
+维护时通过 Sites 将随机的 `ARCHIVE_IMPORT_TOKEN` 设置为临时运行时 secret 并部署。脚本以隐藏输入接收 `url`、`serviceToken`、`importToken` JSON，不把凭证写入文件。导入前核对线上海报和节目册，源数据快照、逐条结果和总结保存到忽略提交的 `.local-data/online-import-backups/`。导入后删除运行时 secret 并重新部署，确认 `/api/archive-import` 返回 404。此入口不能登记管理员，也不能修改已有记录；默认未配置 secret 时关闭。
+
 ## 本地历史档案资料
 
 `research/legacy-site/` 保存旧版官网目录对应的 11 张海报、来源和校验记录，以及逐剧核对的日期、简介和中英文姓名依据。`research/productions.json` 是整理后的研究档案，`data/curated-archive.json` 是网站导入数据。运行 `python3 scripts/prepare-research-archive.py` 后，再运行 `node scripts/import-curated-archive.mjs` 更新本机数据库；导入会先备份，并保留后台已修改的字段。以上命令均不部署。
