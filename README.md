@@ -62,7 +62,17 @@ npm run build
 
 托管绑定为 `DB`（D1）和 `BUCKET`（R2）。数据库变更先改 `db/schema.ts`，运行 `npm run db:generate`，审阅并提交 `drizzle/` 迁移；Sites 发布时应用线上迁移。迁移只修改结构，不写入示例数据。生产数据库与本机数据库相互独立。
 
-不要把 `out/` 单独部署为完整动态站点：它不包含 API 与持久化存储。如果以后迁移到 Vercel，需同时替换 Worker API、D1/R2 接入及认证，不能只上传前端。
+不要把 `out/` 单独部署为完整动态站点：它不包含 API 与持久化存储。Vercel 使用下面的服务端连接方式。
+
+## Vercel 前台与线上数据库
+
+`https://princetonchinesetheater.vercel.app` 的前台通过服务端 API 实时读取已发布剧目；数据库、上传存储与管理员认证继续使用原 Sites 站点。Vercel 的 `/admin/`、`/new-play/` 和 `/preview/` 自动跳转到 Sites，管理员在那里保存和发布后，Vercel 前台下一次读取即可更新。两个地址不再维护两套档案数据。
+
+Vercel 项目根目录设为此目录，保留 `vercel.json` 中的 Next.js 框架、`npm run build:vercel` 构建命令和 `.next` 输出目录。不要覆盖输出目录为 `out`。在 Vercel 的 Production 环境配置服务端变量 `SITES_BACKEND_TOKEN`，其值为现有 Sites 站点的服务访问令牌；预览部署需要另行配置 Preview 环境。配置或修改变量后重新部署。不得使用 `NEXT_PUBLIC_` 前缀，也不得把令牌放入源码、浏览器或提交。
+
+`pages/api/[...path].ts` 只转发已发布剧目的 GET/HEAD 请求和上传文件读取，不转发浏览器身份、Cookie 或任意写入，拒绝后台 scope 查询。后台仍在 Sites 检查真实管理员身份。没有服务端密钥时返回明确的 JSON 503，服务异常也不会把登录 HTML 当成剧目 JSON。Sites 网站保持原有访问范围，无需公开。
+
+`npm run build` 在本机默认保留 Sites 的静态前端与 Worker 打包；在 Vercel 上自动构建含 API 的 Next.js 应用。手动验证 Vercel 构建可运行 `npm run build:vercel`。
 
 ## 主要源码
 
