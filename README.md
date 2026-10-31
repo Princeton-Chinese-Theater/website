@@ -1,67 +1,62 @@
-# 普林斯顿中文剧社 · 剧目档案模板
+# 普林斯顿中文剧社 · Next.js 剧目档案
 
-静态网站，无需安装依赖。`dist/` 是完整网站目录，`research/` 历史研究资料保留在上级项目中，没有自动作为正式档案发布。
+使用 Next.js App Router、React 和 TypeScript。剧目页面共用 React 组件，填写页支持本机草稿、预览和 JSON 导出。当前只有明确标记的虚构示例，上级 research/ 的未核资料没有作为正式内容发布。
 
-## 本地运行
+## 本地开发
 
-在此目录运行 `python3 -m http.server 8000 --directory dist`，打开 `http://localhost:8000`。请通过 HTTP 打开；直接双击 HTML 时浏览器可能禁止读取 JSON。
+需要 Node.js 20.9 或以上版本。
 
-## 添加一部新剧
-
-1. 打开 `new-play.html`，填写资料；只有剧目编号和中文剧名必填。
-2. 点击“预览新剧”检查排版；返回填写页可点击“恢复本机草稿”。
-3. 点击“下载剧目 JSON”，将下载文件中的整个对象添加到 `dist/data/productions.json` 的 `productions` 数组。不要再套一层 `productions`。
-4. 剧目编号必须唯一。例如 `2027-spring-title`；不能使用保留编号 `draft`。
-5. 将海报、剧照、节目册放入 `dist/assets/`，在资料中填写路径，如 `assets/2027-title-poster.jpg`。也支持完整 HTTPS 链接。
-6. 重新部署 `dist/`。新页面地址为 `index.html?play=2027-spring-title`，页面顶部会自动列出其他剧目。
-
-也可以复制 `dist/data/production-template.json` 直接填写。添加真实剧目时设置 `isExample: false`，移除示例对象即可。默认打开数据中的第一部剧。
-
-## 数据格式
-
-```json
-{
-  "productions": [
-    {
-      "id": "2027-spring-title",
-      "isExample": false,
-      "title": "正式中文剧名",
-      "titleEn": "English title",
-      "season": "2027 春季制作",
-      "year": "2027",
-      "performances": ["2027 年 4 月 23 日 · 19:00"],
-      "venue": "剧场名称",
-      "synopsis": "剧情简介",
-      "creative": [{"role": "导演", "name": "姓名"}],
-      "cast": [{"role": "角色", "name": "演员姓名"}],
-      "crew": [{"role": "舞台监督", "name": "姓名"}],
-      "poster": "assets/2027-title-poster.jpg",
-      "playbillUrl": "assets/2027-title-playbill.pdf",
-      "photos": [{"url": "assets/2027-title-01.jpg", "caption": "第一幕剧照", "alt": "图片内容说明"}],
-      "videos": [{"url": "https://example.com/video", "label": "演出录像"}],
-      "sources": [{"url": "https://example.com/article", "label": "演出公告"}]
-    }
-  ]
-}
+```sh
+npm ci
+npm run dev
 ```
 
-以上日期、姓名及 example.com 地址仅解释格式，使用时替换。全部字段见空白 JSON 文件。
+打开终端显示的本机地址，通常为 http://localhost:3000。
 
-## 模板行为
+## 检查与构建
 
-- 未填写的剧情、导演手记、人员分组、剧照、影像与鸣谢自动隐藏。
-- 演出留档保留；没有节目册时显示“尚未上传”，不生成失效下载按钮。
-- 没有海报时显示带剧名的文字海报占位。
-- 表单只保存本机浏览器草稿，不连接后台，不上传资料，不自动发布。
-- 文本以纯文本输出；链接只接受 HTTP(S) 或站内文件路径。
-- 样式适配手机，支持键盘操作和减少动态效果的系统设置。
+```sh
+npm run typecheck
+npm run build
+```
 
-## 文件
+目前配置 output: 'export'，构建时将各剧目的 HTML、React 资源及静态文件导出到 out/。可部署到 Vercel 或其他静态托管平台。源代码是完整 Next.js 项目，现有功能无需服务端；以后增加数据库或服务端编辑时可调整部署模式。
 
-- `dist/index.html`：所有剧目共用的页面。
-- `dist/new-play.html`：填表、预览、导出。
-- `dist/assets/app.js`：剧目渲染与可选章节。
-- `dist/assets/editor.js`：新剧表单。
-- `dist/assets/style.css`：共用视觉样式。
-- `dist/data/productions.json`：正式剧目数据，当前只有明确标记的虚构示例。
-- `dist/data/production-template.json`：空白剧目对象。
+Vercel 配置：Root Directory 选择 theatre-template，Framework Preset 选择 Next.js，Build Command 为 npm run build，Output Directory 为 out。现有 Sites 身份保存在 .openai/hosting.json，没有创建另一站点。
+
+## 添加新剧
+
+1. 打开 /new-play/，填写资料。编号和中文剧名必填，其余可留空。
+2. 点击“预览新剧”。返回填写页后点击“恢复本机草稿”继续编辑。
+3. 下载 JSON，将整个对象加入 public/data/productions.json 的 productions 数组，不要再套一层 productions。
+4. 编号必须唯一，只用小写字母、数字、短横线，例如 2027-spring-title，不能为保留编号 draft。
+5. 海报、剧照和节目册放入 public/assets/。资料路径填写 assets/poster.jpg 或 /assets/poster.jpg，不包含 public/。
+6. 重新构建部署后，自动生成 /productions/2027-spring-title/。
+
+也可以复制 public/data/production-template.json 直接填写。真实剧目设 isExample: false，并移除示例对象。首页展示第一部剧，多部剧时出现切换入口。巡演或复排使用不同编号，各自保留对应演职员与节目册。
+
+## 页面和组件
+
+- app/layout.tsx：共用导航、页脚、元信息。
+- app/page.tsx：首页。
+- app/productions/[slug]/page.tsx：构建时自动生成的剧目路由。
+- app/new-play/page.tsx：填写页。
+- app/preview/page.tsx：本机草稿预览，不收录到搜索索引。
+- components/production-page.tsx：所有剧目共用的 React 页面。
+- components/production-form.tsx：React 表单、恢复和导出。
+- lib/productions.ts：TypeScript 类型、数据验证、安全链接处理。
+- lib/catalog.ts：读取并校验正式剧目，重复编号会阻止构建。
+- lib/form-fields.ts：可复用字段定义。
+- app/globals.css：响应式全局样式。
+- public/data/productions.json：正式剧目数据。
+- public/data/production-template.json：空白模板。
+
+## 字段约定
+
+- performances：每场演出一条字符串。
+- creative、cast、crew：role（职务或角色）与 name（姓名）组成的对象数组。
+- photos：url、caption 和可选 alt 组成的对象数组。
+- videos、sources：url 与 label 组成的对象数组。
+- poster、playbillUrl、ticketUrl：图片、节目册、购票路径或 HTTP(S) 网址。
+
+未填写的可选章节自动隐藏。没有海报时显示文字占位；没有节目册时显示待上传说明。文字由 React 渲染，不执行 HTML。草稿仅保存在当前浏览器，不上传、不自动发布；请下载 JSON 备份。
