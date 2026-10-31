@@ -20,6 +20,10 @@ const assets=${JSON.stringify(assets)};
 export default { async fetch(request,env) {
  const url=new URL(request.url);
  if(url.pathname.startsWith('/api/')||url.pathname.startsWith('/media/'))return handleApi(request,env);
+ if(/^\\/(admin|new-play|preview)(?:\\/|$)/.test(url.pathname)&&!allowedAdmin(request)) {
+  if(!request.headers.get('oai-authenticated-user-id'))return Response.redirect(url.origin+'/signin-with-chatgpt?return_to='+encodeURIComponent(url.pathname+url.search),302);
+  return new Response('当前账号无权访问剧社后台。请退出后使用指定管理员账号登录。',{status:403,headers:{'Content-Type':'text/plain; charset=utf-8','Cache-Control':'no-store'}});
+ }
  if(!['GET','HEAD'].includes(request.method))return new Response('Method not allowed',{status:405});
  let path=url.pathname;
  if(path==='/'||path.endsWith('/'))path+='index.html';

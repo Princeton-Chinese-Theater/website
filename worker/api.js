@@ -13,10 +13,15 @@ async function readBody(request) {
   try { return JSON.parse(new TextDecoder().decode(buffer)); } catch { fail(400, '请求数据不是有效 JSON'); }
 }
 const decodeRow = row => row && ({ production: JSON.parse(row.data), publicationStatus: row.publication_status, version: row.version, updatedAt: row.updated_at });
+const ADMIN_EMAIL = 'luoxi813@outlook.com';
+function allowedAdmin(request) {
+  return !!request.headers.get('oai-authenticated-user-id') && request.headers.get('oai-authenticated-user-email')?.trim().toLowerCase() === ADMIN_EMAIL;
+}
 async function identity(request, env) {
   const userId = request.headers.get('oai-authenticated-user-id');
   const admin = await env.DB.prepare('SELECT user_id FROM site_admin WHERE id = 1').first();
-  return { userId, configured: !!admin, canEdit: !!userId && admin?.user_id === userId };
+  const eligible = allowedAdmin(request);
+  return { userId, configured: !!admin && (!eligible || admin.user_id === userId), canEdit: eligible && admin?.user_id === userId };
 }
 async function requireAdmin(request, env) {
   const user = await identity(request, env);
@@ -53,8 +58,9 @@ export async function handleApi(request, env) {
     if (url.pathname === '/api/setup' && request.method === 'POST') {
       const userId = request.headers.get('oai-authenticated-user-id');
       if (!userId) fail(401, '请先登录');
-      // The first administrator is enrolled while the Site is owner-private.
-      await env.DB.prepare('INSERT OR IGNORE INTO site_admin (id, user_id, created_at) VALUES (1, ?, ?)').bind(userId, new Date().toISOString()).run();
+      if (!allowedAdmin(request)) fail(403, '当前账号没有管理权限');
+      // Only the explicitly allowed email may enroll, replacing the previous administrator.
+      await env.DB.prepare('INSERT INTO site_admin (id, user_id, created_at) VALUES (1, ?, ?) ON CONFLICT(id) DO UPDATE SET user_id = excluded.user_id, created_at = excluded.created_at').bind(userId, new Date().toISOString()).run();
       const user = await identity(request, env);
       if (!user.canEdit) fail(403, '后台已有其他管理员');
       return json({ canEdit: true });

@@ -10,6 +10,7 @@ const server=createServer(async(req,res)=>{
     const headers=new Headers(req.headers);
     // The development API binds only to loopback; never use this identity shim in production.
     headers.set('oai-authenticated-user-id','local-development');
+    headers.set('oai-authenticated-user-email','luoxi813@outlook.com');
     const origin=headers.get('origin');
     if(origin&&!['http://localhost:3000','http://127.0.0.1:3000','http://127.0.0.1:8899'].includes(origin)){res.writeHead(403);res.end('Cross-origin request rejected');return;}
     const request=new Request(`${origin||'http://127.0.0.1:3000'}${req.url}`,{method:req.method,headers,...!['GET','HEAD'].includes(req.method)?{body:Readable.toWeb(req),duplex:'half'}:{}});
