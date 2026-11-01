@@ -5,16 +5,14 @@ import { handleApi } from '../worker/api.js';
 import { createLocalStorage } from './local-storage.mjs';
 
 const storage=createLocalStorage('.local-data');
+const env={...storage,PCT_LOCAL_AUTH:true,AUTH_PASSWORD_PEPPER:process.env.AUTH_PASSWORD_PEPPER,ADMIN_BOOTSTRAP_TOKEN:process.env.ADMIN_BOOTSTRAP_TOKEN};
 const server=createServer(async(req,res)=>{
   try {
     const headers=new Headers(req.headers);
-    // The development API binds only to loopback; never use this identity shim in production.
-    headers.set('oai-authenticated-user-id','local-development');
-    headers.set('oai-authenticated-user-email','luoxi813@outlook.com');
     const origin=headers.get('origin');
     if(origin&&!['http://localhost:3000','http://127.0.0.1:3000','http://127.0.0.1:8899'].includes(origin)){res.writeHead(403);res.end('Cross-origin request rejected');return;}
     const request=new Request(`${origin||'http://127.0.0.1:3000'}${req.url}`,{method:req.method,headers,...!['GET','HEAD'].includes(req.method)?{body:Readable.toWeb(req),duplex:'half'}:{}});
-    const response=await handleApi(request,storage);
+    const response=await handleApi(request,env);
     res.writeHead(response.status,Object.fromEntries(response.headers));res.end(Buffer.from(await response.arrayBuffer()));
   } catch {res.writeHead(500);res.end('Local API error');}
 });

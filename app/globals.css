@@ -179,3 +179,16 @@ html[lang=en] .production-detail .hero h1{font-size:36px}
 @media(max-width:760px){
  .production-detail .hero h1,html[lang=en] .production-detail .hero h1{font-size:32px}
 }
+
+/* Private administrator sign-in and account management. */
+.auth-form{display:grid;gap:1.2rem;max-width:32rem;margin:2rem 0}
+.auth-form .button{justify-self:start}.auth-note{max-width:36rem;opacity:.7;font-size:.9rem}
+.admin-invite-form{display:flex;align-items:flex-end;gap:1rem;max-width:50rem;margin:1.5rem 0}
+.admin-invite-form .field{flex:1;min-width:0}.admin-invite-form .button{flex-shrink:0}
+.admin-account-list{list-style:none;padding:0;margin:1.5rem 0}
+.admin-account-list li{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 0;border-bottom:1px solid currentColor}
+.admin-account-list strong{overflow-wrap:anywhere}.admin-account-list p{margin:.4rem 0 0;opacity:.7;font-size:.85rem}
+.admin-account-list .status-pill{margin-left:.75rem}.admin-password{margin-top:1.5rem}
+.admin-password summary{cursor:pointer}.invitation-box{margin:1.5rem 0}.invitation-box .field{margin-bottom:1rem}
+.admin-session-email{font-size:.85rem;opacity:.7;overflow-wrap:anywhere}.admin-productions-title{margin-top:2.5rem}
+@media(max-width:640px){.admin-invite-form{align-items:stretch;flex-direction:column}.admin-account-list li{align-items:flex-start;flex-direction:column}}

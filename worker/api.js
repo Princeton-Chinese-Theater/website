@@ -1,4 +1,5 @@
 import { isProduction } from '../lib/productions.ts';
+import { AuthError, getAuthIdentity, handleAuthRequest } from './auth.js';
 
 const MAX_BODY = 200_000;
 const MAX_FILE = 10 * 1024 * 1024;
@@ -13,18 +14,8 @@ async function readBody(request) {
   try { return JSON.parse(new TextDecoder().decode(buffer)); } catch { fail(400, '请求数据不是有效 JSON'); }
 }
 const decodeRow = row => row && ({ production: JSON.parse(row.data), publicationStatus: row.publication_status, version: row.version, updatedAt: row.updated_at });
-const ADMIN_EMAIL = 'luoxi813@outlook.com';
-function allowedAdmin(request) {
-  return !!request.headers.get('oai-authenticated-user-id') && request.headers.get('oai-authenticated-user-email')?.trim().toLowerCase() === ADMIN_EMAIL;
-}
-async function identity(request, env) {
-  const userId = request.headers.get('oai-authenticated-user-id');
-  const admin = await env.DB.prepare('SELECT user_id FROM site_admin WHERE id = 1').first();
-  const eligible = allowedAdmin(request);
-  return { userId, configured: !!admin && (!eligible || admin.user_id === userId), canEdit: eligible && admin?.user_id === userId };
-}
 async function requireAdmin(request, env) {
-  const user = await identity(request, env);
+  const user = await getAuthIdentity(request, env);
   if (!user.userId) fail(401, '请先登录');
   if (!user.canEdit) fail(403, '当前账号没有管理权限');
   return user;
@@ -40,7 +31,10 @@ export async function handleApi(request, env) {
     if (request.method !== 'GET' && request.method !== 'HEAD') {
       const origin = request.headers.get('origin');
       if (origin && origin !== url.origin) fail(403, '不接受跨站写入');
+      if (request.headers.get('sec-fetch-site') === 'cross-site') fail(403, '不接受跨站写入');
     }
+    const authResponse = await handleAuthRequest(request, env);
+    if (authResponse) return authResponse;
     if (url.pathname.startsWith('/media/')) {
       if (!['GET','HEAD'].includes(request.method)) fail(405, '不支持的请求方法');
       const key = url.pathname.slice(7);
@@ -50,20 +44,6 @@ export async function handleApi(request, env) {
       const headers = new Headers({ 'X-Content-Type-Options': 'nosniff', 'Cache-Control': 'public, max-age=31536000, immutable' });
       object.writeHttpMetadata(headers); headers.set('ETag', object.httpEtag);
       return new Response(request.method === 'HEAD' ? null : object.body, { headers });
-    }
-    if (url.pathname === '/api/session' && request.method === 'GET') {
-      const user = await identity(request, env);
-      return json({ authenticated: !!user.userId, configured: user.configured, canEdit: user.canEdit });
-    }
-    if (url.pathname === '/api/setup' && request.method === 'POST') {
-      const userId = request.headers.get('oai-authenticated-user-id');
-      if (!userId) fail(401, '请先登录');
-      if (!allowedAdmin(request)) fail(403, '当前账号没有管理权限');
-      // Only the explicitly allowed email may enroll, replacing the previous administrator.
-      await env.DB.prepare('INSERT INTO site_admin (id, user_id, created_at) VALUES (1, ?, ?) ON CONFLICT(id) DO UPDATE SET user_id = excluded.user_id, created_at = excluded.created_at').bind(userId, new Date().toISOString()).run();
-      const user = await identity(request, env);
-      if (!user.canEdit) fail(403, '后台已有其他管理员');
-      return json({ canEdit: true });
     }
     if (url.pathname === '/api/productions' && request.method === 'GET') {
       const all = url.searchParams.get('scope') === 'all';
@@ -89,7 +69,7 @@ export async function handleApi(request, env) {
       if (request.method === 'GET') {
         const row = await env.DB.prepare('SELECT * FROM productions WHERE id = ?').bind(id).first();
         if (!row) fail(404, '没有找到这部剧');
-        if (row.publication_status !== 'published') { const user = await identity(request, env); if (!user.canEdit) fail(404, '没有找到这部剧'); }
+        if (row.publication_status !== 'published') { const user = await getAuthIdentity(request, env); if (!user.canEdit) fail(404, '没有找到这部剧'); }
         return json({ record: decodeRow(row) });
       }
       if (request.method === 'PUT') {
@@ -122,7 +102,7 @@ export async function handleApi(request, env) {
     }
     fail(404, '接口不存在');
   } catch (error) {
-    if (error instanceof HttpError) return json({ error: error.message }, error.status);
+    if (error instanceof HttpError || error instanceof AuthError) return json({ error: error.message }, error.status);
     console.error('API request failed', error instanceof Error ? error.message : 'unknown');
     return json({ error: '服务暂时不可用，请稍后重试' }, 500);
   }

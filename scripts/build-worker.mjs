@@ -14,15 +14,16 @@ function walk(directory,prefix='') {
 }
 walk('out');
 const model=ts.transpileModule(readFileSync('lib/productions.ts','utf8'),{compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.ES2022}}).outputText.replace(/^export /gm,'');
-const api=readFileSync('worker/api.js','utf8').replace(/^import .*?;\n/,'').replace('export async function handleApi','async function handleApi');
+const auth=readFileSync('worker/auth.js','utf8').replace(/^export /gm,'');
+const api=readFileSync('worker/api.js','utf8').replace(/^import .*?;\n/gm,'').replace('export async function handleApi','async function handleApi');
 const handler=`
 const assets=${JSON.stringify(assets)};
 export default { async fetch(request,env) {
  const url=new URL(request.url);
  if(url.pathname.startsWith('/api/')||url.pathname.startsWith('/media/'))return handleApi(request,env);
- if(/^\\/(admin|new-play|preview)(?:\\/|$)/.test(url.pathname)&&!allowedAdmin(request)) {
-  if(!request.headers.get('oai-authenticated-user-id'))return Response.redirect(url.origin+'/signin-with-chatgpt?return_to='+encodeURIComponent(url.pathname+url.search),302);
-  return new Response('当前账号无权访问剧社后台。请退出后使用指定管理员账号登录。',{status:403,headers:{'Content-Type':'text/plain; charset=utf-8','Cache-Control':'no-store'}});
+ if(/^\\/(admin|new-play|preview)(?:\\/|$)/.test(url.pathname)&&!/^\\/admin\\/(login|activate)(?:\\/|$)/.test(url.pathname)) {
+  const user=await getAuthIdentity(request,env);
+  if(!user.canEdit)return new Response(null,{status:302,headers:{Location:url.origin+'/admin/login/','Cache-Control':'no-store'}});
  }
  if(!['GET','HEAD'].includes(request.method))return new Response('Method not allowed',{status:405});
  let path=url.pathname;
@@ -35,6 +36,6 @@ export default { async fetch(request,env) {
 }};
 `;
 mkdirSync('dist/server',{recursive:true});mkdirSync('dist/.openai',{recursive:true});
-writeFileSync('dist/server/index.js',model+'\n'+api+'\n'+handler);
+writeFileSync('dist/server/index.js',model+'\n'+auth+'\n'+api+'\n'+handler);
 writeFileSync('dist/.openai/hosting.json',readFileSync('.openai/hosting.json'));
 console.log(`Built dynamic Worker with ${Object.keys(assets).length} Next.js assets and DB/BUCKET bindings.`);

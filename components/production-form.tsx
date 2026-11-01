@@ -7,7 +7,7 @@ import { productionFromForm, formValue } from '@/lib/form-data';
 import { DRAFT_KEY, isProduction } from '@/lib/productions';
 import { api, type ProductionRecord } from '@/lib/api';
 
-export default function ProductionForm({ existingIds, initialRecord }: { existingIds: string[]; initialRecord?: ProductionRecord }) {
+export default function ProductionForm({ existingIds, initialRecord, maxUploadBytes = 10 * 1024 * 1024 }: { existingIds: string[]; initialRecord?: ProductionRecord; maxUploadBytes?: number }) {
   const formRef = useRef<HTMLFormElement>(null);
   const [status, setStatus] = useState('');
   const [savedRecord,setSavedRecord]=useState(initialRecord);
@@ -67,7 +67,7 @@ export default function ProductionForm({ existingIds, initialRecord }: { existin
     }catch(error){setStatus(error instanceof Error?error.message:'保存失败，请重试');}finally{setBusy(false);}
   }
   async function upload(file:File|undefined,target:'poster'|'playbillUrl'|'photos') {
-    if(!file)return;if(file.size>10*1024*1024){setStatus('文件不能超过 10 MB');return;}
+    if(!file)return;if(file.size>maxUploadBytes){setStatus(`文件不能超过 ${maxUploadBytes / 1024 / 1024} MB`);return;}
     if(target==='playbillUrl'&&!file.name.toLowerCase().endsWith('.pdf')){setStatus('节目册请选择 PDF 文件');return;}
     setBusy(true);setStatus('正在上传……');
     try{
@@ -81,7 +81,7 @@ export default function ProductionForm({ existingIds, initialRecord }: { existin
   return <form ref={formRef} onSubmit={preview}>
     {savedRecord&&<div className="notice">正在编辑：{savedRecord.production.title} · {savedRecord.publicationStatus==='published'?'已发布':'草稿'} · 版本 {savedRecord.version} <a href={`/production/?id=${savedRecord.production.id}`}>查看页面 →</a></div>}
     {fieldGroups.map(([title,items]) => <section className="form-section" key={title}><h2>{title}</h2><div className="form-grid">{items.map(([name,label,type,hint]) => <label className={`field${type === 'textarea' ? ' wide' : ''}`} key={name}><span>{label}</span>{type === 'textarea' ? <textarea name={name} placeholder={hint} defaultValue={initialRecord?formValue(initialRecord.production,name):''} /> : <input name={name} type={type} placeholder={hint} defaultValue={initialRecord?formValue(initialRecord.production,name):''} readOnly={name==='id'&&!!savedRecord} required={name === 'id' || name === 'title'} maxLength={name === 'id' ? 100 : undefined} pattern={name === 'id' ? '(?!draft$)[a-z0-9]+(-[a-z0-9]+)*' : undefined} title={name === 'id' ? '使用小写字母、数字及短横线；编号不能重复，也不能为 draft' : undefined} />}</label>)}</div></section>)}
-    <section className="form-section"><h2>上传海报与节目册</h2><p className="editor-intro">每个文件最多 10 MB。上传后自动填入对应字段，支持 JPG、PNG、WebP、GIF 和 PDF。</p><div className="form-grid"><label className="field"><span>演出海报</span><input type="file" accept="image/jpeg,image/png,image/webp,image/gif" disabled={busy} onChange={e=>void upload(e.target.files?.[0],'poster')}/></label><label className="field"><span>节目册 PDF</span><input type="file" accept="application/pdf" disabled={busy} onChange={e=>void upload(e.target.files?.[0],'playbillUrl')}/></label><label className="field"><span>添加一张剧照</span><input type="file" accept="image/jpeg,image/png,image/webp,image/gif" disabled={busy} onChange={e=>void upload(e.target.files?.[0],'photos')}/></label></div></section>
+    <section className="form-section"><h2>上传海报与节目册</h2><p className="editor-intro">每个文件最多 {maxUploadBytes / 1024 / 1024} MB。上传后自动填入对应字段，支持 JPG、PNG、WebP、GIF 和 PDF。</p><div className="form-grid"><label className="field"><span>演出海报</span><input type="file" accept="image/jpeg,image/png,image/webp,image/gif" disabled={busy} onChange={e=>void upload(e.target.files?.[0],'poster')}/></label><label className="field"><span>节目册 PDF</span><input type="file" accept="application/pdf" disabled={busy} onChange={e=>void upload(e.target.files?.[0],'playbillUrl')}/></label><label className="field"><span>添加一张剧照</span><input type="file" accept="image/jpeg,image/png,image/webp,image/gif" disabled={busy} onChange={e=>void upload(e.target.files?.[0],'photos')}/></label></div></section>
     <div className="editor-actions"><button className="button primary" type="button" disabled={busy} onClick={()=>void save('published')}>发布到网站 ↗</button><button className="button" type="button" disabled={busy} onClick={()=>void save('draft')}>保存草稿</button><button className="button" type="submit" disabled={busy}>预览</button><button className="button" type="button" disabled={busy} onClick={download}>导出 JSON</button><button className="button" type="button" disabled={busy} onClick={restore}>恢复本机草稿</button><span role="status" aria-live="polite" id="form-status">{status}</span></div>
   </form>;
 }

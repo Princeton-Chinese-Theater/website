@@ -14,11 +14,17 @@
 - `/preview/`：本机修改预览，不自动保存或发布。
 - `/productions/example-production/`：保留的虚构模板示例，不是数据库里的正式剧目。
 
-管理后台仅允许 Sites 认证邮箱为 `luoxi813@outlook.com` 的账号访问。首次使用该账号进入 `/admin/` 后，点击“启用管理后台”，即可绑定当前账号并接管原有管理员登记。其他邮箱即使是原管理员，也无法打开后台页面、查看草稿、上传或保存；邮箱缺失时同样拒绝。公开页面不显示后台入口。
+后台现在使用独立的邮箱＋密码登录，不再要求 ChatGPT 账号。公开页面不显示后台入口，登录地址是 `/admin/login/`。初始管理员为 `luoxi813@outlook.com`，先使用一次性邀请链接设置自己的密码。
 
-Sites 平台保留站点所有者的基础设施权限；后台内容权限另外通过认证邮箱与管理员账号编号检查，不因平台所有者身份而放行。Vercel 继续提供公开的已发布剧目读取。
+已激活的管理员可在后台“管理员”区域添加邮箱，复制生成的邀请链接并单独发送给对方；系统不会自动发邮件。邀请 24 小时内有效且只能使用一次，新人自行设置密码后即可管理内容和邀请其他管理员。可重新邀请尚未激活或已撤销的账号；已激活账号需要先撤销才能重新邀请。不能撤销自己的权限，至少保留一位已激活管理员。
 
-后台可保存草稿、发布、编辑，或把已发布内容保存为草稿以撤下展示。草稿只对管理员可见。更新使用版本号检查，旧窗口不能直接覆盖较新修改。文本以 React 纯文本输出，外链限定 HTTP(S)；上传文件按实际文件头检查，只支持 JPG、PNG、WebP、GIF 与 PDF，每个最多 10 MB。
+支持退出登录和修改自己的密码。撤销权限立即使该账号的会话与邀请失效；修改密码会退出其他设备。密码丢失时由其他管理员撤销旧权限并重新邀请，不提供无验证的公开重置入口。
+
+认证数据保存在 D1 的 `admin_accounts`、`admin_sessions` 和 `auth_rate_limits` 中。密码使用带随机盐的 PBKDF2-SHA256（100,000 次，适配 Workers 上限），先以独立的服务端 pepper 做 HMAC 预哈希；数据库不保存明文密码、会话令牌或邀请令牌。会话使用 Secure、HttpOnly、SameSite=Strict Cookie，8 小时到期；密码或权限变化会更新会话版本，避免旧令牌重新生效。登录有邮箱和网络限流，写入检查 Origin。
+
+Sites 仍是受限的私有数据服务；Vercel 通过服务端连接读取数据与认证会话。Sites／ChatGPT 登录身份不再赋予内容管理权限。
+
+后台可保存草稿、发布、编辑，或把已发布内容保存为草稿以撤下展示。草稿只对管理员可见。更新使用版本号检查，旧窗口不能直接覆盖较新修改。文本以 React 纯文本输出，外链限定 HTTP(S)；上传文件按实际文件头检查，只支持 JPG、PNG、WebP、GIF 与 PDF，Vercel 后台每个最多 4 MB，直接 Worker API 每个最多 10 MB。
 
 上传文件后需要保存剧目才会引用该文件。JSON 导出用于备份，不再是发布流程。2026-10-31 已将本机37条历史档案导入线上数据库：31条已发布，6条待核记录保留为后台草稿。后续本机编辑仍不会自动同步线上。
 
@@ -33,7 +39,7 @@ npm run dev
 
 本地服务在 `127.0.0.1:3000`（Next.js）和 `127.0.0.1:8899`（API）运行。数据库和上传文件保存在忽略提交的 `.local-data/` 中，重启仍然保留。启动时自动应用尚未执行的迁移。
 
-本地开发使用仅绑定 loopback 的开发身份，不要求 ChatGPT 登录。这个身份只在 `scripts/dev.mjs` 中设置，绝不会进入生产 Worker。线上身份来自 Sites 的认证入口，写入操作每次都在后端检查。
+本地开发同样使用邮箱与密码，不再注入自动管理员身份。在忽略提交的 `.env.local` 中设置独立的随机 `AUTH_PASSWORD_PEPPER`（至少32字符），首次运行 `npm run admin:local` 取得本机的初始邀请链接，然后启动 `npm run dev` 并打开该链接设密码。本机 Cookie 使用仅供 loopback 开发的名称与 HTTP 设置；生产始终使用 Secure Cookie。不要复制生产密码 pepper 到本机。
 
 ## 本地档案资料
 
@@ -68,22 +74,25 @@ npm run build
 
 ## Vercel 前台与线上数据库
 
-`https://princetonchinesetheater.vercel.app` 的前台通过服务端 API 实时读取已发布剧目；数据库、上传存储与管理员认证继续使用原 Sites 站点。Vercel 的 `/admin/`、`/new-play/` 和 `/preview/` 自动跳转到 Sites，管理员在那里保存和发布后，Vercel 前台下一次读取即可更新。两个地址不再维护两套档案数据。
+`https://princetonchinesetheater.vercel.app` 直接提供前台、邮箱登录、管理员管理和剧目编辑，不再把后台跳转到 Sites。所有认证与档案记录仍保存在同一套 Sites D1/R2 中，更新后前台下一次读取即可显示。
 
-Vercel 项目根目录设为此目录，保留 `vercel.json` 中的 Next.js 框架、`npm run build:vercel` 构建命令和 `.next` 输出目录。不要覆盖输出目录为 `out`。在 Vercel 的 Production 环境配置服务端变量 `SITES_BACKEND_TOKEN`，其值为现有 Sites 站点的服务访问令牌；预览部署需要另行配置 Preview 环境。配置或修改变量后重新部署。不得使用 `NEXT_PUBLIC_` 前缀，也不得把令牌放入源码、浏览器或提交。
+Vercel 项目根目录设为此目录，保留 `vercel.json` 中的 Next.js 框架、`npm run build:vercel` 构建命令和 `.next` 输出目录。在 Vercel 的 Production／Preview 环境配置服务端 `SITES_BACKEND_TOKEN`，值为现有 Sites 的服务访问令牌。仅 Worker runtime 持有 `AUTH_PASSWORD_PEPPER`（随机服务端 secret）；该值须稳定保留，随意轮换会使已有密码无法验证。不得使用 `NEXT_PUBLIC_` 前缀，也不得把密钥放入源码、浏览器或提交。变量变化后重新部署。
 
-`pages/api/[...path].ts` 只转发已发布剧目的 GET/HEAD 请求和上传文件读取，不转发浏览器身份、Cookie 或任意写入，拒绝后台 scope 查询。后台仍在 Sites 检查真实管理员身份。没有服务端密钥时返回明确的 JSON 503，服务异常也不会把登录 HTML 当成剧目 JSON。Sites 网站保持原有访问范围，无需公开。
+初次初始化使用临时 Worker secret `ADMIN_BOOTSTRAP_TOKEN` 调用仅在账号表为空时可用的 `/api/auth/bootstrap`。此入口只生成指定 Outlook 账号的邀请，Vercel 不转发该路径；初始化后删除临时 secret 并重新部署。不得把初始邀请加入版本库或日志。结构迁移不写入账号数据，旧 `site_admin` 表只保留历史记录，不参与新认证。
+
+`pages/api/[...path].ts` 只转发白名单接口及当前域的管理员会话 Cookie，不信任浏览器传入的 Sites 身份、Authorization 或其他 Cookie。Worker 每次检查会话、账号状态和版本。登录返回的 Cookie 由 Vercel 写入当前域，不需要浏览器跨域访问 Sites。Vercel 请求体上限对应后台上传限制为 4 MB。
 
 `npm run build` 在本机默认保留 Sites 的静态前端与 Worker 打包；在 Vercel 上自动构建含 API 的 Next.js 应用。手动验证 Vercel 构建可运行 `npm run build:vercel`。
 
 ## 主要源码
 
 - `components/archive-home.tsx`：动态档案列表与筛选。
-- `components/admin-dashboard.tsx`：后台与管理员初始化。
+- `components/admin-dashboard.tsx`、`components/admin-login.tsx`、`components/admin-accounts.tsx`：后台、登录、邀请和权限管理。
 - `components/production-form.tsx`：剧目编辑、上传、在线保存、发布与备份。
 - `components/production-page.tsx`：共用剧目页面。
 - `lib/productions.ts`：资料类型与验证。
-- `worker/api.js`：资料、身份、版本检查与上传 API。
+- `worker/api.js`：资料、版本检查与上传 API。
+- `worker/auth.js`：密码、一次性邀请、会话、管理员名单与限流。
 - `db/schema.ts`、`drizzle/`：数据库 schema 和迁移。
 - `scripts/build-worker.mjs`：将 Next.js 资源与 API 打包成 ESM Worker。
 - `scripts/dev.mjs`、`scripts/local-storage.mjs`：本机 API 与 SQLite/文件存储适配。
@@ -97,7 +106,7 @@ Vercel 项目根目录设为此目录，保留 `vercel.json` 中的 Next.js 框�
 
 导入前检查了36个线上海报／节目册附件，导入后验证了31条已发布剧目与6条草稿的可见性。缺少文件的摩西剧照 `/assets/moses-stage.jpg` 已在本次导出中排除，原始本机记录未修改。源数据快照、排除项、逐条结果和总结保存到忽略提交的 `.local-data/online-import-backups/20261031T224817Z/`。
 
-临时 `ARCHIVE_IMPORT_TOKEN` 已从 Sites 运行时配置删除，`/api/archive-import` 路由也已从生产代码移除。导入脚本作为本次迁移的记录保留，不能直接再次执行；后续批量迁移需要单独准备受保护的维护入口。首次管理员登录与登记仍通过 `/admin/` 完成。
+临时 `ARCHIVE_IMPORT_TOKEN` 已从 Sites 运行时配置删除，`/api/archive-import` 路由也已从生产代码移除。导入脚本作为本次迁移的记录保留，不能直接再次执行；后续批量迁移需要单独准备受保护的维护入口。管理员登录使用 `/admin/login/`，邀请激活使用 `/admin/activate/`。
 
 ## 本地历史档案资料
 
