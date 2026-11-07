@@ -44,6 +44,10 @@ async function checkPassword(password, stored, env) {
 }
 function cookieName(env) { return env.PCT_LOCAL_AUTH === true ? 'pct_admin_local' : '__Host-pct_admin'; }
 function sessionToken(request, env) {
+  if (request.headers.get('x-pct-cookie-transport') === 'header') {
+    const value = request.headers.get('x-pct-session-token') || '';
+    return /^[a-f0-9]{64}$/.test(value) ? value : '';
+  }
   const name = cookieName(env);
   const entry = (request.headers.get('cookie') || '').split(';').map(item => item.trim()).find(item => item.startsWith(name + '='));
   const value = entry?.slice(name.length + 1) || '';
@@ -51,6 +55,12 @@ function sessionToken(request, env) {
 }
 function sessionCookie(token, env, clear = false) {
   return `${cookieName(env)}=${clear ? '' : token}; Path=/; HttpOnly; SameSite=Strict; Max-Age=${clear ? 0 : SESSION_MS / 1000}${env.PCT_LOCAL_AUTH === true ? '' : '; Secure'}`;
+}
+function sessionHeaders(request, token, env, clear = false) {
+  // Sites dispatch owns Cookie/Set-Cookie. The Vercel server uses an explicit
+  // transport header and writes the HttpOnly cookie on its own origin.
+  const name = request.headers.get('x-pct-cookie-transport') === 'header' ? 'X-PCT-Set-Cookie' : 'Set-Cookie';
+  return { [name]: sessionCookie(token, env, clear) };
 }
 export async function getAuthIdentity(request, env) {
   const token = sessionToken(request, env);
@@ -123,7 +133,7 @@ export async function handleAuthRequest(request, env) {
     if (!valid || row.status !== 'active') deny(401, '邮箱或密码不正确');
     const token = await createSession(email, env, row.password_hash);
     await env.DB.prepare('DELETE FROM auth_rate_limits WHERE bucket = ?').bind(await tokenHash('login-email:' + email)).run();
-    return authJson({ email }, 200, { 'Set-Cookie': sessionCookie(token, env) });
+    return authJson({ email }, 200, sessionHeaders(request, token, env));
   }
   if (path === '/api/auth/invitation' && method === 'POST') {
     const body = await authBody(request);
@@ -144,12 +154,12 @@ export async function handleAuthRequest(request, env) {
       .bind(password, new Date().toISOString(), row.email, hashedToken, Date.now()).run();
     if (!result.meta.changes) deny(400, '邀请链接已失效或已使用');
     const session = await createSession(row.email, env, password);
-    return authJson({ email: row.email }, 200, { 'Set-Cookie': sessionCookie(session, env) });
+    return authJson({ email: row.email }, 200, sessionHeaders(request, session, env));
   }
   if (path === '/api/auth/logout' && method === 'POST') {
     const token = sessionToken(request, env);
     if (token) await env.DB.prepare('DELETE FROM admin_sessions WHERE token_hash = ?').bind(await tokenHash(token)).run();
-    return authJson({ ok: true }, 200, { 'Set-Cookie': sessionCookie('', env, true) });
+    return authJson({ ok: true }, 200, sessionHeaders(request, '', env, true));
   }
   if (path === '/api/auth/password' && method === 'POST') {
     const user = await authAdmin(request, env), body = await authBody(request);
@@ -163,7 +173,7 @@ export async function handleAuthRequest(request, env) {
     if (!changed.meta.changes) deny(409, '账号状态已变化，请重新登录');
     await env.DB.prepare('DELETE FROM admin_sessions WHERE email = ?').bind(user.email).run();
     const token = await createSession(user.email, env, password);
-    return authJson({ ok: true }, 200, { 'Set-Cookie': sessionCookie(token, env) });
+    return authJson({ ok: true }, 200, sessionHeaders(request, token, env));
   }
   if (path === '/api/admins' && method === 'GET') {
     await authAdmin(request, env);

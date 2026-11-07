@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useRef, useState, type FormEvent } from 'react';
 import Link from 'next/link';
-import { api } from '@/lib/api';
+import { api, type Session } from '@/lib/api';
 
 export default function AdminLogin({ activate = false }: { activate?: boolean }) {
   const [token, setToken] = useState(''), [email, setEmail] = useState('');
@@ -32,6 +32,8 @@ export default function AdminLogin({ activate = false }: { activate?: boolean })
         method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(activate ? { token, password } : { email: values.get('email'), password }),
       });
+      const session = await api<Session>('/api/session');
+      if (!session.canEdit) throw new Error('登录状态未能保存，请刷新页面后重新登录。');
       window.location.assign('/admin/');
     } catch (reason) { setError(reason instanceof Error ? reason.message : '登录失败，请稍后重试'); }
     finally { setBusy(false); }

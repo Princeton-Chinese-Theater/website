@@ -13,7 +13,7 @@ test('public proxy reads current records without forwarding visitor identity or 
   assert.equal(response.status,200);
   assert.deepEqual(await response.json(),{records:[production]});
   assert.equal(destination,SITES_BACKEND+'/api/productions');
-  assert.deepEqual(Object.fromEntries(options.headers),{'oai-sites-authorization':'Bearer server-secret',accept:'application/json'});
+  assert.deepEqual(Object.fromEntries(options.headers),{'oai-sites-authorization':'Bearer server-secret',accept:'application/json','x-pct-cookie-transport':'header'});
   assert.equal(options.redirect,'manual');assert.equal(options.cache,'no-store');
 });
 
@@ -62,10 +62,12 @@ test('authenticated proxy forwards only its own session and keeps same-origin wr
  }),'server-secret',async(url,options)=>{
   assert.equal(url,SITES_BACKEND+'/api/auth/login');
   assert.equal(options.headers.get('Origin'),SITES_BACKEND);
-  assert.equal(options.headers.get('Cookie'),cookie);
+  assert.equal(options.headers.get('Cookie'),null);
+  assert.equal(options.headers.get('x-pct-session-token'),'a'.repeat(64));
+  assert.equal(options.headers.get('x-pct-cookie-transport'),'header');
   assert.equal(options.headers.get('oai-authenticated-user-email'),null);
   assert.equal(JSON.parse(new TextDecoder().decode(options.body)).email,'admin@example.com');
-  return Response.json({email:'admin@example.com'},{headers:{'Set-Cookie':cookie+'; Path=/; HttpOnly; Secure; SameSite=Strict'}});
+  return Response.json({email:'admin@example.com'},{headers:{'X-PCT-Set-Cookie':cookie+'; Path=/; HttpOnly; SameSite=Strict; Max-Age=28800; Secure'}});
  });
  assert.equal(response.status,200);assert.match(response.headers.get('set-cookie'),/HttpOnly/);
  const denied=await publicBackend(new Request('https://front.test/api/auth/login',{
@@ -107,5 +109,31 @@ test('Vercel proxy and Worker complete login, invite activation and revocation a
   assert.equal((await forward('/api/admins/',{cookie:other})).status,200);
   const revoke=await forward('/api/admins/revoke/',{method:'POST',cookie:root,body:{email:'new-admin@example.com'}});assert.equal(revoke.status,200);
   assert.equal((await forward('/api/productions/?scope=all',{cookie:other})).status,401);
+ }finally{env.close();rmSync(folder,{recursive:true,force:true});}
+});
+
+test('login survives stripped cookies and platform cookies in a hosting gateway',async()=>{
+ const {mkdtempSync,rmSync}=await import('node:fs');const {tmpdir}=await import('node:os');const {join}=await import('node:path');
+ const {storage,rootSession,PASSWORD,ROOT_EMAIL}=await import('./auth-fixture.mjs');const {handleApi}=await import('../worker/api.js');
+ const folder=mkdtempSync(join(tmpdir(),'pct-gateway-cookie-')),env=storage(folder);
+ const gateway=async(url,options)=>{
+  const headers=new Headers(options.headers);headers.delete('cookie');
+  const response=await handleApi(new Request(url,{...options,headers}),env);
+  const outputHeaders=new Headers(response.headers);outputHeaders.set('set-cookie','__cf_bm=gateway-cookie; Domain=chatgpt.site; Path=/; Secure');
+  return new Response(response.body,{status:response.status,headers:outputHeaders});
+ };
+ try{
+  await rootSession(env);
+  const login=await publicBackend(new Request('https://front.test/api/auth/login',{method:'POST',headers:{Origin:'https://front.test'},body:JSON.stringify({email:ROOT_EMAIL,password:PASSWORD})}),'service-token',gateway);
+  assert.equal(login.status,200);
+  const cookie=(login.headers.get('set-cookie')||'').split(';')[0];assert.match(cookie,/^__Host-pct_admin=[a-f0-9]{64}$/);
+  assert.equal(login.headers.get('x-pct-set-cookie'),null);
+  assert.doesNotMatch(login.headers.get('set-cookie'),/__cf_bm|Domain=/);
+  const session=await publicBackend(new Request('https://front.test/api/session',{headers:{Cookie:cookie}}),'service-token',gateway);
+  assert.equal((await session.json()).canEdit,true);
+  const admins=await publicBackend(new Request('https://front.test/api/admins',{headers:{Cookie:cookie}}),'service-token',gateway);assert.equal(admins.status,200);
+  const logout=await publicBackend(new Request('https://front.test/api/auth/logout',{method:'POST',headers:{Cookie:cookie},body:'{}'}),'service-token',gateway);
+  assert.match(logout.headers.get('set-cookie'),/Max-Age=0/);
+  const after=await publicBackend(new Request('https://front.test/api/session',{headers:{Cookie:cookie}}),'service-token',gateway);assert.equal((await after.json()).canEdit,false);
  }finally{env.close();rmSync(folder,{recursive:true,force:true});}
 });

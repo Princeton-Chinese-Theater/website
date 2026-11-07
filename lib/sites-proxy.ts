@@ -22,8 +22,8 @@ export async function publicBackend(request: Request, token: string | undefined,
   try {
     // Only the opaque admin session is forwarded. Browser identity headers,
     // other cookies, Authorization and arbitrary destinations are never trusted.
-    const headers = new Headers({ 'OAI-Sites-Authorization': `Bearer ${token}`, Accept: media ? '*/*' : 'application/json' });
-    if (cookie) headers.set('Cookie', cookie);
+    const headers = new Headers({ 'OAI-Sites-Authorization': `Bearer ${token}`, Accept: media ? '*/*' : 'application/json', 'X-PCT-Cookie-Transport': 'header' });
+    if (cookie) headers.set('X-PCT-Session-Token', cookie.slice('__Host-pct_admin='.length));
     if (writing) {
       headers.set('Origin', SITES_BACKEND);
       headers.set('Content-Type', request.headers.get('content-type') || 'application/json');
@@ -50,8 +50,11 @@ export async function publicBackend(request: Request, token: string | undefined,
     }
     if (path === '/api/session' && response.ok) data.maxUploadBytes = 4 * 1024 * 1024;
     const output = json(data, response.status);
-    const session = response.headers.get('set-cookie');
-    if (session && (openAuth || path === '/api/auth/password')) output.headers.set('Set-Cookie', session);
+    const session = response.headers.get('x-pct-set-cookie') || response.headers.get('set-cookie');
+    if (session && (openAuth || path === '/api/auth/password')) {
+      if (!/^__Host-pct_admin=(?:[a-f0-9]{64})?; Path=\/; HttpOnly; SameSite=Strict; Max-Age=(?:0|28800); Secure$/.test(session)) throw new Error('Invalid session cookie');
+      output.headers.set('Set-Cookie', session);
+    }
     return request.method === 'HEAD' ? new Response(null, { status: output.status, headers: output.headers }) : output;
   } catch {
     return json({ error: '剧目资料服务暂时不可用，请稍后重试' }, 502);
