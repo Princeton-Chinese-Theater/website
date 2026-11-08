@@ -74,7 +74,9 @@ npm run build
 
 ## Vercel 前台与线上数据库
 
-`https://princetonchinesetheater.vercel.app` 直接提供前台、邮箱登录、管理员管理和剧目编辑，不再把后台跳转到 Sites。所有认证与档案记录仍保存在同一套 Sites D1/R2 中，更新后前台下一次读取即可显示。
+`https://princetonchinesetheater.vercel.app` 直接提供前台、邮箱登录、管理员管理和剧目编辑，不再把后台跳转到 Sites。所有认证与档案记录仍保存在同一套 Sites D1/R2 中。
+
+Archive 首个页面响应直接包含已发布剧目的卡片，服务端数据每30秒在后台重新验证；浏览器加载后仍通过不缓存的接口读取最新资料，更新失败时保留已有卡片。首屏只传输卡片字段，不包括完整演职员资料。后台、草稿和写入接口继续使用原有实时权限检查，Sites 静态导出保留客户端读取与重试流程。
 
 Vercel 项目根目录设为此目录，保留 `vercel.json` 中的 Next.js 框架、`npm run build:vercel` 构建命令和 `.next` 输出目录。在 Vercel 的 Production／Preview 环境配置服务端 `SITES_BACKEND_TOKEN`，值为现有 Sites 的服务访问令牌。仅 Worker runtime 持有 `AUTH_PASSWORD_PEPPER`（随机服务端 secret）；该值须稳定保留，随意轮换会使已有密码无法验证。不得使用 `NEXT_PUBLIC_` 前缀，也不得把密钥放入源码、浏览器或提交。变量变化后重新部署。
 
