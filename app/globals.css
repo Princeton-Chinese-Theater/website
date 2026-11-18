@@ -60,38 +60,35 @@ body{min-height:100svh;display:flex;flex-direction:column}.header,.site-footer{f
 .society-home .intro-contact{border-top-color:var(--gold)}.board-source a,.archive-note a{color:var(--primary)}
 
 /* Compact identity, navigation and language controls within the shared width. */
-.header{width:min(100% - 64px,1100px);padding-block:6px;gap:18px}
+.header{padding-block:12px;gap:18px}
 .header .brand{font-size:18px;gap:9px}.header .brand-logo{width:34px;height:34px}
 .header nav{gap:18px}.header nav a{min-height:40px}
 .header .nav-action{display:flex;align-items:center;padding-left:12px}.header .nav-action span{margin-left:5px}
 .header .language-switch{gap:4px}.header .language-switch button{min-height:40px}
 @media(max-width:760px){
- .header{width:calc(100% - 40px);padding-block:6px;gap:4px 12px}
+ .header{padding-block:10px;gap:4px 12px}
  .header .brand{font-size:14px;gap:8px}.header .brand-logo{width:30px;height:30px}
  .header nav{gap:16px}.header .nav-action{display:none}
  html[lang=en] .header .brand{font-size:12px}
 }
 
-/* Center the complete Board layout instead of leaving unused space on its right. */
-.board-page.wrap{width:min(100% - 80px,1020px)}
 .board-layout{grid-template-columns:170px minmax(0,1fr)}
 @media(max-width:760px){
- .board-page.wrap{width:calc(100% - 40px)}
  .board-layout{grid-template-columns:minmax(0,1fr)}
 }
 
 /* One shared content boundary for navigation, public pages and the footer. */
 :root{--page-max:1000px;--text-max:780px;--page-gutters:80px;--stage-height:800px}
-.wrap,.header,.footer-bottom,.society-home .society-intro,.board-page.wrap{
+.wrap,.footer-bottom,.society-home .society-intro{
  width:min(calc(100% - var(--page-gutters)),var(--page-max));margin-inline:auto
+}
+.page-content{
+ width:min(calc(100% - var(--page-gutters)),var(--text-max));margin-inline:auto
 }
 @media(max-width:760px){:root{--page-gutters:40px;--stage-height:420px}}
 
 /* Keep the introduction readable inside the wider theatre frame. */
-.header{max-width:var(--text-max)}
 .society-home .intro-copy{max-width:var(--text-max);margin-inline:auto}
-.board-page.wrap{max-width:var(--text-max)}
-.archive-page .repertoire.wrap{max-width:var(--text-max)}
 .archive-page .production-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
 .archive-page .archive-tools{flex-wrap:wrap;gap:16px}
 .archive-page .archive-controls{margin-left:auto}
@@ -104,6 +101,7 @@ body{min-height:100svh;display:flex;flex-direction:column}.header,.site-footer{f
 .theatre-frame{--page-title-offset:48px;--stage-valance:clamp(26px,4vw,56px);position:relative;isolation:isolate;min-height:var(--stage-height);padding-top:var(--stage-valance)}
 @media(max-width:760px){.theatre-frame{--page-title-offset:32px}}
 html{scrollbar-gutter:stable}
+@supports not (scrollbar-gutter:stable){html{overflow-y:scroll}}
 
 /* Muted logo red unifies the navigation, curtain and interface accents. */
 .theatre-masthead{flex-shrink:0;background:linear-gradient(180deg,var(--stage-dark),var(--stage-red));color:#f4f1e9}

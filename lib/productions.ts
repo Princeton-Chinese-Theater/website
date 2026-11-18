@@ -62,6 +62,11 @@ export function compareProductionPeriods(a: ProductionPeriod, b: ProductionPerio
   return yearOrder || seasonRank[productionSeason(b) ?? ''] - seasonRank[productionSeason(a) ?? ''];
 }
 
+export function latestProduction(productions: Production[]): Production | null {
+  return productions.reduce<Production | null>((latest, production) =>
+    !latest || compareProductionPeriods(production, latest) < 0 ? production : latest, null);
+}
+
 export const DRAFT_KEY = 'pct-production-draft';
 
 /** Root-relative asset paths work on both the home page and nested production routes. */

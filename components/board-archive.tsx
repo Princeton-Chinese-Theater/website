@@ -7,7 +7,7 @@ export default function BoardArchive(){
   const {t,language}=useLanguage();
   const [term,setTerm]=useState(archive.boards[0].id);
   const board=archive.boards.find(board=>board.id===term)!;
-  return <div id="top" className="board-page wrap">
+  return <div id="top" className="board-page page-content">
     <h1>{t("历届 Board")}</h1>
     <div className="board-layout"><nav className="board-years" aria-label={t("选择 Board 学年")}>{archive.boards.map(item=><button key={item.id} onClick={()=>setTerm(item.id)} aria-pressed={term===item.id} aria-controls="board-members">{item.term}</button>)}</nav>
       <section id="board-members" aria-labelledby="board-term"><h2 id="board-term">{board.term}</h2>

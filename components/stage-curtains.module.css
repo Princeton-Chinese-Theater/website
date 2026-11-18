@@ -15,6 +15,15 @@
   user-select: none;
 }
 
+:global(.theatre-frame):has(> .stage):has(> :global(.society-home), > :global(.board-page)) {
+  --stage-valance: clamp(24px, 3.2vw, 40px);
+
+  > .stage {
+    height: var(--stage-valance);
+    border-inline-width: 0;
+  }
+}
+
 @media (max-width: 760px) {
   .stage {
     border-inline-width: 10px;
