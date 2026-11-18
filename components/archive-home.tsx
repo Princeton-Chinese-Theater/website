@@ -3,7 +3,7 @@ import { useLanguage } from '@/components/language-provider';
 import TitleCover from '@/components/title-cover';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { api, type ProductionRecord } from '@/lib/api';
-import { productionTerm, safeUrl } from '@/lib/productions';
+import { compareProductionPeriods, productionTerm, safeUrl } from '@/lib/productions';
 const detail=(id:string)=>`/production/?id=${encodeURIComponent(id)}`;
 
 export default function ArchiveHome({initialRecords=null}:{initialRecords?:ProductionRecord[]|null}){
@@ -15,7 +15,7 @@ export default function ArchiveHome({initialRecords=null}:{initialRecords?:Produ
   const load=()=>{setError('');api<{records:ProductionRecord[]}>('/api/productions').then(data=>setRecords(data.records)).catch(error=>setError(error.message));};
   useEffect(()=>{load();},[]);
   const years=[...new Set((records||[]).map(r=>r.production.year).filter((y):y is string=>!!y))].sort().reverse();
-  const filtered=useMemo(()=>[...(records||[])].sort((a,b)=>(b.production.year||'').localeCompare(a.production.year||'')).filter(({production:p})=>(!year||p.year===year)&&`${p.title} ${p.titleEn||''} ${t(productionTerm(p))}`.toLowerCase().includes(query.toLowerCase())),[records,year,query]);
+  const filtered=useMemo(()=>[...(records||[])].sort((a,b)=>compareProductionPeriods(a.production,b.production)).filter(({production:p})=>(!year||p.year===year)&&`${p.title} ${p.titleEn||''} ${t(productionTerm(p))}`.toLowerCase().includes(query.toLowerCase())),[records,year,query]);
   return <div id="top" className="archive-page">
     <section className="repertoire wrap" id="productions" aria-labelledby="repertoire-title"><div className="repertoire-heading"><h2 id="repertoire-title">{t("剧目档案")}</h2><div className="archive-controls"><label className="archive-search"><span aria-hidden="true">⌕</span><input aria-label={t("搜索剧目")} placeholder={t("寻找一场戏")} value={query} onChange={e=>setQuery(e.target.value)}/>{query&&<button onClick={()=>setQuery('')} aria-label={t("清除搜索")}>×</button>}</label><div className="view-controls" role="group" aria-label={t("展示方式")}><button aria-label={t("海报网格")} aria-pressed={view==='grid'} className={view==='grid'?'active':''} onClick={()=>setView('grid')}>▦</button><button aria-label={t("剧目列表")} aria-pressed={view==='list'} className={view==='list'?'active':''} onClick={()=>setView('list')}>☷</button></div></div></div>
       <div className="archive-tools"><div className="year-filters" role="group" aria-label={t("按年份筛选")}><button className={!year?'active':''} aria-pressed={!year} onClick={()=>setYear('')}>{t("全部演出")} <sup>{records?.length??'—'}</sup></button>{years.map(y=><button key={y} className={year===y?'active':''} aria-pressed={year===y} onClick={()=>setYear(y)}>{y}</button>)}</div></div>

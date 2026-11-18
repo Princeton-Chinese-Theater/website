@@ -32,21 +32,34 @@ export type Production = {
   updatedAt?: string;
 };
 
-/** Display a production term without exposing exact dates or research notes. */
-export function productionTerm(play: Pick<Production, 'year' | 'season' | 'performances'>): string {
-  const year = play.year?.trim();
-  if (!year) return '时间待考';
+type ProductionPeriod = Pick<Production, 'year' | 'season' | 'performances'>;
+
+function productionSeason(play: ProductionPeriod): 'Spring' | 'Fall' | undefined {
   const season = play.season || '';
-  if (/\b(spring)\b|春/i.test(season)) return `${year} Spring`;
-  if (/\b(fall|autumn)\b|秋/i.test(season)) return `${year} Fall`;
+  if (/\bspring\b|春/i.test(season)) return 'Spring';
+  if (/\b(fall|autumn)\b|秋/i.test(season)) return 'Fall';
   // Only use a leading performance date, never a later publication or research date.
   const date = [season, ...(play.performances || [])].map(value => value.match(/^\s*\d{4}\s*(?:年|[-/])\s*(\d{1,2})(?:月|[-/])/)).find(Boolean);
   if (date) {
     const month = Number(date[1]);
-    if (month >= 1 && month <= 6) return `${year} Spring`;
-    if (month >= 8 && month <= 12) return `${year} Fall`;
+    if (month >= 1 && month <= 6) return 'Spring';
+    if (month >= 8 && month <= 12) return 'Fall';
   }
-  return year;
+}
+
+/** Display a production term without exposing exact dates or research notes. */
+export function productionTerm(play: ProductionPeriod): string {
+  const year = play.year?.trim();
+  if (!year) return '时间待考';
+  const season = productionSeason(play);
+  return season ? `${year} ${season}` : year;
+}
+
+const seasonRank = { Fall: 2, Spring: 1, '': 0 };
+
+export function compareProductionPeriods(a: ProductionPeriod, b: ProductionPeriod): number {
+  const yearOrder = (b.year?.trim() || '').localeCompare(a.year?.trim() || '');
+  return yearOrder || seasonRank[productionSeason(b) ?? ''] - seasonRank[productionSeason(a) ?? ''];
 }
 
 export const DRAFT_KEY = 'pct-production-draft';
