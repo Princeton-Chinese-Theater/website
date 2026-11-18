@@ -1,11 +1,21 @@
 'use client';
 
-import { useRef, useState, type FormEvent } from 'react';
+import { useEffect, useRef, useState, type FormEvent } from 'react';
 import { useRouter } from 'next/navigation';
 import { fieldGroups } from '@/lib/form-fields';
 import { productionFromForm, formValue } from '@/lib/form-data';
-import { DRAFT_KEY, isProduction } from '@/lib/productions';
+import { DRAFT_KEY, isProduction, type Production } from '@/lib/productions';
 import { api, type ProductionRecord } from '@/lib/api';
+import { editorPreviewKey, editorUrl, readEditorPreview } from '@/lib/editor-preview';
+
+function fillForm(form: HTMLFormElement | null, production: Production, fields?: Record<string, string>) {
+  for (const [, items] of fieldGroups) for (const [key] of items) {
+    const input = form?.elements.namedItem(key);
+    if (input instanceof HTMLInputElement || input instanceof HTMLTextAreaElement) {
+      input.value = typeof fields?.[key] === 'string' ? fields[key] : formValue(production, key);
+    }
+  }
+}
 
 export default function ProductionForm({ existingIds, initialRecord, maxUploadBytes = 10 * 1024 * 1024 }: { existingIds: string[]; initialRecord?: ProductionRecord; maxUploadBytes?: number }) {
   const formRef = useRef<HTMLFormElement>(null);
@@ -13,6 +23,17 @@ export default function ProductionForm({ existingIds, initialRecord, maxUploadBy
   const [savedRecord,setSavedRecord]=useState(initialRecord);
   const [busy,setBusy]=useState(false);
   const router = useRouter();
+
+  useEffect(() => {
+    const draft = readEditorPreview(initialRecord?.production.id);
+    if (!draft) return;
+    if (draft.version !== initialRecord?.version) {
+      setStatus('后台版本已更新。这次预览的编辑仍可通过“恢复本机草稿”找回。');
+      return;
+    }
+    fillForm(formRef.current, draft.production, draft.fields);
+    setStatus('已恢复预览前的编辑。');
+  }, [initialRecord]);
 
   function collect() {
     const form = formRef.current;
@@ -25,12 +46,19 @@ export default function ProductionForm({ existingIds, initialRecord, maxUploadBy
   }
   function preview(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    if (busy) return;
     const play = collect();
     if (!play) return;
+    const id = savedRecord?.production.id;
+    const fields = Object.fromEntries(new FormData(event.currentTarget));
     try {
-      localStorage.setItem(DRAFT_KEY, JSON.stringify(play));
-      router.push('/preview/');
-    } catch { setStatus('浏览器无法保存草稿，暂时不能预览。请下载 JSON 留存。'); }
+      sessionStorage.setItem(editorPreviewKey(id), JSON.stringify({ production: play, fields, version: savedRecord?.version }));
+    } catch {
+      setStatus('浏览器无法保存草稿，暂时不能预览。请下载 JSON 留存。');
+      return;
+    }
+    try { localStorage.setItem(DRAFT_KEY, JSON.stringify(play)); } catch { /* The current tab still has its preview. */ }
+    router.push(id ? `/preview/?id=${encodeURIComponent(id)}` : '/preview/');
   }
   function download() {
     const play = collect();
@@ -44,13 +72,14 @@ export default function ProductionForm({ existingIds, initialRecord, maxUploadBy
   }
   function restore() {
     try {
-      const play: unknown = JSON.parse(localStorage.getItem(DRAFT_KEY) || 'null');
+      const id = savedRecord?.production.id;
+      const draft = readEditorPreview(id);
+      const local: unknown = JSON.parse(localStorage.getItem(DRAFT_KEY) || 'null');
+      const matches = isProduction(local) && (!id || local.id === id);
+      const play = matches ? local : draft?.production ?? local;
       if (!isProduction(play)) { setStatus('没有可恢复的有效草稿。'); return; }
-      if(savedRecord&&play.id!==savedRecord.production.id){setStatus('本机草稿属于另一部剧，不能恢复到当前剧目。');return;}
-      for (const [,items] of fieldGroups) for (const [key] of items) {
-        const input = formRef.current?.elements.namedItem(key);
-        if (input instanceof HTMLInputElement || input instanceof HTMLTextAreaElement) input.value = formValue(play,key);
-      }
+      if (id && play.id !== id) { setStatus('本机草稿属于另一部剧，不能恢复到当前剧目。'); return; }
+      fillForm(formRef.current, play, matches ? undefined : draft?.fields);
       setStatus('已恢复最近一次保存的本机草稿。');
     } catch { setStatus('无法读取本机草稿，请重新填写。'); }
   }
@@ -63,6 +92,8 @@ export default function ProductionForm({ existingIds, initialRecord, maxUploadBy
       const result=await api<{record:ProductionRecord}>(savedRecord?`/api/productions/${savedRecord.production.id}`:'/api/productions',{
         method:savedRecord?'PUT':'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({production,publicationStatus,...savedRecord?{version:savedRecord.version}:{}}),
       });
+      try { sessionStorage.removeItem(editorPreviewKey(savedRecord?.production.id)); } catch { /* The server save succeeded. */ }
+      if (!savedRecord) window.history.replaceState(null, '', editorUrl(result.record.production.id));
       setSavedRecord(result.record);setStatus(publicationStatus==='published'?'已发布，前台档案已更新。':'草稿已保存，访客暂时看不到。');
     }catch(error){setStatus(error instanceof Error?error.message:'保存失败，请重试');}finally{setBusy(false);}
   }

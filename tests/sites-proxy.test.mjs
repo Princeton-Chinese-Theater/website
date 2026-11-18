@@ -46,12 +46,49 @@ test('proxy keeps drafts private and rejects sign-in HTML, redirects and failed 
 });
 
 test('proxy serves uploaded files using the same protected backend',async()=>{
-  const response=await publicBackend(new Request('https://front.test/api/backend-media/abcdef-123.pdf'),'secret',async(url)=>{
-    assert.equal(url,SITES_BACKEND+'/media/abcdef-123.pdf');
-    return new Response('%PDF-example',{headers:{'Content-Type':'application/pdf'}});
-  });
-  assert.equal(response.headers.get('content-type'),'application/pdf');
-  assert.equal(await response.text(),'%PDF-example');
+  for(const route of ['/media/abcdef-123.pdf','/api/backend-media/abcdef-123.pdf']){
+    const response=await publicBackend(new Request('https://front.test'+route),'secret',async(url)=>{
+      assert.equal(url,SITES_BACKEND+'/media/abcdef-123.pdf');
+      return new Response('%PDF-example',{headers:{'Content-Type':'application/pdf'}});
+    });
+    assert.equal(response.status,200);
+    assert.equal(response.headers.get('content-type'),'application/pdf');
+    assert.equal(await response.text(),'%PDF-example');
+  }
+});
+
+test('a published poster is readable at the public URL returned by upload', async () => {
+  const { mkdtempSync, rmSync } = await import('node:fs');
+  const { tmpdir } = await import('node:os');
+  const { join } = await import('node:path');
+  const { storage, rootSession } = await import('./auth-fixture.mjs');
+  const { handleApi } = await import('../worker/api.js');
+  const folder = mkdtempSync(join(tmpdir(), 'pct-poster-'));
+  const env = storage(folder);
+  const forward = (path, init) => publicBackend(new Request('https://front.test' + path, init), 'service-token',
+    (url, options) => handleApi(new Request(url, options), env));
+  try {
+    const cookie = await rootSession(env);
+    const image = Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+aRuoAAAAASUVORK5CYII=', 'base64');
+    const upload = await forward('/api/media', { method: 'POST', headers: { Cookie: cookie, 'Content-Type': 'image/png' }, body: image });
+    assert.equal(upload.status, 201);
+    const { url } = await upload.json();
+    const published = await forward('/api/productions', {
+      method: 'POST',
+      headers: { Cookie: cookie, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ production: { ...production.production, poster: url }, publicationStatus: 'published' }),
+    });
+    assert.equal(published.status, 201);
+    const record = await (await forward('/api/productions/2026-test')).json();
+    assert.equal(record.record.production.poster, url);
+    const poster = await forward(record.record.production.poster);
+    assert.equal(poster.status, 200);
+    assert.equal(poster.headers.get('content-type'), 'image/png');
+    assert.deepEqual(Buffer.from(await poster.arrayBuffer()), image);
+  } finally {
+    env.close();
+    rmSync(folder, { recursive: true, force: true });
+  }
 });
 
 test('authenticated proxy forwards only its own session and keeps same-origin writes and Set-Cookie intact',async()=>{

@@ -8,7 +8,8 @@ export async function publicBackend(request: Request, token: string | undefined,
   if (writing && ((request.headers.get('origin') && request.headers.get('origin') !== url.origin) || request.headers.get('sec-fetch-site') === 'cross-site')) {
     return json({ error: '不接受跨站写入' }, 403);
   }
-  const media = /^\/api\/backend-media\/([a-f0-9-]+\.(?:jpg|png|webp|gif|pdf))$/.exec(path);
+  // Next can pass the original public path to a Pages API handler after rewriting.
+  const media = /^\/(?:media|api\/backend-media)\/([a-f0-9-]+\.(?:jpg|png|webp|gif|pdf))$/.exec(path);
   const production = /^\/api\/productions(?:\/[a-z0-9]+(?:-[a-z0-9]+)*)?$/.test(path);
   const openAuth = /^\/api\/auth\/(login|activate|invitation|logout)$/.test(path);
   const protectedAuth = path === '/api/auth/password' || /^\/api\/admins(?:\/(invite|revoke))?$/.test(path);
